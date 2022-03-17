@@ -7,6 +7,8 @@ public class RotateCamera : MonoBehaviour
 
     private Touch initTouch = new Touch();
     public Camera cam;
+    public Camera referenceCam;
+    private float CamMoveSpeed = 2f;
 
     private float rotX = 0f;
     private float rotY = 0f;
@@ -14,8 +16,10 @@ public class RotateCamera : MonoBehaviour
 
     public float rotSpeed = 0.5f;
     public float dir = -1;
-    // Start is called before the first frame update
-    // Update is called once per frame
+
+    //Za kamero
+    private bool lookRight, lookLeft = false;
+
 
     void Start(){
         origRot = cam.transform.eulerAngles;
@@ -26,22 +30,53 @@ public class RotateCamera : MonoBehaviour
     void FixedUpdate()
     {
         foreach(Touch touch in Input.touches){
-            if(touch.phase == TouchPhase.Began){
-                initTouch = touch;
-            }
-            else if(touch.phase == TouchPhase.Moved){
-                float deltaX = initTouch.position.x - touch.position.x;
-                float deltaY = initTouch.position.y - touch.position.y;
+            if (!didLook())
+            {
+                if (touch.phase == TouchPhase.Began)
+                {
+                    initTouch = touch;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    float deltaX = initTouch.position.x - touch.position.x;
+                    float deltaY = initTouch.position.y - touch.position.y;
 
-                rotX -= deltaX * Time.deltaTime * rotSpeed*dir;
-                rotY += deltaY * Time.deltaTime * rotSpeed*dir;
+                    rotX -= deltaY * Time.deltaTime * rotSpeed * dir;
+                    rotY += deltaX * Time.deltaTime * rotSpeed * dir;
 
-                cam.transform.eulerAngles = new Vector3(rotX, rotY,0f);
+                    Mathf.Clamp(rotX, -45f, 45f);
+                    Mathf.Clamp(rotY, -45f, 45f);
 
+
+
+                    cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, rotY, 0f);
+
+                }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    initTouch = new Touch();
+                }
             }
-            else if(touch.phase == TouchPhase.Ended){
-                initTouch = new Touch();
-            }
+
         }
+
+        if (didLook()){
+
+            cam.transform.position = Vector3.Lerp(cam.transform.position, referenceCam.transform.position, CamMoveSpeed * Time.deltaTime);
+            cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, referenceCam.transform.rotation, CamMoveSpeed * Time.deltaTime);
+        }
+    }
+
+    bool didLook(){
+        float angle = cam.transform.eulerAngles.y;
+
+
+        if (angle >= 140f)lookRight = true;
+        else if (angle <= 90f)lookLeft = true;
+
+        Debug.Log(angle);
+
+        return lookLeft && lookRight;
+
     }
 }
