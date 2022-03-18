@@ -63,7 +63,7 @@ public class RotateCamera : MonoBehaviour
         if (didLook()){
 
             cam.transform.position = Vector3.Lerp(cam.transform.position, referenceCam.transform.position, CamMoveSpeed * Time.deltaTime);
-            cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, referenceCam.transform.rotation, CamMoveSpeed * Time.deltaTime);
+            cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, referenceCam.transform.rotation, CamMoveSpeed * Time.deltaTime);
         }
     }
 
