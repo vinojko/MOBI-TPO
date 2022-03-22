@@ -10,7 +10,7 @@ public class RotateCamera : MonoBehaviour
     public Camera referenceCam;
     private float CamMoveSpeed = 2f;
 
-    private float rotX = 0f;
+    private float rotX = 0f;        
     private float rotY = 0f;
     private Vector3 origRot;
 
@@ -20,6 +20,10 @@ public class RotateCamera : MonoBehaviour
     //Za kamero
     private bool lookRight, lookLeft = false;
 
+    void Awake()
+    {
+
+    }
 
     void Start(){
         origRot = cam.transform.eulerAngles;
