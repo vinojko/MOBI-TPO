@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour
 {
+    public static RotateCamera instance;
 
     private Touch initTouch = new Touch();
     public Camera cam;
@@ -68,6 +69,7 @@ public class RotateCamera : MonoBehaviour
 
             cam.transform.position = Vector3.Lerp(cam.transform.position, referenceCam.transform.position, CamMoveSpeed * Time.deltaTime);
             cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, referenceCam.transform.rotation, CamMoveSpeed * Time.deltaTime);
+            GameManager.instance.UpdateGameState(GameState.Odzivnost);
         }
     }
 
@@ -77,8 +79,6 @@ public class RotateCamera : MonoBehaviour
 
         if (angle >= 140f)lookRight = true;
         else if (angle <= 90f)lookLeft = true;
-
-        Debug.Log(angle);
 
         return lookLeft && lookRight;
 
