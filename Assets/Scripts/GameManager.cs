@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateGameState(GameState.Varnost);
+        UpdateGameState(GameState.Footsteps);
     }
 
     // Update is called once per frame
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
+            case GameState.Footsteps:
+                break;
             case GameState.Varnost:
                 break;
             case GameState.Odzivnost:
@@ -48,7 +50,10 @@ public class GameManager : MonoBehaviour
 
 public enum GameState
 {
+    //VARNOST
+    Footsteps,
     Varnost,
+    //Konec VARNOST
     Odzivnost,
     PomocDihanje,
     CPR,

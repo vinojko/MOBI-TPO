@@ -8,9 +8,9 @@ public class ChangeCamera : MonoBehaviour
     public Camera main_Camera;
 
 
-    IEnumerator switchCamera(Camera second_Camera)
+    public IEnumerator switchCamera(Camera second_Camera)
     {
-        var animSpeed = 0.5f;
+        var animSpeed = 1.5f;
 
         Vector3 pos = main_Camera.transform.position;
         Quaternion rot = main_Camera.transform.rotation;
@@ -28,5 +28,10 @@ public class ChangeCamera : MonoBehaviour
         //Set final transform
         main_Camera.transform.position = second_Camera.transform.position;
         main_Camera.transform.rotation = second_Camera.transform.rotation;
+    }
+
+    public void ChangeToCamera(Camera second_Camera)
+    {
+        StartCoroutine(switchCamera(second_Camera));
     }
 }
