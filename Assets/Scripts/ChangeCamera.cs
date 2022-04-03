@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ChangeCamera : MonoBehaviour
 {
-
+    public static ChangeCamera instance;
     public Camera main_Camera;
 
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     public IEnumerator switchCamera(Camera second_Camera)
     {

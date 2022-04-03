@@ -7,17 +7,11 @@ public class HandleVarnost : MonoBehaviour
 {
     public float delayTime;
     public GameObject button;
-    private Vector3 posB;
     private Vector3 temp = new Vector3(-2.3614f, 1.625f, -22.231f);
     public VisualEffect smokeVfx;
+
+    public Camera HanzCamera;
     
-    void Start(){
-
-        posB = button.transform.position;
-        posB += temp;
-
-    }
-
     public IEnumerator HandleButton()
     {
  
@@ -25,21 +19,22 @@ public class HandleVarnost : MonoBehaviour
 
         if (GameManager.currentState == GameState.Varnost)
         {
-            float startTime = Time.time; // Time.time contains current frame time, so remember starting point
+            float startTime = Time.time;
             while (Time.time - startTime <= 1)
-            { // until one second passed
+            {   
+                //Premaknemo gumb ON/OFF v x os, da zgleda kot da ga premaknemo
                 button.transform.position = Vector3.Lerp(button.transform.position, temp, Time.time - startTime); // lerp from A to B in one second
-                yield return 1; // wait for next frame
+                yield return 1; 
             }
+            ChangeCamera.instance.ChangeToCamera(HanzCamera);
+            //STATE Varnost je sedaj koncana
             GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
-        }// start at time X
- 
+
+        }
     }
 
     public void HandleButtonOff(){
         StartCoroutine(HandleButton());
         smokeVfx.Stop();
-
-
     }
 }
