@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Varnost:
                 break;
+            case GameState.VarnostKoncano:
+                break;
             case GameState.Odzivnost:
                 break;
             case GameState.PomocDihanje:
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
         }
         OnGameStateChanged?.Invoke(newState);
         currentState = newState;
+        Debug.Log("Curent State: " + currentState);
     }
     
 }
@@ -56,6 +59,7 @@ public enum GameState
     //VARNOST
     Footsteps,
     Varnost,
+    VarnostKoncano,
     //Konec VARNOST
     Odzivnost,
     PomocDihanje,

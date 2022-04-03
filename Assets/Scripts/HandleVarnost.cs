@@ -31,6 +31,7 @@ public class HandleVarnost : MonoBehaviour
                 button.transform.position = Vector3.Lerp(button.transform.position, temp, Time.time - startTime); // lerp from A to B in one second
                 yield return 1; // wait for next frame
             }
+            GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
         }// start at time X
  
     }
@@ -38,6 +39,7 @@ public class HandleVarnost : MonoBehaviour
     public void HandleButtonOff(){
         StartCoroutine(HandleButton());
         smokeVfx.Stop();
+
 
     }
 }
