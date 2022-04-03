@@ -6189,6 +6189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayTime: 1
   button: {fileID: 355416871}
+  smokeVfx: {fileID: 993949855}
 --- !u!1001 &401929563
 PrefabInstance:
   m_ObjectHideFlags: 0

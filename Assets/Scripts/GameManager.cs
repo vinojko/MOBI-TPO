@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameState State;
+    public static GameState currentState;
 
     public static event Action<GameState> OnGameStateChanged;
     void Awake()
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentState = GameState.Footsteps;
         UpdateGameState(GameState.Footsteps);
     }
 
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGameStateChanged?.Invoke(newState);
+        currentState = newState;
     }
     
 }
