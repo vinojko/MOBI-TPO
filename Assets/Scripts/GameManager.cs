@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.VarnostKoncano:
                 break;
+            case GameState.PremakniZrtev:
+                break;
             case GameState.Odzivnost:
                 break;
             case GameState.PomocDihanje:
@@ -60,6 +62,7 @@ public enum GameState
     Footsteps,
     Varnost,
     VarnostKoncano,
+    PremakniZrtev,
     //Konec VARNOST
     Odzivnost,
     PomocDihanje,

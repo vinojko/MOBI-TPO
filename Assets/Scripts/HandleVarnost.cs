@@ -27,7 +27,7 @@ public class HandleVarnost : MonoBehaviour
                 yield return 1; 
             }
             ChangeCamera.instance.ChangeToCamera(HanzCamera);
-            //STATE Varnost je sedaj koncana
+            //STATE Varnost je sedaj koncana, NOV STATE
             GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
 
         }
