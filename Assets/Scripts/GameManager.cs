@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameState State;
+    public static GameState currentState;
 
     public static event Action<GameState> OnGameStateChanged;
     void Awake()
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateGameState(GameState.Varnost);
+        currentState = GameState.Footsteps;
+        UpdateGameState(GameState.Footsteps);
     }
 
     // Update is called once per frame
@@ -30,7 +32,13 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
+            case GameState.Footsteps:
+                break;
             case GameState.Varnost:
+                break;
+            case GameState.VarnostKoncano:
+                break;
+            case GameState.PremakniZrtev:
                 break;
             case GameState.Odzivnost:
                 break;
@@ -42,13 +50,20 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGameStateChanged?.Invoke(newState);
+        currentState = newState;
+        Debug.Log("Curent State: " + currentState);
     }
     
 }
 
 public enum GameState
 {
+    //VARNOST
+    Footsteps,
     Varnost,
+    VarnostKoncano,
+    PremakniZrtev,
+    //Konec VARNOST
     Odzivnost,
     PomocDihanje,
     CPR,
