@@ -30,7 +30,7 @@ public class PremakniZrtev : MonoBehaviour
 
     public void MoveTheVictim()
     {
-       /if(GameManager.currentState == GameState.PremakniZrtev)
+       if(GameManager.currentState == GameState.PremakniZrtev)
         StartCoroutine(MoveVictim());
 
     }
