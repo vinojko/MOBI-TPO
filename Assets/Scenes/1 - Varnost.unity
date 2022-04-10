@@ -17940,6 +17940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110511156}
+  - component: {fileID: 1110511157}
   m_Layer: 0
   m_Name: DialogManager
   m_TagString: Untagged
@@ -17961,6 +17962,18 @@ Transform:
   m_Father: {fileID: 1114660262}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110511157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110511155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c98cb0148b560447b9c44934aa7419b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1111076783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29208,8 +29221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149ba672c7e135c4d88964c20e2cf874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sentence:
-  - avkmkvatozaver
   Dialog: {fileID: 1878699432}
   DialogSpeed: 0.5
 --- !u!1 &1855441368
