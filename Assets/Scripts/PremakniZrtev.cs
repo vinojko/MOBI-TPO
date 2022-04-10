@@ -22,17 +22,13 @@ public class PremakniZrtev : MonoBehaviour
             animator.SetFloat(BlendHash, progress);
             yield return new WaitForEndOfFrame();
             progress += Time.deltaTime * animSpeed;
-            
-
         }
 
     }
-
     public void MoveTheVictim()
     {
-       /if(GameManager.currentState == GameState.PremakniZrtev)
+       if(GameManager.currentState == GameState.PremakniZrtev)
         StartCoroutine(MoveVictim());
-
     }
 
 }
