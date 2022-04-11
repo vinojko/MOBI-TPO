@@ -11,26 +11,36 @@ public class HandleVarnost : MonoBehaviour
     public VisualEffect smokeVfx;
 
     public Camera HanzCamera;
-    
+    [SerializeField] private GameObject polijVoda, pokrijPokrov;
+
+    bool pokrovClicked = false;
+
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
+    }
+
+    private void GameManagerOnStateChanged(GameState state)
+    {
+
+        polijVoda.SetActive(state == GameState.Varnost);
+        pokrijPokrov.SetActive(state == GameState.Varnost);
+
+    }
+
     public IEnumerator HandleButton()
     {
  
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(1);
 
-        if (GameManager.currentState == GameState.Varnost)
-        {
-            float startTime = Time.time;
-            while (Time.time - startTime <= 1)
-            {   
-                //Premaknemo gumb ON/OFF v x os, da zgleda kot da ga premaknemo
-                button.transform.position = Vector3.Lerp(button.transform.position, temp, Time.time - startTime); // lerp from A to B in one second
-                yield return 1; 
-            }
-            ChangeCamera.instance.ChangeToCamera(HanzCamera);
-            //STATE Varnost je sedaj koncana, NOV STATE
-            GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
-
-        }
+        ChangeCamera.instance.ChangeToCamera(HanzCamera);
+        //STATE Varnost je sedaj koncana, NOV STATE
+        GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
     }
 
     public void HandleButtonOff(){

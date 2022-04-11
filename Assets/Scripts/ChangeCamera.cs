@@ -15,6 +15,7 @@ public class ChangeCamera : MonoBehaviour
 
     public IEnumerator switchCamera(Camera second_Camera)
     {
+
         var animSpeed = 1.5f;
 
         Vector3 pos = main_Camera.transform.position;
