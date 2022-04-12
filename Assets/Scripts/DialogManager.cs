@@ -12,9 +12,33 @@ public class DialogManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    // Update is called once per frame
-    void Update()
+  public void startDialog(Dialog dialog)
     {
-        
+        Debug.Log("DIALOG TRIGGER");
+
+        sentences.Clear();
+
+        foreach (string sentence in sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+            
+        DisplayNextSentence();
+
+
+    }
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0)
+        {
+            EndDialog();
+            return;
+        }
+
+        sentences.Dequeue();
+    }
+    void EndDialog()
+    {
+        Debug.Log("End of dialog");
     }
 }
