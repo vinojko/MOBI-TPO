@@ -10000,6 +10000,7 @@ GameObject:
   - component: {fileID: 641673516}
   - component: {fileID: 641673515}
   - component: {fileID: 641673514}
+  - component: {fileID: 641673517}
   m_Layer: 5
   m_Name: FootstepsOven
   m_TagString: Untagged
@@ -10094,6 +10095,18 @@ MonoBehaviour:
           m_StringArgument: Varnost
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 641673517}
+        m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641673515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10132,6 +10145,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641673512}
   m_CullTransparentMesh: 1
+--- !u!114 &641673517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641673512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329799f5fbd413c4a83e623106415e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - <color=#FF0000> blablabla </color>
+    - TEST TEST TETST
 --- !u!1001 &642467876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12676,6 +12705,7 @@ GameObject:
   - component: {fileID: 776192131}
   - component: {fileID: 776192130}
   - component: {fileID: 776192129}
+  - component: {fileID: 776192133}
   m_Layer: 5
   m_Name: DialogBox
   m_TagString: Untagged
@@ -12781,6 +12811,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776192127}
   m_CullTransparentMesh: 1
+--- !u!95 &776192133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776192127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42094ca7e4279c546b02e9e561dcf9e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &778495448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18150,6 +18199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c98cb0148b560447b9c44934aa7419b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMesh: {fileID: 1878699432}
+  animator: {fileID: 776192133}
+  TypeSpeed: 0.013
 --- !u!1001 &1111076783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29753,7 +29805,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1852467178}
-  - component: {fileID: 1852467179}
   m_Layer: 0
   m_Name: DialogWriter
   m_TagString: Untagged
@@ -29775,21 +29826,6 @@ Transform:
   m_Father: {fileID: 688045648}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1852467179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852467177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149ba672c7e135c4d88964c20e2cf874, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialog: {fileID: 1878699432}
-  Index: 0
-  DialogSpeed: 0.5
 --- !u!1 &1855441368
 GameObject:
   m_ObjectHideFlags: 0
@@ -30166,7 +30202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: <color=red>[jingooo]</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fccc559baaf88524dae13ae5f73aa9db, type: 2}
   m_sharedMaterial: {fileID: -1203842163132959276, guid: fccc559baaf88524dae13ae5f73aa9db, type: 2}

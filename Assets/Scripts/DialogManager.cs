@@ -1,24 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
 
     private Queue<string> sentences;
+    public TextMeshProUGUI textMesh;
+
+    public Animator animator;
+    public float TypeSpeed;
     // Start is called before the first frame update
+    private Color32 purple; 
     void Start()
     {
+        purple = new Color32(233, 3, 218, 255);
         sentences = new Queue<string>();
     }
 
   public void startDialog(Dialog dialog)
     {
-        Debug.Log("DIALOG TRIGGER");
+        animator.SetBool("isOpen", true);
+        //Debug.Log("DIALOG TRIGGER");
 
         sentences.Clear();
 
-        foreach (string sentence in sentences)
+        foreach (string sentence in dialog.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -35,10 +43,25 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        sentences.Dequeue();
+        
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence (string sentence)
+    {
+        textMesh.text = "";
+
+        foreach (char letter in sentence.ToCharArray())
+        {
+            if (letter.Equals('[')) textMesh.color = purple;
+            textMesh.text += letter;
+            yield return new WaitForSeconds(TypeSpeed);
+        }
     }
     void EndDialog()
     {
-        Debug.Log("End of dialog");
+        animator.SetBool("isOpen", false);
     }
 }
