@@ -10,6 +10,5 @@ public class DialogTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogManager>().startDialog(dialog);
 
-
     }
 }
