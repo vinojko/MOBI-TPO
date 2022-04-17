@@ -11,7 +11,7 @@ public class HandleVarnost : MonoBehaviour
     public VisualEffect smokeVfx;
 
     public Camera HanzCamera;
-    [SerializeField] private GameObject polijVoda, pokrijPokrov;
+    [SerializeField] private GameObject polijVoda, pokrijPokrov, gasilniAparat;
 
     bool pokrovClicked = false;
 
@@ -30,6 +30,7 @@ public class HandleVarnost : MonoBehaviour
 
         polijVoda.SetActive(state == GameState.Varnost);
         pokrijPokrov.SetActive(state == GameState.Varnost);
+        gasilniAparat.SetActive(state == GameState.Varnost);
 
     }
 
