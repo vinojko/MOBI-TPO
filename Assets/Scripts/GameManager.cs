@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,8 +18,21 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentState = GameState.Footsteps;
-        UpdateGameState(GameState.Footsteps);
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+
+        if(sceneName == "1 - Varnost")
+        {
+            currentState = GameState.Footsteps;
+        }
+        else if(sceneName == "2 - Odzivnost")
+        {
+            currentState = GameState.VarnostKoncano;
+        }
+
+        UpdateGameState(currentState);
     }
 
     // Update is called once per frame
