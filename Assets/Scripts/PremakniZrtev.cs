@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class PremakniZrtev : MonoBehaviour
 {
     public Animator animator;
@@ -20,7 +20,7 @@ public class PremakniZrtev : MonoBehaviour
         MoveCamera();
         float progress = 0.0f;
 
- 
+
 
         while (progress < 1.0f)
         {
@@ -30,19 +30,22 @@ public class PremakniZrtev : MonoBehaviour
 
             progress += Time.deltaTime * animSpeed;
         }
-        
+
 
     }
     public void MoveTheVictim()
     {
+
+
         StopAllCoroutines();
-       if(GameManager.currentState == GameState.PremakniZrtev)
-        StartCoroutine(MoveVictim());
+        if (GameManager.currentState == GameState.PremakniZrtev) StartCoroutine(MoveVictim());
+        GameManager.instance.UpdateGameState(GameState.Odzivnost);
+
     }
 
     public void MoveCamera()
     {
- 
+
         ChangeCamera.instance.ChangeToCamera(cam);
 
     }

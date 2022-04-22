@@ -20,7 +20,8 @@ public class ShowFootsteps : MonoBehaviour
     {
    
         HanzFootsteps.SetActive(state == GameState.Footsteps || state == GameState.VarnostKoncano);
-        OvenFootsteps.SetActive(state == GameState.Footsteps);
- 
+        if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
+
+
     }
 }
