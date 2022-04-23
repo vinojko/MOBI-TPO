@@ -58,7 +58,7 @@ public class DialogManager : MonoBehaviour
 
             //Purple #f700ce - ce bos rabu
             if (letter.Equals('[')) {
-                textMesh.text += "<color=red>";
+                textMesh.text += "<color=#f700ce>";
             
             }
             textMesh.text += letter;
