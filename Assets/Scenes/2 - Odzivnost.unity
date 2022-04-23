@@ -5996,6 +5996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963304780}
+  - {fileID: 445226458}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6695,6 +6696,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4090680311511694, guid: f99e08c83de05bc45a73e623c2de7885, type: 3}
   m_PrefabInstance: {fileID: 440137075}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445226456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445226458}
+  - component: {fileID: 445226457}
+  m_Layer: 0
+  m_Name: OdzivnostDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &445226457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445226456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329799f5fbd413c4a83e623106415e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - Sedaj morate preveriti odzivnost. Osebo primite za ramena in jo stresite [STRESEMO
+      TELEFON].
+--- !u!4 &445226458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445226456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370027080}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446153020
 GameObject:
   m_ObjectHideFlags: 0
@@ -16047,8 +16095,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pozdravljeni,\ndanes sem tu, da vam predstavim nekaj osnov TPO. Najpomembnej\u0161a
-      stvar je, da na za\u010Detku vedno preverite varnost."
+    - "Sedaj morate preveriti odzivnost.\nPristopite do \u017Ertve."
+--- !u!1 &967661672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967661674}
+  - component: {fileID: 967661673}
+  m_Layer: 0
+  m_Name: MicTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &967661673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967661672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab00c7e042244b14b929c48d6d9f6a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &967661674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967661672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 658.5625, y: 1515.5851, z: -80.149124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &969208274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17561,6 +17651,7 @@ GameObject:
   - component: {fileID: 1064059372}
   - component: {fileID: 1064059371}
   - component: {fileID: 1064059370}
+  - component: {fileID: 1064059373}
   m_Layer: 5
   m_Name: FootstepsHanz
   m_TagString: Untagged
@@ -17655,6 +17746,18 @@ MonoBehaviour:
           m_StringArgument: PremakniZrtev
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1064059373}
+        m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1064059371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17693,6 +17796,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064059368}
   m_CullTransparentMesh: 1
+--- !u!114 &1064059373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064059368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329799f5fbd413c4a83e623106415e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - "Osebo premaknite na hrbet \n[PODRSAJTE  V DESNO]."
 --- !u!1001 &1073524071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21262,6 +21380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftShoulder: {fileID: 493937292}
   rightShoulder: {fileID: 2093971888}
+  odzivnostDialog: {fileID: 445226457}
 --- !u!1001 &1282129107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22571,6 +22690,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4509750270730824, guid: fa6bcaea44b77f54aa56935a01fdf5c0, type: 3}
   m_PrefabInstance: {fileID: 1371665668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1373135279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373135281}
+  - component: {fileID: 1373135280}
+  m_Layer: 0
+  m_Name: MicInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1373135280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373135279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304865d20849d5f47bf0e189e1bb8305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1373135281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373135279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 658.5625, y: 1515.5851, z: -80.149124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1374720358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38265,7 +38427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019201399}
   m_LocalRotation: {x: 0.2636774, y: 0.67220855, z: -0.6449188, w: 0.25037912}
-  m_LocalPosition: {x: 1.105937, y: -0.024942398, z: -9.357092}
+  m_LocalPosition: {x: 1.105937, y: 0.52, z: -9.357092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 923839311}

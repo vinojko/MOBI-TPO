@@ -10,6 +10,8 @@ public class Odzivnost : MonoBehaviour
 
     bool showShoulders = false;
 
+    public DialogTrigger odzivnostDialog;
+
 
     void Awake()
     {
@@ -23,7 +25,12 @@ public class Odzivnost : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        if(state == GameState.Odzivnost)showShoulders = true;
+        if (state == GameState.Odzivnost)
+        {
+            showShoulders = true;
+            odzivnostDialog.TriggerDialog();
+        }
+
     }
 
     void Start()

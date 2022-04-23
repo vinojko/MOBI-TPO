@@ -55,9 +55,17 @@ public class DialogManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
-            if (letter.Equals('[')) textMesh.color = purple;
+            if (letter.Equals('[')) {
+                textMesh.text += "<color=#f700ce>";
+            
+            }
             textMesh.text += letter;
             yield return new WaitForSeconds(TypeSpeed);
+
+            if (letter.Equals(']'))
+            {
+                textMesh.text += "</color>";
+            }
         }
     }
     void EndDialog()
