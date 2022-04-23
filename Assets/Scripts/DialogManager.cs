@@ -55,8 +55,10 @@ public class DialogManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
+
+            //Purple #f700ce - ce bos rabu
             if (letter.Equals('[')) {
-                textMesh.text += "<color=#f700ce>";
+                textMesh.text += "<color=red>";
             
             }
             textMesh.text += letter;
