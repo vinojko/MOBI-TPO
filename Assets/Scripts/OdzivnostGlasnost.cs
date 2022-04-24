@@ -18,8 +18,15 @@ public class OdzivnostGlasnost : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        
+        if(state == GameState.OdzivnostGlasnost)
+        {
+            AnimationUI();
+        }
 
+    }
+    private void Update()
+    {
+     
     }
 
     private void AnimationUI()

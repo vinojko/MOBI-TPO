@@ -30,6 +30,11 @@ public class Odzivnost : MonoBehaviour
             showShoulders = true;
             odzivnostDialog.TriggerDialog();
         }
+        else{
+            showShoulders = false;
+            leftShoulder.SetActive(false);
+            rightShoulder.SetActive(false);
+        }
 
     }
 
