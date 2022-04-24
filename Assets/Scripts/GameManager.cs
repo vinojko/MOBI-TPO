@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Odzivnost:
                 break;
+            case GameState.OdzivnostGlasnost:
+                break;
             case GameState.PomocDihanje:
                 break;
             case GameState.CPR:
@@ -72,13 +74,14 @@ public class GameManager : MonoBehaviour
 
 public enum GameState
 {
-    //VARNOST
+    /* --- 1 - VARNOST --- */
     Footsteps,
     Varnost,
+    /* --- 2 - ODZIVNOST--- */
     VarnostKoncano,
     PremakniZrtev,
-    //Konec VARNOST
     Odzivnost,
+    OdzivnostGlasnost,
     PomocDihanje,
     CPR,
     AED

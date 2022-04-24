@@ -46,6 +46,11 @@ public class Odzivnost : MonoBehaviour
         {
             Invoke(nameof(ShowShoulders), 3);
         }
+
+        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken)
+        {
+            GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
+        }
     }
 
     private void ShowShoulders()

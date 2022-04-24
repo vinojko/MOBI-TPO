@@ -9,6 +9,6 @@ public class MicTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(MicInput.MicLoudness);
+        //Debug.Log(MicInput.MicLoudness);
     }
 }

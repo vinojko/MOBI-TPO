@@ -26,7 +26,7 @@ public class PremakniZrtev : MonoBehaviour
         {
             animator.SetFloat(BlendHash, progress);
             yield return new WaitForEndOfFrame();
-            Debug.Log(progress);
+            //Debug.Log(progress);
 
             progress += Time.deltaTime * animSpeed;
         }
