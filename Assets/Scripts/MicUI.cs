@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 /* http://www.Mousawi.Dev By @AbdullaMousawi*/
-public class Health : MonoBehaviour
+public class MicUI : MonoBehaviour
 {
     public Text healthText;
     public Image ringHealthBar;
@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     float health, maxHealth = 1;
     float lerpSpeed;
+    public float Amplifier = 3.5f;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class Health : MonoBehaviour
     void HealthBarFiller()
     {
  
-        ringHealthBar.fillAmount = Mathf.Lerp(ringHealthBar.fillAmount, MicInput.MicLoudness, lerpSpeed);
+        ringHealthBar.fillAmount = Mathf.Lerp(ringHealthBar.fillAmount, MicInput.MicLoudness * Amplifier, lerpSpeed);
 
 
     }

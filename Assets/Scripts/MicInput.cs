@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MicInput : MonoBehaviour
 {
-
     public static float MicLoudness;
 
     private string _device;
@@ -15,6 +14,7 @@ public class MicInput : MonoBehaviour
         if (_device == null) _device = Microphone.devices[0];
         _clipRecord = Microphone.Start(_device, true, 999, 44100);
     }
+
 
     void StopMicrophone()
     {

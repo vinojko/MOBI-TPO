@@ -27,13 +27,11 @@ public class Odzivnost : MonoBehaviour
     {
         if (state == GameState.Odzivnost)
         {
-            showShoulders = true;
+            Invoke(nameof(ShowShoulders), 3);
             odzivnostDialog.TriggerDialog();
         }
-        else{
-            showShoulders = false;
-            leftShoulder.SetActive(false);
-            rightShoulder.SetActive(false);
+        else if(state == GameState.OdzivnostGlasnost){
+            Invoke(nameof(HideShoulders), 0.1f);
         }
 
     }
@@ -47,12 +45,8 @@ public class Odzivnost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(showShoulders == true)
-        {
-            Invoke(nameof(ShowShoulders), 3);
-        }
 
-        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken)
+        if (ButtonSingleton.instance.leftShoulder /*&& ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken*/)
         {
             GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
         }
@@ -62,5 +56,10 @@ public class Odzivnost : MonoBehaviour
     {
         leftShoulder.SetActive(true);
         rightShoulder.SetActive(true);
+    }
+    private void HideShoulders()
+    {
+        leftShoulder.SetActive(false);
+        rightShoulder.SetActive(false);
     }
 }

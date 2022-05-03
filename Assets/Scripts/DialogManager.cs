@@ -9,10 +9,11 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     public TextMeshProUGUI textMesh;
 
-    public Animator animator;
     public float TypeSpeed;
     // Start is called before the first frame update
-    private Color32 purple; 
+    private Color32 purple;
+
+    public GameObject DialogUI;
     void Start()
     {
         purple = new Color32(233, 3, 218, 255);
@@ -21,9 +22,12 @@ public class DialogManager : MonoBehaviour
 
   public void startDialog(Dialog dialog)
     {
-        animator.SetBool("isOpen", true);
+        //animator.SetBool("isOpen", true);
         //Debug.Log("DIALOG TRIGGER");
 
+        //LeanTween.moveLocal(DialogUI, new Vector3(0f, -35f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
+
+        AnimationUIOpen();
         sentences.Clear();
 
         foreach (string sentence in dialog.sentences)
@@ -72,6 +76,11 @@ public class DialogManager : MonoBehaviour
     }
     void EndDialog()
     {
-        animator.SetBool("isOpen", false);
+        //animator.SetBool("isOpen", false);
+    }
+
+    void AnimationUIOpen()
+    {
+        LeanTween.moveLocalY(DialogUI, 1085f, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
     }
 }
