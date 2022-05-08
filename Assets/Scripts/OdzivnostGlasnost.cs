@@ -31,10 +31,11 @@ public class OdzivnostGlasnost : MonoBehaviour
     {
         Debug.Log(MicInput.MicLoudness);
   
-        if(MicInput.MicLoudness >= threshold)
+        if(MicInput.MicLoudness >= threshold && (GameManager.currentState == GameState.OdzivnostGlasnost))
         {
             Debug.Log("Uporabnik je prekoracil glasnost");
             dialogTrigger.TriggerDialog();
+            GameManager.instance.UpdateGameState(GameState.OdzivnostKoncano);
         }
     }
 
