@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NextLevelAnim : MonoBehaviour
 {
-    public GameObject panel;
+    public CanvasGroup panel;
     public GameObject nextLevelUI;
     // Start is called before the first frame update
     void Start()
@@ -33,17 +33,11 @@ public class NextLevelAnim : MonoBehaviour
     {
         if (state == GameState.OdzivnostKoncano)
         {
-            FadeStart();
+            LeanTween.alphaCanvas(panel, 1f, 1f);
+            Debug.Log("ANIMACIJA");
         }
 
 
     }
-    void FadeStart()
-    {
-        LeanTween.alpha(panel, 1f, 1f).setEase(LeanTweenType.linear);
-    }
-    void FadeFinished()
-    {
-        LeanTween.alpha(panel, 0f, 1f).setEase(LeanTweenType.linear).setOnComplete(FadeStart);
-    }
+
 }
