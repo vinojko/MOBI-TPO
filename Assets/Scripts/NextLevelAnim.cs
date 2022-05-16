@@ -34,10 +34,17 @@ public class NextLevelAnim : MonoBehaviour
         if (state == GameState.OdzivnostKoncano)
         {
             LeanTween.alphaCanvas(panel, 1f, 1f);
+            NextLevelAnimation();
+            
             Debug.Log("ANIMACIJA");
         }
 
 
+    }
+
+    private void NextLevelAnimation()
+    {
+        LeanTween.moveLocal(nextLevelUI, new Vector3(0f, 0f, 0f), 1.7f).setDelay(0.7f).setEase(LeanTweenType.easeOutExpo);
     }
 
 }

@@ -23,7 +23,11 @@ public class OdzivnostGlasnost : MonoBehaviour
     {
         if(state == GameState.OdzivnostGlasnost)
         {
-            AnimationUI();
+            StartAnimation();
+        }
+        else
+        {
+            EndAnimation();
         }
 
     }
@@ -39,8 +43,13 @@ public class OdzivnostGlasnost : MonoBehaviour
         }
     }
 
-    private void AnimationUI()
+    private void StartAnimation()
     {
-        LeanTween.moveLocal(MicUI, new Vector3(-300f, -857f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
+    }
+
+    private void EndAnimation()
+    {
+        LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
     }
 }

@@ -20,7 +20,27 @@ public class DialogManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-  public void startDialog(Dialog dialog)
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
+    }
+
+    private void GameManagerOnStateChanged(GameState state)
+    {
+        if (state == GameState.OdzivnostKoncano)
+        {
+            AnimationUIClose();
+        }
+
+
+    }
+
+    public void startDialog(Dialog dialog)
     {
         //animator.SetBool("isOpen", true);
         //Debug.Log("DIALOG TRIGGER");
@@ -39,6 +59,8 @@ public class DialogManager : MonoBehaviour
 
 
     }
+
+
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
@@ -76,11 +98,16 @@ public class DialogManager : MonoBehaviour
     }
     void EndDialog()
     {
-        //animator.SetBool("isOpen", false);
+        AnimationUIClose();
     }
 
     void AnimationUIOpen()
     {
         LeanTween.moveLocalY(DialogUI, 1085f, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
+    }
+
+    void AnimationUIClose()
+    {
+        LeanTween.moveLocalY(DialogUI, 2085f, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
     }
 }
