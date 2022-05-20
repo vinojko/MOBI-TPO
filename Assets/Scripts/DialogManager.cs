@@ -32,7 +32,7 @@ public class DialogManager : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        if (state == GameState.OdzivnostKoncano)
+        if (state == GameState.OdzivnostKoncano || state == GameState.VarnostKoncano)
         {
             AnimationUIClose();
         }
@@ -99,6 +99,11 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         AnimationUIClose();
+    }
+
+    void CheckCorrectState()
+    {
+
     }
 
     void AnimationUIOpen()

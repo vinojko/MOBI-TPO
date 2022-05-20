@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         }
         else if(sceneName == "2 - Odzivnost")
         {
-            currentState = GameState.VarnostKoncano;
+            currentState = GameState.OdzivnostZacetek;
         }
 
         UpdateGameState(currentState);
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
             case GameState.Varnost:
                 break;
             case GameState.VarnostKoncano:
+                break;
+            case GameState.OdzivnostZacetek:
                 break;
             case GameState.PremakniZrtev:
                 break;
@@ -81,6 +83,7 @@ public enum GameState
     Varnost,
     /* --- 2 - ODZIVNOST--- */
     VarnostKoncano,
+    OdzivnostZacetek,
     PremakniZrtev,
     Odzivnost,
     OdzivnostGlasnost,

@@ -18,10 +18,11 @@ public class ShowFootsteps : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
+        Debug.Log("OnChange happened!");
    
-        HanzFootsteps.SetActive(state == GameState.Footsteps || state == GameState.VarnostKoncano);
-        if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
-
+        HanzFootsteps.SetActive(state == GameState.OdzivnostZacetek || state == GameState.Footsteps );
+        //if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
+        //if (HanzFootsteps != null) HanzFootsteps.SetActive(state == GameState.Footsteps);
 
     }
 }
