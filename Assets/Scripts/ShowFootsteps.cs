@@ -21,6 +21,9 @@ public class ShowFootsteps : MonoBehaviour
         Debug.Log("OnChange happened!");
    
         HanzFootsteps.SetActive(state == GameState.OdzivnostZacetek || state == GameState.Footsteps );
+        if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
+
+
         //if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
         //if (HanzFootsteps != null) HanzFootsteps.SetActive(state == GameState.Footsteps);
 

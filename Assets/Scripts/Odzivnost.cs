@@ -46,7 +46,7 @@ public class Odzivnost : MonoBehaviour
     void Update()
     {
 
-        if (ButtonSingleton.instance.leftShoulder /*&& ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken*/)
+        if (ButtonSingleton.instance.leftShoulder &&  ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken)
         {
             GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
         }
