@@ -75,7 +75,7 @@ public class SwipeManager : MonoBehaviour
             if (deltaY > 0)
             {
                 this.OnSwipeUp.Invoke();
-                //Debug.Log("up");
+               Debug.Log("SWIPE UP");
             }
             else if (deltaY < 0)
             {

@@ -11,6 +11,8 @@ public class UndressHans : MonoBehaviour
     {
         HansDressed.SetActive(false);
         HansUndressed.SetActive(true);
+
+        GameManager.instance.UpdateGameState(GameState.ChinLift);
     }
     
 }
