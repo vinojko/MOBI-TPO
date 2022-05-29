@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MainMenuAnimation : MonoBehaviour
+{
+    // Start is called before the first frame update
+
+    public GameObject Hand, Logo, firstButton, secondButton, thirdButton, fourthButton, fifthButton;
+    void Start()
+    {
+        HandAnim();
+        LogoAnim();
+        ButtonsAnim();  
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void HandAnim()
+    {
+        LeanTween.moveLocal(Hand, new Vector3(0f, -245f, 0f), 1.5f).setDelay(0.1f).setEase(LeanTweenType.easeOutExpo);
+    }
+
+    void LogoAnim()
+    {
+        LeanTween.moveLocal(Logo, new Vector3(0f, 0f, 0f), 1.5f).setDelay(0.1f).setEase(LeanTweenType.easeOutExpo);
+    }
+
+    void ButtonsAnim()
+    {
+        LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.4f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.6f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.8f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(1.0f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(1.2f).setEase(LeanTweenType.easeOutElastic);
+    }
+}
