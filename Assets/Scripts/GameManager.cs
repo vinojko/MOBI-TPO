@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.DihanjeZacetek:
                 break;
+            case GameState.ChinLift:
+                break;
+            case GameState.MouthCheck:
+                break;
+            case GameState.MouthInside:
+                break;
             case GameState.CPR:
                 break;
             case GameState.AED:
@@ -91,6 +97,8 @@ public enum GameState
     /* --- 2 - DIHANJE IN KLIC NA POMOC --- */
     DihanjeZacetek,
     ChinLift,
+    MouthCheck,
+    MouthInside,
     CPR,
     AED
 

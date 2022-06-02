@@ -32,10 +32,10 @@ public class MainMenuAnimation : MonoBehaviour
 
     void ButtonsAnim()
     {
-        LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.4f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.6f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(0.8f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(1.0f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1.5f).setDelay(1.2f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1f).setDelay(0.4f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1f).setDelay(0.6f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(0.8f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.2f).setEase(LeanTweenType.easeOutExpo);
     }
 }

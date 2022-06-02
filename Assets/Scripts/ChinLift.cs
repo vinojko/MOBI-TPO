@@ -22,10 +22,11 @@ public class ChinLift : MonoBehaviour
 
     private void Update()
     {
-        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder)
+        if (ButtonSingleton.instance.leftShoulder && GameManager.currentState == GameState.ChinLift)
         {
             Debug.Log("Chin correct");
             animator.SetBool("playChin", true);
+            GameManager.instance.UpdateGameState(GameState.MouthCheck);
         }
     }
 
@@ -41,20 +42,25 @@ public class ChinLift : MonoBehaviour
             HandleChinLift();
         }
         
+        if(state != GameState.ChinLift)
+        {
+            headLift.SetActive(false);
+            chinLift.SetActive(false);
+        }
+        
     }
 
     private IEnumerator ChinLiftCoroutine()
     {
         MoveCamera();
         yield return new WaitForSeconds(1.0f);
-
-        
-        
         chinLift.SetActive(true);
         headLift.SetActive(true);
-        
+
     }
 
+
+    
     private void HandleChinLift()
     {
         StartCoroutine(ChinLiftCoroutine());
