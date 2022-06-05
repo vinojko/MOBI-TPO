@@ -16,6 +16,7 @@ public class MouthCheck : MonoBehaviour
     public GameObject mouth;
 
 
+
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -88,6 +89,7 @@ public class MouthCheck : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
         mouth.SetActive(true);
+
         
     }
 }

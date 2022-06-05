@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,26 +7,42 @@ public class InsideMouth : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject brocolli;
+
     public GameObject mouth;
+    public DialogTrigger mouthDialog;
+    public GameObject ui;
+
 
     private float AnimationSpeed = 0.5f;
 
-    void Start()
+    void Awake()
     {
-        
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnDestroy()
     {
-        
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
     }
 
-    public void moveBrocolli()
+    private void GameManagerOnStateChanged(GameState state)
     {
-        LeanTween.moveLocal(brocolli, new Vector3(1000f, 0f, 0f), 1.4f).setEase(LeanTweenType.easeOutExpo);
+        if (state == GameState.MouthInside)
+        {
+            StartCoroutine(StartDialog());
+        }
+    }
+
+
+    public void AnswerYes()
+    {
         StartCoroutine(Fade());
+        GameManager.instance.UpdateGameState(GameState.CheckBreathing);
+    }
+    public void AnswerNo()
+    {
+        //Dialog napacno...
     }
 
    public IEnumerator Fade()
@@ -36,6 +53,16 @@ public class InsideMouth : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         mouth.SetActive(false);
         
+
+    }
+    public IEnumerator StartDialog()
+    {
+        yield return new WaitForSeconds(1.5f);
+        mouthDialog.TriggerDialog();
+        yield return new WaitForSeconds(1.0f);
+        ui.SetActive(true);
+
+
 
     }
 }
