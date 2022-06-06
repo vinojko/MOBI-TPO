@@ -11,6 +11,7 @@ public class InsideMouth : MonoBehaviour
     public GameObject mouth;
     public DialogTrigger mouthDialog;
     public GameObject ui;
+    public Camera cam;
 
 
     private float AnimationSpeed = 0.5f;
@@ -32,6 +33,10 @@ public class InsideMouth : MonoBehaviour
         {
             StartCoroutine(StartDialog());
         }
+        else
+        {
+            ui.SetActive(false);
+        }
     }
 
 
@@ -52,6 +57,7 @@ public class InsideMouth : MonoBehaviour
         FaderMouth.instance.FadeOut();
         yield return new WaitForSeconds(0.5f);
         mouth.SetActive(false);
+        ChangeCamera.instance.ChangeToCamera(cam);
         
 
     }
