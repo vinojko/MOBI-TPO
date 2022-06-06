@@ -72,6 +72,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.CheckBreathing:
                 break;
+            case GameState.CallHelp:
+                break;
             case GameState.CPR:
                 break;
             case GameState.AED:
@@ -102,6 +104,7 @@ public enum GameState
     MouthCheck,
     MouthInside,
     CheckBreathing,
+    CallHelp,
     CPR,
     AED
 
