@@ -22,7 +22,7 @@ public class ChinLift : MonoBehaviour
 
     private void Update()
     {
-        if (ButtonSingleton.instance.leftShoulder && GameManager.currentState == GameState.ChinLift)
+        if (ButtonSingleton.instance.leftShoulder && GameManager.currentState == GameState.ChinLift && ButtonSingleton.instance.leftShoulder)
         {
             Debug.Log("Chin correct");
             animator.SetBool("playChin", true);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CallHelp : MonoBehaviour
 {
-    public DialogTrigger dialog1, dialog2;
+    public DialogTrigger dialog1, dialog2, dialog3;
     public GameObject Answers;
     public GameObject MicUI;
     public Camera kiraCam;
@@ -38,10 +38,11 @@ public class CallHelp : MonoBehaviour
         if ((MicEnable /*&& MicInput.MicLoudness >= threshold)*/))
         {
             MicEnable = false;
+            dialog3.TriggerDialog();
             EndAnimation();
             ChangeCamera.instance.ChangeToCameraSlow(kiraCam);
-
             StartRunning();
+            GameManager.instance.UpdateGameState(GameState.Call112);
         }
     }
 

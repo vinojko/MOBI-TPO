@@ -29,7 +29,7 @@ public class CheckBreathing : MonoBehaviour
     private void Start()
     {
         //Za testiranje
-        CheckBreathingButton.SetActive(true);
+        CheckBreathingButton.SetActive(false);
         yesNo.SetActive(false);
         for (int i = 0; i < mVolumeProfile.components.Count; i++)
         {
