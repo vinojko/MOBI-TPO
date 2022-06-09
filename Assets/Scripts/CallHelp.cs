@@ -7,6 +7,14 @@ public class CallHelp : MonoBehaviour
     public DialogTrigger dialog1, dialog2;
     public GameObject Answers;
     public GameObject MicUI;
+    public Camera kiraCam;
+
+    bool MicEnable = false;
+    //Za tesatiranje mikrofona na racunalniku
+    bool micTesterPass = true;
+    private float threshold = 0.80f;
+    public Animator kiraAnimator;
+    int kiraHash;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -15,7 +23,7 @@ public class CallHelp : MonoBehaviour
 
     private void Start()
     {
-
+        kiraHash = Animator.StringToHash("Kira");
     }
 
 
@@ -24,12 +32,26 @@ public class CallHelp : MonoBehaviour
         GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
     }
 
+    private void Update()
+    {
+
+        if ((MicEnable /*&& MicInput.MicLoudness >= threshold)*/))
+        {
+            MicEnable = false;
+            EndAnimation();
+            ChangeCamera.instance.ChangeToCameraSlow(kiraCam);
+
+            StartRunning();
+        }
+    }
+
     private void GameManagerOnStateChanged(GameState state)
     {
         if (state == GameState.CallHelp)
         {
             dialog1.TriggerDialog();
             StartCoroutine(ShowAnswers());
+
         }
     }
 
@@ -49,11 +71,27 @@ public class CallHelp : MonoBehaviour
     }
     private void StartAnimation()
     {
-        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setEaseInOutExpo();
+        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(1.7f).setEaseInOutExpo();
+        MicEnable = true;
     }
 
     private void EndAnimation()
     {
         LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
+    }
+
+    private void StartRunning()
+    {
+
+        kiraAnimator.SetBool("StartRunning", true);
+        /*LeanTween.value(gameObject, 1f, 2f, 0.5f).setOnUpdate((value) =>
+        {
+            kiraAnimator.SetFloat(kiraHash, value);
+        });*/
+
+        LeanTween.value(gameObject, 0f, 1f, 0.5f).setDelay(1.6f).setOnUpdate((value) =>
+        {
+            kiraAnimator.SetFloat(kiraHash, value);
+        });
     }
 }
