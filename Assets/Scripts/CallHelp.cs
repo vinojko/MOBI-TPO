@@ -9,9 +9,9 @@ public class CallHelp : MonoBehaviour
     public GameObject MicUI;
     public Camera kiraCam;
 
-    bool MicEnable = false;
+    private bool MicEnable = false;
     //Za tesatiranje mikrofona na racunalniku
-    bool micTesterPass = true;
+    public bool micTesterPass = false;
     private float threshold = 0.80f;
     public Animator kiraAnimator;
     int kiraHash;
@@ -35,7 +35,7 @@ public class CallHelp : MonoBehaviour
     private void Update()
     {
 
-        if ((MicEnable /*&& MicInput.MicLoudness >= threshold)*/))
+        if ((MicEnable && MicInput.MicLoudness >= threshold) || micTesterPass == true)
         {
             MicEnable = false;
             dialog3.TriggerDialog();
