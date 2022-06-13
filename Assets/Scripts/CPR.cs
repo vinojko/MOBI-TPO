@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CPR : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class CPR : MonoBehaviour
     private int taps;
     bool firstClick = true;
 
-    int bpm = 0;
+    float bpm = 0f;
     int neededSec = 0;
 
     float last, now, diff, sum, entries;
+
+    public Slider mainSlider;
 
     List<float> bpms = new List<float>();
     void Start()
@@ -26,7 +29,7 @@ public class CPR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        mainSlider.value = bpm;
     }
 
     public IEnumerator BPM()
@@ -70,11 +73,13 @@ public class CPR : MonoBehaviour
         entries++;
 
         float avg = sum / entries;
+        
+        Debug.Log(60f / avg);
+        bpm = 60f / avg;
 
-        Debug.Log(60 / avg);
-       
 
 
-            
+
+
     }
 }
