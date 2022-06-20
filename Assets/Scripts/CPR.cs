@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,17 +7,17 @@ public class CPR : MonoBehaviour
 {
     // Start is called before the first frame update
     private int secElapsed;
-    private int taps;
+    private int taps = 0;
     bool firstClick = true;
 
     float bpm = 0f;
+    float lastBpm = 0f;
     int neededSec = 0;
 
     float last, now, diff, sum, entries;
 
     public Slider mainSlider;
 
-    List<float> bpms = new List<float>();
     void Start()
     {
         secElapsed = 0;
@@ -29,7 +28,7 @@ public class CPR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mainSlider.value = bpm;
+        
     }
 
     public IEnumerator BPM()
@@ -59,6 +58,7 @@ public class CPR : MonoBehaviour
          {
              taps++;
          }*/
+        lastBpm = bpm;
 
         if (firstClick)
         {
@@ -77,9 +77,22 @@ public class CPR : MonoBehaviour
         Debug.Log(60f / avg);
         bpm = 60f / avg;
 
+        taps++;
+        valueAnimation();
 
 
 
+    }
+
+    private void valueAnimation()
+    {
+        if(taps >= 3)
+        {
+            LeanTween.value(gameObject, lastBpm, bpm, 0.5f).setOnUpdate((value) =>
+            {
+                mainSlider.value = value;
+            });
+        }
 
     }
 }

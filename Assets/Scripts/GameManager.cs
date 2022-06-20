@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
         {
             currentState = GameState.OdzivnostZacetek;
         }
+        else if (sceneName == "4 - CPR")
+        {
+            currentState = GameState.HandPositions;
+        }
+
 
         UpdateGameState(currentState);
     }
@@ -76,8 +81,11 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Call112:
                 break;
+            case GameState.HandPositions:
+                break;
             case GameState.CPR:
                 break;
+
             case GameState.AED:
                 break;
         }
@@ -100,7 +108,7 @@ public enum GameState
     Odzivnost,
     OdzivnostGlasnost,
     OdzivnostKoncano,
-    /* --- 2 - DIHANJE IN KLIC NA POMOC --- */
+    /* --- 3 - DIHANJE IN KLIC NA POMOC --- */
     DihanjeZacetek,
     ChinLift,
     MouthCheck,
@@ -108,6 +116,8 @@ public enum GameState
     CheckBreathing,
     CallHelp,
     Call112,
+    /* --- 4 - CPR --- */
+    HandPositions,
     CPR,
     AED
 
