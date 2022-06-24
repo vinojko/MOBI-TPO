@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Linq;
 
 public class CPR : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class CPR : MonoBehaviour
     private int secElapsed;
     private int taps = 0;
     bool firstClick = true;
+    public TextMeshProUGUI bpmText;
 
     float bpm = 0f;
     float lastBpm = 0f;
@@ -16,48 +19,59 @@ public class CPR : MonoBehaviour
 
     float last, now, diff, sum, entries;
 
+
     public Slider mainSlider;
+    public GameObject hands;
+    public Animator animator;
+
+    private Vector3 initHands;
+
+    public GameObject cprUI;
+
+    List<float> bpms = new List<float>();
 
     void Start()
     {
         secElapsed = 0;
         taps = 0;
+        initHands = new Vector3 (3.03889f, 6.0774f, 3.798612f);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
     }
 
-    public IEnumerator BPM()
+
+    private void OnDestroy()
     {
-        while (true)
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
+    }
+
+    private void GameManagerOnStateChanged(GameState state)
+    {
+
+        if(state == GameState.CPR)
         {
-            yield return new WaitForSeconds(1f);
-            secElapsed++;
-            neededSec = 60 / secElapsed;
-            bpm = taps * neededSec;
-            Debug.Log("BPM: " + bpm);
+            UIAnimation();
         }
+    }
 
-       
+    public IEnumerator HanzAnimation()
+    {
+
+        animator.SetBool("playCPR", true);
+        yield return new WaitForSeconds(0.2f);
+        animator.SetBool("playCPR", false);
+
+
+
 
     }
 
     public void Tap()
     {
-        /* if (firstClick)
-         {
-             StartCoroutine(BPM());
-             firstClick = false;
-             taps++;
-         }
-         else
-         {
-             taps++;
-         }*/
         lastBpm = bpm;
 
         if (firstClick)
@@ -70,17 +84,32 @@ public class CPR : MonoBehaviour
         diff = now - last;
         last = now;
         sum = sum + diff;
+
+        bpms.Add(diff);
+
         entries++;
 
-        float avg = sum / entries;
+        float avg = bpms.Average();
         
         Debug.Log(60f / avg);
         bpm = 60f / avg;
 
         taps++;
+
         valueAnimation();
+        HandsAnimation();
+        StartCoroutine(HanzAnimation());
+
+        int bpmInt = (int)bpm;
+
+        if(taps > 2)
+        {
+            bpmText.text = bpmInt.ToString();
+        }
 
 
+        
+ 
 
     }
 
@@ -94,5 +123,16 @@ public class CPR : MonoBehaviour
             });
         }
 
+    }
+
+    private void HandsAnimation()
+    {
+        LeanTween.scale(hands, initHands - new Vector3(0.2f,0.2f,0.2f), 0.2f);
+        LeanTween.scale(hands, initHands, 0.2f).setDelay(0.2f);
+    }
+
+   private void UIAnimation()
+    {
+        LeanTween.moveLocal(cprUI, new Vector3(0f, -810f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
     }
 }

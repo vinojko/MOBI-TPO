@@ -13,6 +13,8 @@ public class Call112 : MonoBehaviour
     public DialogTrigger callAmbulance, wrongNumber, correctNumber;
 
     [SerializeField]TextMeshProUGUI phoneText;
+
+    [SerializeField] Camera first;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -35,16 +37,6 @@ public class Call112 : MonoBehaviour
             
         }
 
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 
@@ -88,10 +80,19 @@ public class Call112 : MonoBehaviour
         {
             correctNumber.TriggerDialog();
             PhoneAnimationEnd();
+
+            StartCoroutine(EndCamera());
         }
         else
         {
             wrongNumber.TriggerDialog();
         }
     }
+
+    private IEnumerator EndCamera()
+    {
+        yield return new WaitForSeconds(0.7f);
+        ChangeCamera.instance.ChangeToCameraSlow(first);
+    }
+
 }

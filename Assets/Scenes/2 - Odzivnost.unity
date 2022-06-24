@@ -6172,8 +6172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad790b3714d31429c92ee997664579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeThreshold: 50
-  timeThreshold: 0.3
+  swipeThreshold: 56.98
+  timeThreshold: 1.04
   OnSwipeLeft:
     m_PersistentCalls:
       m_Calls: []
@@ -32978,7 +32978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MicUI: {fileID: 1532382049}
-  threshold: 0.4
+  threshold: 0.3
   dialogTrigger: {fileID: 1913471483}
 --- !u!114 &1913471483
 MonoBehaviour:

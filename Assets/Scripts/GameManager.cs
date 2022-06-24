@@ -83,6 +83,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.HandPositions:
                 break;
+            case GameState.LinePositions:
+                break;
             case GameState.CPR:
                 break;
 
@@ -118,6 +120,7 @@ public enum GameState
     Call112,
     /* --- 4 - CPR --- */
     HandPositions,
+    LinePositions,
     CPR,
     AED
 

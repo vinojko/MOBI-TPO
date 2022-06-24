@@ -80,6 +80,7 @@ public class SwipeManager : MonoBehaviour
             else if (deltaY < 0)
             {
                 this.OnSwipeDown.Invoke();
+                Debug.Log("Swipe Down");
                 //Debug.Log("down");
             }
         }

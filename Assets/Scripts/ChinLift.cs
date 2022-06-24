@@ -9,6 +9,8 @@ public class ChinLift : MonoBehaviour
     public Camera chinCamera;
     [SerializeField] private Animator animator;
 
+    [SerializeField] DialogTrigger chinDialog;
+
 
     private void Start()
     {
@@ -40,6 +42,7 @@ public class ChinLift : MonoBehaviour
         if(state == GameState.ChinLift)
         {
             HandleChinLift();
+            chinDialog.TriggerDialog();
         }
         
         if(state != GameState.ChinLift)

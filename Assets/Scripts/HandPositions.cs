@@ -5,7 +5,7 @@ using UnityEngine;
 public class HandPositions : MonoBehaviour
 {
     [SerializeField] GameObject handPositions;
-    public DialogTrigger rightAnswerDialog, wrongAnswerDialog;
+    public DialogTrigger startDialog, rightAnswerDialog, wrongAnswerDialog;
 
     //public DialogTrigger handPosDialog;
     void Awake()
@@ -14,7 +14,6 @@ public class HandPositions : MonoBehaviour
     }
     private void Start()
     {
-        GameManager.instance.UpdateGameState(GameState.HandPositions);
         handPositionsAnim();
     }
 
@@ -26,15 +25,13 @@ public class HandPositions : MonoBehaviour
     private void GameManagerOnStateChanged(GameState state)
     {
 
-        if(state == GameState.HandPositions)
-        {
-        }
 
     }
 
     private void handPositionsAnim()
     {
 
+        //startDialog.TriggerDialog();
         LeanTween.moveLocal(handPositions, new Vector3(0f, 160f, 0f), 1.7f).setDelay(3.0f).setEase(LeanTweenType.easeOutExpo);
     }
 
@@ -42,6 +39,7 @@ public class HandPositions : MonoBehaviour
     {
         rightAnswerDialog.TriggerDialog();
         LeanTween.moveLocal(handPositions, new Vector3(0f, -760f, 0f), 1.7f).setDelay(0.3f).setEase(LeanTweenType.easeOutExpo);
+        GameManager.instance.UpdateGameState(GameState.LinePositions);
     }
     public void WrongAnswer()
     {

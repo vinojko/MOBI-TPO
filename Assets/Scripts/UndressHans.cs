@@ -9,7 +9,7 @@ public class UndressHans : MonoBehaviour
     // Start is called before the first frame update
    public void Undress()
     {
-        if(GameManager.currentState == GameState.Footsteps)
+        if(GameManager.currentState == GameState.Footsteps || GameManager.currentState == GameState.OdzivnostKoncano)
         {
             HansDressed.SetActive(false);
             HansUndressed.SetActive(true);

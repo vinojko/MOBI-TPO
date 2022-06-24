@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1122,7 +1122,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: InfoHouse
+          m_StringArgument: 4 - CPR
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &594231730
@@ -1769,8 +1769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 332, y: 1007}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 318.81293, y: 913.35297}
+  m_SizeDelta: {x: 84.0849, y: 84.0849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951329939
 MonoBehaviour:

@@ -12,7 +12,7 @@ public class CallHelp : MonoBehaviour
     private bool MicEnable = false;
     //Za tesatiranje mikrofona na racunalniku
     public bool micTesterPass = false;
-    private float threshold = 0.80f;
+    private float threshold = 0.30f;
     public Animator kiraAnimator;
     int kiraHash;
     void Awake()
