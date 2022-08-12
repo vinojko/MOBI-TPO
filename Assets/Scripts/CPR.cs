@@ -16,6 +16,7 @@ public class CPR : MonoBehaviour
     float bpm = 0f;
     float lastBpm = 0f;
     int neededSec = 0;
+    int cprCounter = 0;
 
     float last, now, diff, sum, entries;
 
@@ -27,6 +28,7 @@ public class CPR : MonoBehaviour
     private Vector3 initHands;
 
     public GameObject cprUI;
+    public GameObject RespirationIcon;
 
     List<float> bpms = new List<float>();
 
@@ -107,9 +109,12 @@ public class CPR : MonoBehaviour
             bpmText.text = bpmInt.ToString();
         }
 
+        cprCounter++;
 
-        
- 
+        if (cprCounter == 30) {
+            Respiration();
+            //cprCounter = 0;
+        }
 
     }
 
@@ -134,5 +139,10 @@ public class CPR : MonoBehaviour
    private void UIAnimation()
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -810f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
+    }
+
+    private void Respiration()
+    {
+        hands.SetActive(false);
     }
 }
