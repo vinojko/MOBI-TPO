@@ -2793,6 +2793,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4989483737447878, guid: a1f1e78432fe272419d0956231290428, type: 3}
   m_PrefabInstance: {fileID: 187123889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &190564635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190564636}
+  - component: {fileID: 190564637}
+  m_Layer: 0
+  m_Name: AEDPads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &190564636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190564635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 688045648}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &190564637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190564635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0849e83bafaf964ca2c04885ff4fd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analysisDialog: {fileID: 1498882639}
+  leftPadSet: 0
+  rightPadSet: 0
 --- !u!1001 &197144911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8127,7 +8173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 427fd39004cf91d4098a1ab7a957ab9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00fe5408c7d80d948bcb9f78c5165fce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13003,6 +13049,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1528884526}
+  - {fileID: 190564636}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13406,6 +13453,7 @@ Transform:
   m_LocalScale: {x: 0.70912457, y: 0.70912457, z: 0.70912457}
   m_Children:
   - {fileID: 5017091}
+  - {fileID: 727919924}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: -0.01, z: -53.268005}
@@ -13459,6 +13507,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4616358364489076, guid: 5bf8ac8357b02674daa70b347bef47b0, type: 3}
   m_PrefabInstance: {fileID: 719942572}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727919923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727919924}
+  - component: {fileID: 727919925}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727919924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727919923}
+  m_LocalRotation: {x: 0.52023286, y: 0.8531575, z: 0.029347166, w: -0.02487836}
+  m_LocalPosition: {x: -1.1668, y: -0.921, z: -1.1778}
+  m_LocalScale: {x: 2.9746, y: 2.9746, z: 2.9746}
+  m_Children: []
+  m_Father: {fileID: 717037956}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -4.356, y: -539.315, z: 62.721}
+--- !u!108 &727919925
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727919923}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.063926935, g: 1, b: 0, a: 1}
+  m_Intensity: 0.56
+  m_Range: 0.0634
+  m_SpotAngle: 120.23671
+  m_InnerSpotAngle: 26.130394
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.853
+    m_Bias: 0.02
+    m_NormalBias: 0.1
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &733133411
 GameObject:
   m_ObjectHideFlags: 0
@@ -18258,8 +18399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Sedaj morate za\u010Deti z CPR.\nKaj menite, da je pravilni polo\u017Eaj\nrok
-      pri izvedbi CPR?"
+    - "Namesti elektrodi na bolnikov gol\nprsni ko\u0161, kot je prikazano."
 --- !u!1001 &969208274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25239,10 +25379,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.243
       objectReference: {fileID: 0}
+    - target: {fileID: -3745917357464307196, guid: f3f867e58beb64e4d84529fc5448d8d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12201c559eb60dc42a6ec0a855cc1c6a, type: 2}
     - target: {fileID: -3056041028626425089, guid: f3f867e58beb64e4d84529fc5448d8d2, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 461c019eddd2c1f41908e12c1f91433d, type: 2}
+    - target: {fileID: -1967059241291111399, guid: f3f867e58beb64e4d84529fc5448d8d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12201c559eb60dc42a6ec0a855cc1c6a, type: 2}
+    - target: {fileID: -7376061280610868, guid: f3f867e58beb64e4d84529fc5448d8d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12201c559eb60dc42a6ec0a855cc1c6a, type: 2}
     - target: {fileID: 919132149155446097, guid: f3f867e58beb64e4d84529fc5448d8d2, type: 3}
       propertyPath: m_Name
       value: defib11
@@ -27427,7 +27579,7 @@ GameObject:
   - component: {fileID: 1498882637}
   - component: {fileID: 1498882639}
   m_Layer: 0
-  m_Name: RightAnswer
+  m_Name: AnalysisDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27461,7 +27613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico in prsnim ko\u0161om."
+    - "Analiziram sr\u010Dni ritem.\n<b>Ne dotikaj se bolnika.</b>\n. . . . . .\nSvetujem
+      \u0161ok, polnim, umakni se. \n. . . . . .\nPritisni utripajo\u010D gumb za
+      \u0161ok."
 --- !u!1001 &1502623873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33952,7 +34106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum nekin neki neki neki neki test1 test avkm js sm zdravnik
+  m_text: test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}

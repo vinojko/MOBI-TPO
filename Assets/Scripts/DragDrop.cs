@@ -10,6 +10,8 @@ public class DragDrop : MonoBehaviour
     private Vector3 startPosition;
     public GameObject padLeft, padRight;
 
+    private bool padLeftSet, padRightSet;
+
     void OnMouseDown()
     {
         offset = transform.position - MouseWorldPosition();
@@ -26,6 +28,9 @@ public class DragDrop : MonoBehaviour
         padLeft.SetActive(false);
         padRight.SetActive(false);
         startPosition = transform.position;
+
+        padLeftSet = false;
+        padRightSet = false;
     }
 
     void OnMouseUp()
@@ -39,8 +44,19 @@ public class DragDrop : MonoBehaviour
             {
                 // Za center - transform.position = hitInfo.transform.position;
 
-                if(destinationTag == "DropLeft") padLeft.SetActive(true);
-                else if(destinationTag == "DropRight") padRight.SetActive(true);
+                if (destinationTag == "DropLeft")
+                {
+                    padLeft.SetActive(true);
+                    AEDPads.instance.leftPadSet = true;
+                    AEDPads.instance.PadsSet();
+                    
+                }
+                else if (destinationTag == "DropRight") {
+
+                    padRight.SetActive(true);
+                    AEDPads.instance.rightPadSet = true;
+                    AEDPads.instance.PadsSet();
+                } 
 
                 gameObject.SetActive(false);
             }
@@ -50,6 +66,7 @@ public class DragDrop : MonoBehaviour
             }
 
         }
+
 
         transform.GetComponent<Collider>().enabled = true;
     }

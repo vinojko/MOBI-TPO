@@ -12,6 +12,7 @@ public class DialogManager : MonoBehaviour
     public float TypeSpeed;
     // Start is called before the first frame update
     private Color32 purple;
+    char prevLetter = '+';
 
     public GameObject DialogUI;
     void Start()
@@ -88,12 +89,30 @@ public class DialogManager : MonoBehaviour
             
             }
             textMesh.text += letter;
+
+            if(prevLetter.Equals('.') && letter.Equals(' ')){
+                TypeSpeed = 0.38f;
+            }
+            else if (letter.Equals('.'))
+            {
+                TypeSpeed = 0.12f;
+            }
+            else if (letter.Equals(','))
+            {
+                TypeSpeed = 0.08f;
+            }
+            else
+            {
+                TypeSpeed = 0.03f;
+            }
+
             yield return new WaitForSeconds(TypeSpeed);
 
             if (letter.Equals(']'))
             {
                 textMesh.text += "</color>";
             }
+            prevLetter = letter;
         }
     }
     void EndDialog()
