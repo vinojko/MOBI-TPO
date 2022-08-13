@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-/* http://www.Mousawi.Dev By @AbdullaMousawi*/
 public class MicUI : MonoBehaviour
 {
     public Text healthText;

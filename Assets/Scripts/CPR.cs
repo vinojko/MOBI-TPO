@@ -13,10 +13,14 @@ public class CPR : MonoBehaviour
     bool firstClick = true;
     public TextMeshProUGUI bpmText;
 
+
+
     float bpm = 0f;
     float lastBpm = 0f;
     int neededSec = 0;
     int cprCounter = 0;
+
+    private int respirationCounter = 0;
 
     float last, now, diff, sum, entries;
 
@@ -28,16 +32,26 @@ public class CPR : MonoBehaviour
     private Vector3 initHands;
 
     public GameObject cprUI;
-    public GameObject RespirationIcon;
+    public GameObject respirationIcon;
+
+    public Camera defaultCam, respirationCam;
 
     List<float> bpms = new List<float>();
+
+    public Image compressionRing, respirationRing;
 
     void Start()
     {
         secElapsed = 0;
         taps = 0;
-        initHands = new Vector3 (3.03889f, 6.0774f, 3.798612f);
-        
+        initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
+        respirationIcon.SetActive(true);
+
+    }
+
+    private void Update()
+    {
+        compressionRing.fillAmount = Mathf.Lerp(compressionRing.fillAmount, cprCounter / 30, 0.3f);
     }
 
     void Awake()
@@ -54,7 +68,7 @@ public class CPR : MonoBehaviour
     private void GameManagerOnStateChanged(GameState state)
     {
 
-        if(state == GameState.CPR)
+        if (state == GameState.CPR)
         {
             UIAnimation();
         }
@@ -92,7 +106,7 @@ public class CPR : MonoBehaviour
         entries++;
 
         float avg = bpms.Average();
-        
+
         Debug.Log(60f / avg);
         bpm = 60f / avg;
 
@@ -104,23 +118,26 @@ public class CPR : MonoBehaviour
 
         int bpmInt = (int)bpm;
 
-        if(taps > 2)
+        if (taps > 2)
         {
             bpmText.text = bpmInt.ToString();
         }
 
         cprCounter++;
 
-        if (cprCounter == 30) {
+        if (cprCounter == 30)
+        {
             Respiration();
-            //cprCounter = 0;
+            cprCounter = 0;
         }
+
+        
 
     }
 
     private void valueAnimation()
     {
-        if(taps >= 3)
+        if (taps >= 3)
         {
             LeanTween.value(gameObject, lastBpm, bpm, 0.5f).setOnUpdate((value) =>
             {
@@ -132,11 +149,11 @@ public class CPR : MonoBehaviour
 
     private void HandsAnimation()
     {
-        LeanTween.scale(hands, initHands - new Vector3(0.2f,0.2f,0.2f), 0.2f);
+        LeanTween.scale(hands, initHands - new Vector3(0.2f, 0.2f, 0.2f), 0.2f);
         LeanTween.scale(hands, initHands, 0.2f).setDelay(0.2f);
     }
 
-   private void UIAnimation()
+    private void UIAnimation()
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -810f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
     }
@@ -144,5 +161,37 @@ public class CPR : MonoBehaviour
     private void Respiration()
     {
         hands.SetActive(false);
+        respirationIcon.SetActive(true);
     }
+
+    public IEnumerator RespirationClicked()
+    {
+
+        respirationCounter++;
+
+        respirationIcon.SetActive(false);
+        ChangeCamera.instance.ChangeToCamera(respirationCam);
+        yield return new WaitForSeconds(1.5f);
+        ChangeCamera.instance.ChangeToCamera(defaultCam);
+        yield return new WaitForSeconds(0.5f);
+
+        if (respirationCounter == 2)
+        {
+            respirationIcon.SetActive(false);
+            hands.SetActive(true);
+            respirationCounter = 0;
+            respirationCounter = 0;
+        }
+        else
+        {
+            respirationIcon.SetActive(true);
+            hands.SetActive(false);
+        }
+    }
+
+    public void RespirationMouth()
+    {
+        StartCoroutine(RespirationClicked());
+    }
+
 }

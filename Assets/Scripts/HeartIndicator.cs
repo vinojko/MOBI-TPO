@@ -23,6 +23,7 @@ public class HeartIndicator : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5455f);
             heartAnimationFadeIn();
+            Vibration.Vibrate(10, 100);
             heartAnimationFadeOut();
         }
      
