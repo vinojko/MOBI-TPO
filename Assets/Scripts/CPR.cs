@@ -11,7 +11,14 @@ public class CPR : MonoBehaviour
     private int secElapsed;
     private int taps = 0;
     bool firstClick = true;
+
+    private float respirationTimerStart;
+    private float respirationTimerEnd;
+    private float respirationTimerDiff = 0f;
+
     public TextMeshProUGUI bpmText;
+    public TextMeshProUGUI compressionCounterText;
+    public TextMeshProUGUI respirationCounterText;
 
 
 
@@ -40,6 +47,8 @@ public class CPR : MonoBehaviour
 
     public Image compressionRing, respirationRing;
 
+    float lerpSpeed;
+
     void Start()
     {
         secElapsed = 0;
@@ -51,7 +60,13 @@ public class CPR : MonoBehaviour
 
     private void Update()
     {
-        compressionRing.fillAmount = Mathf.Lerp(compressionRing.fillAmount, cprCounter / 30, 0.3f);
+        lerpSpeed = 5f * Time.deltaTime;
+
+        compressionCounterText.text = cprCounter.ToString();
+        respirationCounterText.text = respirationCounter.ToString();
+
+        compressionRing.fillAmount = Mathf.Lerp(compressionRing.fillAmount, cprCounter / 30f, lerpSpeed);
+        respirationRing.fillAmount = Mathf.Lerp(respirationRing.fillAmount, respirationCounter / 2f, lerpSpeed);
     }
 
     void Awake()
@@ -160,6 +175,7 @@ public class CPR : MonoBehaviour
 
     private void Respiration()
     {
+        respirationTimerStart = Time.time;
         hands.SetActive(false);
         respirationIcon.SetActive(true);
     }
@@ -177,10 +193,17 @@ public class CPR : MonoBehaviour
 
         if (respirationCounter == 2)
         {
+            
+            
+
             respirationIcon.SetActive(false);
             hands.SetActive(true);
             respirationCounter = 0;
             respirationCounter = 0;
+
+            respirationTimerEnd = Time.time;
+            respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
+            last = respirationTimerEnd;
         }
         else
         {

@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IntroAnimation : MonoBehaviour
+{
+    // Start is called before the first frame update
+
+
+    public GameObject number, title, hand, icon;
+    void Start()
+    {
+        numberAnim();
+        titleAnim();
+        handAnim();
+    }
+
+    void numberAnim()
+    {
+        LeanTween.moveLocal(number, new Vector3(-2f, 655f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.scale(number, new Vector3(0.35f,0.35f,0.35f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+    }
+
+    void titleAnim()
+    {
+        LeanTween.moveLocal(title, new Vector3(0f, 80f, 0f), 1.4f).setDelay(1.0f).setEase(LeanTweenType.easeInOutExpo);
+    }
+
+    void handAnim()
+    {
+        LeanTween.moveLocal(hand, new Vector3(0f, -140f, 0f), 1.4f).setDelay(1.3f).setEase(LeanTweenType.easeInOutExpo);
+    }
+
+
+}

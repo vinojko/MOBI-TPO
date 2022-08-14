@@ -623,6 +623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpmText: {fileID: 311686902}
+  compressionCounterText: {fileID: 1143896020}
+  respirationCounterText: {fileID: 923433044}
   mainSlider: {fileID: 289471642}
   hands: {fileID: 1339671121}
   animator: {fileID: 1355890042}
@@ -631,7 +633,7 @@ MonoBehaviour:
   defaultCam: {fileID: 2086945619}
   respirationCam: {fileID: 1493799316}
   compressionRing: {fileID: 1982172532}
-  respirationRing: {fileID: 0}
+  respirationRing: {fileID: 283178516}
 --- !u!1001 &36505157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5687,7 +5689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.17818347, y: 17.196728}
+  m_AnchoredPosition: {x: -0.17818347, y: 14.47}
   m_SizeDelta: {x: 160, y: 11.0691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289471642
@@ -6453,7 +6455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6241858, y: -4.7999988}
+  m_AnchoredPosition: {x: -2.2579913, y: -4.7999988}
   m_SizeDelta: {x: 89.3124, y: 96.8684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311686902
@@ -6813,7 +6815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6, y: -4.8}
+  m_AnchoredPosition: {x: 5.71, y: -4.8}
   m_SizeDelta: {x: 89.3124, y: 96.8684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350188500
@@ -8450,7 +8452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.3, y: 20.8}
+  m_AnchoredPosition: {x: -6.3, y: 18.9}
   m_SizeDelta: {x: 33.0434, y: 32.868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470683614
@@ -12852,7 +12854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.427018, y: 20.804424}
+  m_AnchoredPosition: {x: 8.427018, y: 18.9}
   m_SizeDelta: {x: 41.424, y: 32.8176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685739106
@@ -42115,7 +42117,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
