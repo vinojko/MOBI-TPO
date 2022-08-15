@@ -7,6 +7,8 @@ public class NextLevelAnim : MonoBehaviour
 {
     public CanvasGroup panel;
     public GameObject nextLevelUI;
+
+    public DataManager dataManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,16 @@ public class NextLevelAnim : MonoBehaviour
             
             Debug.Log("ANIMACIJA");
         }
+
+        switch (state)
+        {
+            case GameState.OdzivnostKoncano:
+                dataManager.data.odzivnost = true;
+                break;
+        }
+
+        dataManager.Save();
+             
 
 
     }
