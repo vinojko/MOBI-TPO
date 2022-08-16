@@ -34,15 +34,18 @@ public class SaveManager : MonoBehaviour
             dataManager.Save();
 
         }
-    }
-    void Start()
-    {
-        
+        else if(state == GameState.OdzivnostKoncano)
+        {
+            dataManager.Load();
+            dataManager.data.dihanje = true;
+            dataManager.Save();
+        }
+        /*else if (state == GameState.DihanjeKoncano)
+        {
+            dataManager.Load();
+            dataManager.data.dihanje = true;
+            dataManager.Save();
+        }*/
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
