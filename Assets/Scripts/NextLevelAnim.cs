@@ -41,14 +41,7 @@ public class NextLevelAnim : MonoBehaviour
             Debug.Log("ANIMACIJA");
         }
 
-        switch (state)
-        {
-            case GameState.OdzivnostKoncano:
-                dataManager.data.odzivnost = true;
-                break;
-        }
 
-        dataManager.Save();
              
 
 

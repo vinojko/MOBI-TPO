@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public SaveData data = new SaveData();
+    public SaveData data;
     private string file = "SaveGame.txt";
 
     public void Save()

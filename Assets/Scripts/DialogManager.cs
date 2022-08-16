@@ -95,11 +95,11 @@ public class DialogManager : MonoBehaviour
             }
             else if (letter.Equals('.'))
             {
-                TypeSpeed = 0.12f;
+                TypeSpeed = 0.16f;
             }
             else if (letter.Equals(','))
             {
-                TypeSpeed = 0.08f;
+                TypeSpeed = 0.13f;
             }
             else
             {

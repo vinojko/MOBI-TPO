@@ -10,7 +10,7 @@ public class IntroDialog : MonoBehaviour
 
     void Start()
     {
-        Invoke("StartDialog",0.1f);
+        Invoke("StartDialog", 4.4f);
     }
 
     void StartDialog()
