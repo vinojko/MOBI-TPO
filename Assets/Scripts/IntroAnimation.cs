@@ -18,13 +18,13 @@ public class IntroAnimation : MonoBehaviour
 
     void numberAnim()
     {
-        LeanTween.moveLocal(number, new Vector3(-2f, 655f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.moveLocal(number, new Vector3(-2f, 695f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
         LeanTween.scale(number, new Vector3(0.35f,0.35f,0.35f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
     }
 
     void titleAnim()
     {
-        LeanTween.moveLocal(title, new Vector3(0f, 80f, 0f), 1.4f).setDelay(1.7f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.moveLocal(title, new Vector3(0f, 120f, 0f), 1.4f).setDelay(1.7f).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(title, new Vector3(1f, 1f, 1f), 0.5f).setDelay(1.0f).setEase(LeanTweenType.easeInOutExpo);
     }
 

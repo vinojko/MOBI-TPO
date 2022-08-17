@@ -15,6 +15,8 @@ public class MouthCheck : MonoBehaviour
     public GameObject mouthIcon;
     public GameObject mouth;
 
+    public DialogTrigger mouthCheck, mouthWrong, mouthCorrect;
+
 
 
     void Awake()
@@ -37,6 +39,7 @@ public class MouthCheck : MonoBehaviour
         else
         {
             mouthIcon.SetActive(true);
+            mouthCheck.TriggerDialog();
         }
 
     }
@@ -91,5 +94,14 @@ public class MouthCheck : MonoBehaviour
         mouth.SetActive(true);
 
         
+    }
+
+    public void MouthWrong()
+    {
+        mouthWrong.TriggerDialog();
+    }
+    public void MouthCorrect()
+    {
+        mouthCorrect.TriggerDialog();
     }
 }

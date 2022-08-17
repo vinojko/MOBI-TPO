@@ -81,14 +81,19 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Call112:
                 break;
+            case GameState.DihanjeKoncano:
+                break;
             case GameState.HandPositions:
                 break;
             case GameState.LinePositions:
                 break;
             case GameState.CPR:
                 break;
-
+            case GameState.CPRKoncano:
+                break;
             case GameState.AED:
+                break;
+            case GameState.AEDKoncano:
                 break;
         }
         OnGameStateChanged?.Invoke(newState);
@@ -118,10 +123,14 @@ public enum GameState
     CheckBreathing,
     CallHelp,
     Call112,
+    DihanjeKoncano,
     /* --- 4 - CPR --- */
     HandPositions,
     LinePositions,
     CPR,
-    AED
+    CPRKoncano,
+    /* --- 5 - AED --- */
+    AED,
+    AEDKoncano
 
 }

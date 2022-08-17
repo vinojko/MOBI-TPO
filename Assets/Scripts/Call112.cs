@@ -52,6 +52,7 @@ public class Call112 : MonoBehaviour
         LeanTween.moveLocal(Answers, new Vector3(0f, -1035f, 0f), 1.5f).setEaseInOutExpo();
         KiraPhoneAnimation();
         PhoneAnimation();
+        callAmbulance.TriggerDialog();
 
     }
 
@@ -82,6 +83,7 @@ public class Call112 : MonoBehaviour
             PhoneAnimationEnd();
 
             StartCoroutine(EndCamera());
+            
         }
         else
         {
@@ -92,6 +94,15 @@ public class Call112 : MonoBehaviour
     private IEnumerator EndCamera()
     {
         yield return new WaitForSeconds(0.7f);
+        ChangeCamera.instance.ChangeToCameraSlow(first);
+
+        yield return new WaitForSeconds(0.5f);
+        GameManager.instance.UpdateGameState(GameState.DihanjeKoncano);
+    }
+
+    private IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(1f);
         ChangeCamera.instance.ChangeToCameraSlow(first);
     }
 

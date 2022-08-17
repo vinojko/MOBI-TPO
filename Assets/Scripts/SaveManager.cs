@@ -40,12 +40,12 @@ public class SaveManager : MonoBehaviour
             dataManager.data.dihanje = true;
             dataManager.Save();
         }
-        /*else if (state == GameState.DihanjeKoncano)
+        else if (state == GameState.DihanjeKoncano)
         {
             dataManager.Load();
-            dataManager.data.dihanje = true;
+            dataManager.data.cpr = true;
             dataManager.Save();
-        }*/
+        }
     }
 
 }

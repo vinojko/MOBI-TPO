@@ -33,7 +33,7 @@ public class NextLevelAnim : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        if (state == GameState.OdzivnostKoncano || state == GameState.VarnostKoncano)
+        if (state == GameState.OdzivnostKoncano || state == GameState.VarnostKoncano || state == GameState.DihanjeKoncano || state == GameState.CPRKoncano || state == GameState.AEDKoncano)
         {
             LeanTween.alphaCanvas(panel, 1f, 1f);
             NextLevelAnimation();
