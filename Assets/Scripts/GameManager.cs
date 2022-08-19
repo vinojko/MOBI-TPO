@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.CPR:
                 break;
+            case GameState.CPRKira:
+                break;
             case GameState.CPRKoncano:
                 break;
             case GameState.AED:
@@ -128,6 +130,7 @@ public enum GameState
     HandPositions,
     LinePositions,
     CPR,
+    CPRKira,
     CPRKoncano,
     /* --- 5 - AED --- */
     AED,

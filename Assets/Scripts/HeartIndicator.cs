@@ -6,16 +6,31 @@ public class HeartIndicator : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Image heartRed;
-    void Start()
-    {
-        StartCoroutine(showHeart());
-    }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         
     }
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
+
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
+    }
+
+    private void GameManagerOnStateChanged(GameState state)
+    {
+        if (state == GameState.CPR)
+        {
+            StartCoroutine(showHeart());
+
+        }
+    }
+ 
 
     private IEnumerator showHeart()
     {
@@ -23,7 +38,7 @@ public class HeartIndicator : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5455f);
             heartAnimationFadeIn();
-            Vibration.Vibrate(10, 100);
+            Vibration.Vibrate(10);
             heartAnimationFadeOut();
         }
      

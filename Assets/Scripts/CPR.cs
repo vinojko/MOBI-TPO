@@ -49,6 +49,8 @@ public class CPR : MonoBehaviour
 
     float lerpSpeed;
 
+    private int cycle = 2;
+
     void Start()
     {
         secElapsed = 0;
@@ -172,6 +174,10 @@ public class CPR : MonoBehaviour
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -810f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
     }
+    private void UIAnimationClose()
+    {
+        LeanTween.moveLocal(cprUI, new Vector3(0f, -4000f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
+    }
 
     private void Respiration()
     {
@@ -204,11 +210,23 @@ public class CPR : MonoBehaviour
             respirationTimerEnd = Time.time;
             respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
             last = respirationTimerEnd;
+
+            cycle++;
         }
         else
         {
             respirationIcon.SetActive(true);
             hands.SetActive(false);
+        }
+
+        if(cycle == 3)
+        {
+            UIAnimationClose();
+            hands.SetActive(false);
+            respirationIcon.SetActive(false);
+
+            GameManager.instance.UpdateGameState(GameState.CPRKira);
+            
         }
     }
 

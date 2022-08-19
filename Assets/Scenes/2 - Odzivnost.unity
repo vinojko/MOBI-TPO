@@ -38522,7 +38522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 686266363}
   nextLevelUI: {fileID: 2116468332}
-  dataManager: {fileID: 0}
+  dataManager: {fileID: 1332318363}
 --- !u!1001 &1775133244
 PrefabInstance:
   m_ObjectHideFlags: 0

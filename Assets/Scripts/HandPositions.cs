@@ -32,7 +32,7 @@ public class HandPositions : MonoBehaviour
     {
 
         //startDialog.TriggerDialog();
-        LeanTween.moveLocal(handPositions, new Vector3(0f, 160f, 0f), 1.7f).setDelay(3.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.moveLocal(handPositions, new Vector3(0f, 160f, 0f), 1.7f).setDelay(7.5f).setEase(LeanTweenType.easeOutExpo);
     }
 
     public void CloseHandPositions()

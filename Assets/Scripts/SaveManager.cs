@@ -46,6 +46,12 @@ public class SaveManager : MonoBehaviour
             dataManager.data.cpr = true;
             dataManager.Save();
         }
+        else if (state == GameState.CPRKoncano)
+        {
+            dataManager.Load();
+            dataManager.data.aed = true;
+            dataManager.Save();
+        }
     }
 
 }

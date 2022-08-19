@@ -74,6 +74,7 @@ public class CheckBreathing : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         AnimateStopwatch();
+        yield return new WaitForSeconds(1.5f);
         Timer.instance.ResetTimer();
     }
 
