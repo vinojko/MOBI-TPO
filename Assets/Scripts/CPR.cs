@@ -85,7 +85,7 @@ public class CPR : MonoBehaviour
     private void GameManagerOnStateChanged(GameState state)
     {
 
-        if (state == GameState.CPR)
+        if (state == GameState.CPR /* || state == GameState.CPRAED*/)
         {
             UIAnimation();
         }
