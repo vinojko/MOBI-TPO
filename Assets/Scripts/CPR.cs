@@ -33,6 +33,7 @@ public class CPR : MonoBehaviour
 
 
     public Slider mainSlider;
+    public Slider depthSlider;
     public GameObject hands;
     public Animator animator;
 
@@ -41,7 +42,7 @@ public class CPR : MonoBehaviour
     public GameObject cprUI;
     public GameObject respirationIcon;
 
-    public Camera defaultCam, respirationCam;
+    public Camera defaultCam, respirationCam, CPRCam;
 
     List<float> bpms = new List<float>();
 
@@ -56,7 +57,7 @@ public class CPR : MonoBehaviour
         secElapsed = 0;
         taps = 0;
         initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
-        respirationIcon.SetActive(true);
+        respirationIcon.SetActive(false);
 
     }
 
@@ -88,6 +89,8 @@ public class CPR : MonoBehaviour
         if (state == GameState.CPR /* || state == GameState.CPRAED*/)
         {
             UIAnimation();
+            ChangeCameraCPR();
+            Depth.instance.DepthAnimation();
         }
     }
 
@@ -105,6 +108,7 @@ public class CPR : MonoBehaviour
 
     public void Tap()
     {
+        Depth.instance.ResetTimer();
         lastBpm = bpm;
 
         if (firstClick)
@@ -177,6 +181,7 @@ public class CPR : MonoBehaviour
     private void UIAnimationClose()
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -4000f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
+        Depth.instance.DepthAnimationClose();
     }
 
     private void Respiration()
@@ -184,6 +189,7 @@ public class CPR : MonoBehaviour
         respirationTimerStart = Time.time;
         hands.SetActive(false);
         respirationIcon.SetActive(true);
+        
     }
 
     public IEnumerator RespirationClicked()
@@ -193,8 +199,10 @@ public class CPR : MonoBehaviour
 
         respirationIcon.SetActive(false);
         ChangeCamera.instance.ChangeToCamera(respirationCam);
-        yield return new WaitForSeconds(1.5f);
-        ChangeCamera.instance.ChangeToCamera(defaultCam);
+        yield return new WaitForSeconds(0.4f);
+        FaderMouth.instance.FadeDepth();
+        yield return new WaitForSeconds(1.1f);
+        ChangeCamera.instance.ChangeToCamera(CPRCam);
         yield return new WaitForSeconds(0.5f);
 
         if (respirationCounter == 2)
@@ -233,6 +241,11 @@ public class CPR : MonoBehaviour
     public void RespirationMouth()
     {
         StartCoroutine(RespirationClicked());
+    }
+
+    private void ChangeCameraCPR()
+    {
+        ChangeCamera.instance.ChangeToCamera(CPRCam);
     }
 
 }

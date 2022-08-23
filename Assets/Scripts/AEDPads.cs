@@ -47,8 +47,11 @@ public class AEDPads : MonoBehaviour
         }
 
         light.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         ChangeCamera.instance.ChangeToCamera(defaultCam);
+        yield return new WaitForSeconds(2f);
+
+        //Sound
 
         shockClicked.TriggerDialog();
         
