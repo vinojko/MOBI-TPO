@@ -16,7 +16,7 @@ public partial class AudioManager : MonoBehaviour
     void Awake()
     {
 
-        if (instance == null)
+        /*if (instance == null)
             instance = this;
         else
         {
@@ -24,7 +24,7 @@ public partial class AudioManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);*/
 
         foreach (Sound s in sounds)
         {

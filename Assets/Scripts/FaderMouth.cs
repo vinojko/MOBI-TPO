@@ -42,7 +42,7 @@ public class FaderMouth : MonoBehaviour
     public void FadeOutDepth()
     {
 
-        LeanTween.value(gameObject, 1f, 0f, AnimationSpeed).setDelay(1f).setOnUpdate((value) =>
+        LeanTween.value(gameObject, 1f, 0f, AnimationSpeed).setDelay(2f).setOnUpdate((value) =>
         {
             var tempColor = image.color;
             tempColor.a = value;

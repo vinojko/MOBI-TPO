@@ -10,6 +10,7 @@ public class IntroAnimation : MonoBehaviour
     public GameObject number, title, hand, introScreen;
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Kitchen");
         numberAnim();
         titleAnim();
         handAnim();

@@ -12,6 +12,8 @@ public class Odzivnost : MonoBehaviour
 
     public DialogTrigger odzivnostDialog;
 
+    public DialogTrigger zavpijteDialog;
+
 
     void Awake()
     {
@@ -49,6 +51,7 @@ public class Odzivnost : MonoBehaviour
         if (ButtonSingleton.instance.leftShoulder &&  ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken)
         {
             GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
+            zavpijteDialog.TriggerDialog();
         }
     }
 

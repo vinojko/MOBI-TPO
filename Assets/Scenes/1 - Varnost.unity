@@ -15303,7 +15303,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.4481132, g: 1, b: 0.50298, a: 1}
+    m_PressedColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -23352,6 +23352,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 400629286}
+        m_TargetAssemblyTypeName: HandleVarnost, Assembly-CSharp
+        m_MethodName: IncorrectSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1312431937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25682,6 +25694,42 @@ MonoBehaviour:
   - name: Type
     clip: {fileID: 8300000, guid: 5fc1253a7108ca34eba32d57bf7c2a92, type: 3}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Clack
+    clip: {fileID: 8300000, guid: 2da3a18c91cebd247a000013b30a89ca, type: 3}
+    volume: 0.232
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseOff
+    clip: {fileID: 8300000, guid: 2da3a18c91cebd247a000013b30a89ca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseOn
+    clip: {fileID: 8300000, guid: 2da3a18c91cebd247a000013b30a89ca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kitchen
+    clip: {fileID: 8300000, guid: dd9d3b697569a814785b0caf9012174c, type: 3}
+    volume: 0.048
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: a91c4b5591394a443ae1894734035a85, type: 3}
+    volume: 0.323
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Incorrect
+    clip: {fileID: 8300000, guid: 953cb167c0cdbca4fa7a5ee02b68894c, type: 3}
+    volume: 0.929
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -28772,7 +28820,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.4481132, g: 1, b: 0.50298, a: 1}
+    m_PressedColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -28796,6 +28844,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1634962944}
         m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
         m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 400629286}
+        m_TargetAssemblyTypeName: HandleVarnost, Assembly-CSharp
+        m_MethodName: IncorrectSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28857,9 +28917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'NEPRAVILNO!
-
-      Iskanje gasilnega aparata nam vzame dragocen.'
+    - "NEPRAVILNO!\nIskanje gasilnega aparata nam vzame dragocen \u010Das."
 --- !u!1001 &1635412387
 PrefabInstance:
   m_ObjectHideFlags: 0

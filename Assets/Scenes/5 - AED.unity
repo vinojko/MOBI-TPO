@@ -39230,10 +39230,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Type
-    clip: {fileID: 8300000, guid: 5fc1253a7108ca34eba32d57bf7c2a92, type: 3}
-    volume: 0.494
-    pitch: 0
+  - name: Clack
+    clip: {fileID: 8300000, guid: 2da3a18c91cebd247a000013b30a89ca, type: 3}
+    volume: 0.232
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kitchen
+    clip: {fileID: 8300000, guid: dd9d3b697569a814785b0caf9012174c, type: 3}
+    volume: 0.048
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!1001 &1469750426

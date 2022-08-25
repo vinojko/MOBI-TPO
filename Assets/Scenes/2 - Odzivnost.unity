@@ -7200,6 +7200,7 @@ Transform:
   m_Children:
   - {fileID: 963304780}
   - {fileID: 445226458}
+  - {fileID: 809469039}
   - {fileID: 1572652138}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -13979,7 +13980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11496292, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_graphyMode
@@ -15697,6 +15698,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4579798467464872, guid: 84201fd22b3febe4b8add3e2b9a7485f, type: 3}
   m_PrefabInstance: {fileID: 809086070}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &809469038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809469039}
+  - component: {fileID: 809469040}
+  m_Layer: 0
+  m_Name: ZavpijteDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809469039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809469038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370027080}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809469040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809469038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329799f5fbd413c4a83e623106415e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - 'Zavpijte: Ali ste v redu?'
 --- !u!1001 &814244001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24304,6 +24351,7 @@ MonoBehaviour:
   leftShoulder: {fileID: 493937292}
   rightShoulder: {fileID: 2093971888}
   odzivnostDialog: {fileID: 445226457}
+  zavpijteDialog: {fileID: 809469040}
 --- !u!1001 &1280780964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28350,6 +28398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465443286}
+  - component: {fileID: 1465443287}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -28371,6 +28420,31 @@ Transform:
   m_Father: {fileID: 1114660262}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1465443287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465443285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9e232cea34ec49850df3c2bf357a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Kitchen
+    clip: {fileID: 8300000, guid: dd9d3b697569a814785b0caf9012174c, type: 3}
+    volume: 0.048
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Clack
+    clip: {fileID: 8300000, guid: 2da3a18c91cebd247a000013b30a89ca, type: 3}
+    volume: 0.232
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &1465942899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34727,7 +34801,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370027080}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1573241723
 PrefabInstance:

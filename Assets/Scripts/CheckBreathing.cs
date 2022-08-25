@@ -76,6 +76,8 @@ public class CheckBreathing : MonoBehaviour
         AnimateStopwatch();
         yield return new WaitForSeconds(1.5f);
         Timer.instance.ResetTimer();
+        yield return new WaitForSeconds(4f);
+        AgonalnoDihanje();
     }
 
     private void AnimateStopwatch()
@@ -141,6 +143,11 @@ public class CheckBreathing : MonoBehaviour
     {
         yesNo.SetActive(false);
         GameManager.instance.UpdateGameState(GameState.CallHelp);
+    }
+
+    public void AgonalnoDihanje()
+    {
+        FindObjectOfType<AudioManager>().Play("AgonalnoDihanje");
     }
 }
 

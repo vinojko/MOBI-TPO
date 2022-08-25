@@ -50,7 +50,12 @@ public class CPR : MonoBehaviour
 
     float lerpSpeed;
 
-    private int cycle = 2;
+    private int cycle = 0;
+
+    public GameObject lungs;
+    public Image lungsFilled;
+    public Image lungsImg;
+
 
     void Start()
     {
@@ -152,7 +157,7 @@ public class CPR : MonoBehaviour
             cprCounter = 0;
         }
 
-        
+
 
     }
 
@@ -189,7 +194,7 @@ public class CPR : MonoBehaviour
         respirationTimerStart = Time.time;
         hands.SetActive(false);
         respirationIcon.SetActive(true);
-        
+
     }
 
     public IEnumerator RespirationClicked()
@@ -201,14 +206,21 @@ public class CPR : MonoBehaviour
         ChangeCamera.instance.ChangeToCamera(respirationCam);
         yield return new WaitForSeconds(0.4f);
         FaderMouth.instance.FadeDepth();
-        yield return new WaitForSeconds(1.1f);
+
+        lungs.SetActive(true);
+
+        //Pljuca - 500 ml
+        ShowLungs();
+
+
+        //Kamera nazaj na default
+        yield return new WaitForSeconds(2.1f);
         ChangeCamera.instance.ChangeToCamera(CPRCam);
         yield return new WaitForSeconds(0.5f);
 
         if (respirationCounter == 2)
         {
-            
-            
+
 
             respirationIcon.SetActive(false);
             hands.SetActive(true);
@@ -227,14 +239,14 @@ public class CPR : MonoBehaviour
             hands.SetActive(false);
         }
 
-        if(cycle == 3)
+        if (cycle == 3)
         {
             UIAnimationClose();
             hands.SetActive(false);
             respirationIcon.SetActive(false);
 
             GameManager.instance.UpdateGameState(GameState.CPRKira);
-            
+
         }
     }
 
@@ -246,6 +258,62 @@ public class CPR : MonoBehaviour
     private void ChangeCameraCPR()
     {
         ChangeCamera.instance.ChangeToCamera(CPRCam);
+    }
+
+    private void FillLungs()
+    {
+        LeanTween.value(gameObject, 0f, 1f, 1f).setOnUpdate((value) =>
+        {
+            lungsFilled.fillAmount = value;
+        });
+    }
+
+    private void ShowLungs()
+    {
+        StartCoroutine(showLungs());
+    }
+
+    IEnumerator showLungs()
+    {
+        lungs.SetActive(true);
+
+        LeanTween.value(gameObject, 0f, 1f, 0.5f).setOnUpdate((value) =>
+        {
+            var tempColor = lungsFilled.color;
+            tempColor.a = value;
+            lungsFilled.color = tempColor;
+
+            var tempColor2 = lungsImg.color;
+            tempColor2.a = value;
+            lungsImg.color = tempColor2;
+        });
+
+
+        yield return new WaitForSeconds(0.3f);
+        FillLungs();
+        FindObjectOfType<AudioManager>().Play("BreathIn");
+        yield return new WaitForSeconds(1.5f);
+        HideLungs();
+        
+        yield return new WaitForSeconds(.5f);
+        lungs.SetActive(false);
+        lungsFilled.fillAmount = 0f;
+
+    }
+
+    private void HideLungs()
+    {
+        LeanTween.value(gameObject, 1f, 0f, 0.5f).setOnUpdate((value) =>
+        {
+            var tempColor = lungsFilled.color;
+            tempColor.a = value;
+            lungsFilled.color = tempColor;
+
+            var tempColor2 = lungsImg.color;
+            tempColor2.a = value;
+            lungsImg.color = tempColor2;
+        });
+
     }
 
 }

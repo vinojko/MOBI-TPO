@@ -82,7 +82,7 @@ public class DialogManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
-            FindObjectOfType<AudioManager>().Play("Type");
+            FindObjectOfType<AudioManager>().Play("Clack");
 
             //Purple #f700ce - ce bos rabu
             if (letter.Equals('[')) {
@@ -115,7 +115,7 @@ public class DialogManager : MonoBehaviour
             }
             prevLetter = letter;
 
-            FindObjectOfType<AudioManager>().Stop("Type");
+            //FindObjectOfType<AudioManager>().Stop("Type");
         }
     }
     void EndDialog()

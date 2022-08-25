@@ -27,12 +27,14 @@ public class Pause : MonoBehaviour
     }
     void PauseGame()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
 
@@ -40,12 +42,14 @@ public class Pause : MonoBehaviour
 
     public void Home()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
 
     public void Replay()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }

@@ -24,6 +24,7 @@ public class SwitchSceneFade : MonoBehaviour
     // Update is called once per frame
     IEnumerator Switcher(string sceneName)
     {
+        //FindObjectOfType<AudioManager>().Play("ButtonClick");
         yield return new WaitForSeconds(TimeToExecute);
         StartCoroutine(GameObject.FindObjectOfType<Fader>().FadeAndLoadScene(Fader.FadeDirection.In, sceneName));
         

@@ -99,9 +99,11 @@ public class MouthCheck : MonoBehaviour
     public void MouthWrong()
     {
         mouthWrong.TriggerDialog();
+        FindObjectOfType<AudioManager>().Play("Incorrect");
     }
     public void MouthCorrect()
     {
         mouthCorrect.TriggerDialog();
+        FindObjectOfType<AudioManager>().Play("Correct");
     }
 }
