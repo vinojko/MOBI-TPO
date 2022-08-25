@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class AEDPads : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class AEDPads : MonoBehaviour
 
     public DialogTrigger shockClicked;
 
+    public GameObject pads;
     void Awake()
     {
         instance = this;
@@ -29,6 +31,7 @@ public class AEDPads : MonoBehaviour
         {
             analysisDialog.TriggerDialog();
             StartCoroutine(FlashLight());
+            pads.transform.DOLocalMove(new Vector3(-0.418f, 3.29f, 2.839f), 1f);
         }
         
     }
@@ -37,6 +40,8 @@ public class AEDPads : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         ChangeCamera.instance.ChangeToCamera(AEDCam);
+
+        GameManager.instance.UpdateGameState(GameState.AEDShock);
 
         while (!clicked)
         {

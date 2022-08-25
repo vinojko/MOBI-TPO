@@ -54,6 +54,7 @@ public class Fader : MonoBehaviour
 	public IEnumerator FadeAndLoadScene(FadeDirection fadeDirection, string sceneToLoad)
 	{
 		yield return Fade(fadeDirection);
+		yield return new WaitForSeconds(0.3f);
 		SceneManager.LoadScene(sceneToLoad);
 	}
 

@@ -37,9 +37,10 @@ public class PremakniZrtev : MonoBehaviour
     {
 
 
-        StopAllCoroutines();
+        
         if (GameManager.currentState == GameState.PremakniZrtev) {
             StartCoroutine(MoveVictim());
+            //StopAllCoroutines();
             GameManager.instance.UpdateGameState(GameState.Odzivnost);
         }
         

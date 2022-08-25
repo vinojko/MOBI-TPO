@@ -6,7 +6,7 @@ public class OdzivnostGlasnost : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject MicUI;
-    public float threshold = 0.30f;
+    public float threshold = 0.20f;
 
     public DialogTrigger dialogTrigger;
     void Awake()

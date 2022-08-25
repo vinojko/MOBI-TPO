@@ -6,6 +6,7 @@ public class AEDShock : MonoBehaviour
 {
     private void OnMouseUp()
     {
-        AEDPads.instance.clicked = true;
+        if(GameManager.currentState == GameState.AEDShock) AEDPads.instance.clicked = true;
+
     }
 }

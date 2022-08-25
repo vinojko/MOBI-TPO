@@ -31,9 +31,17 @@ public class GameManager : MonoBehaviour
         {
             currentState = GameState.OdzivnostZacetek;
         }
+        else if (sceneName == "3 - Dihanje")
+        {
+            currentState = GameState.DihanjeZacetek;
+        }
         else if (sceneName == "4 - CPR")
         {
             currentState = GameState.HandPositions;
+        }
+        else if (sceneName == "5 - AED")
+        {
+            currentState = GameState.AED;
         }
 
 
@@ -95,6 +103,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.AED:
                 break;
+            case GameState.AEDShock:
+                break;
             case GameState.AEDKoncano:
                 break;
         }
@@ -134,6 +144,7 @@ public enum GameState
     CPRKoncano,
     /* --- 5 - AED --- */
     AED,
+    AEDShock,
     AEDKoncano
 
 }

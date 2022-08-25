@@ -29,6 +29,10 @@ public class HeartIndicator : MonoBehaviour
             StartCoroutine(showHeart());
 
         }
+        else
+        {
+            StopCoroutine(showHeart());
+        }
     }
  
 
@@ -38,7 +42,7 @@ public class HeartIndicator : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5455f);
             heartAnimationFadeIn();
-            Vibration.Vibrate(10);
+            Vibration.Vibrate(20);
             heartAnimationFadeOut();
         }
      
