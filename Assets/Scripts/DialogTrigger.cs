@@ -8,7 +8,15 @@ public class DialogTrigger : MonoBehaviour
 
     public void TriggerDialog()
     {
-        FindObjectOfType<DialogManager>().startDialog(dialog);
+        if (FindObjectOfType<DialogManager>() != null)
+        {
+            FindObjectOfType<DialogManager>().startDialog(dialog);
+        }
+        else
+        {
+            FindObjectOfType<DialogFirstTime>().startDialog(dialog);
+        }
+        
 
     }
 }
