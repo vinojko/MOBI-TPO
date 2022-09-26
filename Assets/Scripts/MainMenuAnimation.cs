@@ -9,9 +9,9 @@ public class MainMenuAnimation : MonoBehaviour
     public GameObject Hand, Logo, firstButton, secondButton, thirdButton, fourthButton, fifthButton;
     void Start()
     {
-        HandAnim();
+        //HandAnim();
         LogoAnim();
-        ButtonsAnim();  
+        //ButtonsAnim();  
     }
 
     // Update is called once per frame

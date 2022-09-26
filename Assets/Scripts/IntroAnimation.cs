@@ -13,7 +13,7 @@ public class IntroAnimation : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Kitchen");
         numberAnim();
         titleAnim();
-        handAnim();
+        //handAnim();
         AnimEnd();
     }
 
