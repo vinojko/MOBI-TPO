@@ -15,6 +15,7 @@ public class DialogFirstTime : MonoBehaviour
     char prevLetter = '+';
 
     public GameObject DialogUI;
+    private bool first = true;
     void Start()
     {
         purple = new Color32(233, 3, 218, 255);
@@ -48,7 +49,9 @@ public class DialogFirstTime : MonoBehaviour
 
         //LeanTween.moveLocal(DialogUI, new Vector3(0f, -35f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
 
-        AnimationUIOpen();
+        if(first)AnimationUIOpen();
+        first = false;
+
         sentences.Clear();
 
         foreach (string sentence in dialog.sentences)
@@ -143,4 +146,6 @@ public class DialogFirstTime : MonoBehaviour
     {
         LeanTween.moveLocalY(DialogUI, 2085f, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
     }
+
+
 }
