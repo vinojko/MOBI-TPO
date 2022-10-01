@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
+            case GameState.House:
+                break;
             case GameState.Footsteps:
                 break;
             case GameState.Varnost:
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     /* --- 1 - VARNOST --- */
+    House,
     Footsteps,
     Varnost,
     /* --- 2 - ODZIVNOST --- */
