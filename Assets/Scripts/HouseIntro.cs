@@ -15,6 +15,7 @@ public class HouseIntro : MonoBehaviour
 
     public Image panel;
     public CanvasGroup houseGroup;
+    public float speed = 6f;
     void Start()
     {
         ButtonsShow();
@@ -24,7 +25,7 @@ public class HouseIntro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bus.transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
     void Awake()
     {
@@ -71,12 +72,11 @@ public class HouseIntro : MonoBehaviour
         LeanTween.moveLocal(buttons, new Vector3(0f, -677f, 0f), 3f).setEase(LeanTweenType.easeInOutExpo);
         FadeOut();
 
-        yield return new WaitForSeconds(1.5f);
-
         ChangeCamera.instance.ChangeToCamera(windowCam, startCam);
         //yield return new WaitForSeconds(1.5f);
         //ChangeCamera.instance.ChangeToCameraSlow(startCam);
-        GameManager.instance.UpdateGameState(GameState.Footsteps);
+        yield return new WaitForSeconds(2f);
+        GameManager.instance.UpdateGameState(GameState.IntroAnimation);
     }
     
     private void FadeOut()
@@ -95,5 +95,10 @@ public class HouseIntro : MonoBehaviour
     {
         LeanTween.moveLocal(buttons, new Vector3(0f, 0f, 0f), 3f).setEase(LeanTweenType.easeInOutExpo);
 
+    }
+
+    private void MoveBus()
+    {
+        bus.transform.position = new Vector3(0, 0, 2) * Time.deltaTime;
     }
 }

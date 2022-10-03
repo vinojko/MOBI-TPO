@@ -6,6 +6,8 @@ public class ShowFootsteps : MonoBehaviour
 {
     [SerializeField] private GameObject HanzFootsteps, OvenFootsteps;
 
+    public DialogTrigger startDialog;
+
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -22,6 +24,11 @@ public class ShowFootsteps : MonoBehaviour
    
         HanzFootsteps.SetActive(state == GameState.OdzivnostZacetek || state == GameState.Footsteps );
         if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);
+
+        if(state == GameState.Footsteps)
+        {
+            startDialog.TriggerDialog();
+        }
 
 
         //if(OvenFootsteps != null) OvenFootsteps.SetActive(state == GameState.Footsteps);

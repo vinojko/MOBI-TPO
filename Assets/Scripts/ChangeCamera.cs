@@ -73,7 +73,9 @@ public class ChangeCamera : MonoBehaviour
 
     public void ChangeToCamera(Camera second_Camera)
     {
-        StartCoroutine(switchCamera(second_Camera));
+        //StartCoroutine(switchCamera(second_Camera));
+        main_Camera.transform.DOMove(second_Camera.transform.position, 1.2f).SetEase(Ease.InOutSine);
+        main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, 1.2f).SetEase(Ease.InOutSine);
     }
     public void ChangeToCameraSlow(Camera second_Camera)
     {

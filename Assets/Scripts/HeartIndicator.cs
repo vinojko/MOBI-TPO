@@ -11,18 +11,9 @@ public class HeartIndicator : MonoBehaviour
     {
         
     }
-    void Awake()
-    {
-        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
 
-    }
 
-    private void OnDestroy()
-    {
-        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
-    }
-
-    private void GameManagerOnStateChanged(GameState state)
+    /*private void GameManagerOnStateChanged(GameState state)
     {
         if (state == GameState.CPR)
         {
@@ -33,7 +24,7 @@ public class HeartIndicator : MonoBehaviour
         {
             StopCoroutine(showHeart());
         }
-    }
+    }*/
  
 
     private IEnumerator showHeart()
@@ -50,20 +41,20 @@ public class HeartIndicator : MonoBehaviour
 
     private void heartAnimationFadeIn()
     {
-        LeanTween.value(gameObject, 0f, 1f, 0.2f).setOnUpdate((value) =>
+        /*LeanTween.value(gameObject, 0f, 1f, 0.2f).setOnUpdate((value) =>
         {
             var tempColor = heartRed.color;
             tempColor.a = value;
             heartRed.color = tempColor;
-        });
+        });*/
     }
     private void heartAnimationFadeOut()
     {
-        LeanTween.value(gameObject, 1f, 0f, 0.2f).setDelay(0.1f).setOnUpdate((value) =>
+        /*LeanTween.value(gameObject, 1f, 0f, 0.2f).setDelay(0.1f).setOnUpdate((value) =>
         {
             var tempColor = heartRed.color;
             tempColor.a = value;
             heartRed.color = tempColor;
-        });
+        });*/
     }
 }

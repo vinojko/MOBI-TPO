@@ -10,6 +10,8 @@ public class PremakniZrtev : MonoBehaviour
     public Camera cam;
 
 
+
+
     void Start()
     {
 
@@ -35,7 +37,6 @@ public class PremakniZrtev : MonoBehaviour
     }
     public void MoveTheVictim()
     {
-
 
         
         if (GameManager.currentState == GameState.PremakniZrtev) {

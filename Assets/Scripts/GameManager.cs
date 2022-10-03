@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         if(sceneName == "1 - Varnost")
         {
-            currentState = GameState.Footsteps;
+            currentState = GameState.House;
         }
         else if(sceneName == "2 - Odzivnost")
         {
@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
         {
             case GameState.House:
                 break;
+            case GameState.IntroAnimation:
+                break;
             case GameState.Footsteps:
                 break;
             case GameState.Varnost:
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
             case GameState.VarnostKoncano:
                 break;
             case GameState.OdzivnostZacetek:
+                break;
+            case GameState.OsebaOdzivna:
                 break;
             case GameState.PremakniZrtev:
                 break;
@@ -122,10 +126,12 @@ public enum GameState
     /* --- 1 - VARNOST --- */
     House,
     Footsteps,
+    IntroAnimation,
     Varnost,
     /* --- 2 - ODZIVNOST --- */
     VarnostKoncano,
     OdzivnostZacetek,
+    OsebaOdzivna,
     PremakniZrtev,
     Odzivnost,
     OdzivnostGlasnost,
