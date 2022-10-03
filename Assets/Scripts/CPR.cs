@@ -95,7 +95,7 @@ public class CPR : MonoBehaviour
         {
             UIAnimation();
             ChangeCameraCPR();
-            Depth.instance.DepthAnimation();
+            //Depth.instance.DepthAnimation();
         }
     }
 
@@ -186,7 +186,7 @@ public class CPR : MonoBehaviour
     private void UIAnimationClose()
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -4000f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
-        Depth.instance.DepthAnimationClose();
+        //Depth.instance.DepthAnimationClose();
     }
 
     private void Respiration()
