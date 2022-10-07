@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NextLevelAnim : MonoBehaviour
 {
@@ -9,17 +10,8 @@ public class NextLevelAnim : MonoBehaviour
     public GameObject nextLevelUI;
 
     public DataManager dataManager;
+    public TextMeshProUGUI vp;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Awake()
     {
@@ -39,6 +31,8 @@ public class NextLevelAnim : MonoBehaviour
             NextLevelAnimation();
             
             Debug.Log("ANIMACIJA");
+
+            vp.text = FindObjectOfType<DataManager>().data.verjetnostPrezivetja.ToString() + "%";
         }
 
 

@@ -39,7 +39,7 @@ public class HandPositions : MonoBehaviour
     {
         rightAnswerDialog.TriggerDialog();
         LeanTween.moveLocal(handPositions, new Vector3(0f, -760f, 0f), 1.7f).setDelay(0.3f).setEase(LeanTweenType.easeOutExpo);
-        GameManager.instance.UpdateGameState(GameState.LinePositions);
+        GameManager.instance.UpdateGameState(GameState.CPRPositions);
     }
     public void WrongAnswer()
     {

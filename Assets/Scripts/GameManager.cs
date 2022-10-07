@@ -99,6 +99,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.HandPositions:
                 break;
+            case GameState.CPRPositions:
+                break;
             case GameState.LinePositions:
                 break;
             case GameState.CPR:
@@ -109,9 +111,15 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.AED:
                 break;
+            case GameState.VolumeQuestion:
+                break;
             case GameState.AEDShock:
                 break;
             case GameState.AEDKoncano:
+                break;
+            case GameState.Depth:
+                break;
+            case GameState.BPM:
                 break;
         }
         OnGameStateChanged?.Invoke(newState);
@@ -147,8 +155,12 @@ public enum GameState
     DihanjeKoncano,
     /* --- 4 - CPR --- */
     HandPositions,
+    CPRPositions,
+    Depth,
     LinePositions,
     CPR,
+    BPM,
+    VolumeQuestion,
     CPRKira,
     CPRKoncano,
     /* --- 5 - AED --- */

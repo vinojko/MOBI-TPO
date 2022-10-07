@@ -25,7 +25,10 @@ public class LinePositions : MonoBehaviour
     {
         lines.SetActive(state == GameState.LinePositions);
 
-        if (state == GameState.LinePositions) LineAnimations();
+        if (state == GameState.LinePositions) {
+
+            LineAnimations();
+        } 
     
     }
 

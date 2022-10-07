@@ -14,6 +14,8 @@ public class HandleVarnost : MonoBehaviour
     [SerializeField] private GameObject polijVoda, pokrijPokrov, gasilniAparat;
 
     bool pokrovClicked = false;
+    public DataManager dataManager;
+
 
     void Awake()
     {
@@ -51,5 +53,8 @@ public class HandleVarnost : MonoBehaviour
     public void IncorrectSFX()
     {
         FindObjectOfType<AudioManager>().Play("Incorrect");
+        dataManager.data.verjetnostPrezivetja -= 9;
+
+
     }
 }
