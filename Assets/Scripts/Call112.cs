@@ -10,7 +10,9 @@ public class Call112 : MonoBehaviour
     public Animator kiraAnim;
     public GameObject phone;
 
-    public DialogTrigger callAmbulance, wrongNumber, correctNumber;
+    public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions;
+
+    public GameObject keypad, call;
 
     [SerializeField]TextMeshProUGUI phoneText;
 
@@ -79,11 +81,7 @@ public class Call112 : MonoBehaviour
 
         if (phoneText.text.Equals("112"))
         {
-            correctNumber.TriggerDialog();
-            PhoneAnimationEnd();
-
-            StartCoroutine(EndCamera());
-            
+            StartCoroutine(CallInstructions());
         }
         else
         {
@@ -105,5 +103,21 @@ public class Call112 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCamera.instance.ChangeToCameraSlow(first);
     }
+
+    private IEnumerator CallInstructions()
+    {
+        keypad.SetActive(false);
+        call.SetActive(true);
+        correctNumber.TriggerDialog();
+        yield return new WaitForSeconds(3.5f);
+        instructions.TriggerDialog();
+        yield return new WaitForSeconds(6.3f);
+
+
+        PhoneAnimationEnd();
+
+        StartCoroutine(EndCamera());
+    }
+
 
 }
