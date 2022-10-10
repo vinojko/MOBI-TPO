@@ -42,6 +42,11 @@ public class ChangeCamera : MonoBehaviour
         main_Camera.transform.DOMove(second_Camera.transform.position, 3f).SetEase(Ease.OutExpo);
         main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, 3f).SetEase(Ease.OutExpo);
     }
+    public void switcher(Camera second_Camera, float speed)
+    {
+        main_Camera.transform.DOMove(second_Camera.transform.position, speed).SetEase(Ease.OutExpo);
+        main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, speed).SetEase(Ease.OutExpo);
+    }
     public void ChangeToCamera(Camera second_Camera, Camera third_camera)
     {
         main_Camera.transform.DOMove(second_Camera.transform.position, 3f).SetEase(Ease.InExpo);
@@ -77,13 +82,22 @@ public class ChangeCamera : MonoBehaviour
         main_Camera.transform.DOMove(second_Camera.transform.position, 1.2f).SetEase(Ease.InOutSine);
         main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, 1.2f).SetEase(Ease.InOutSine);
     }
+
+    public void ChangeToCamera(Camera second_Camera, float speed)
+    {
+        //StartCoroutine(switchCamera(second_Camera));
+        main_Camera.transform.DOMove(second_Camera.transform.position, speed).SetEase(Ease.InOutSine);
+        main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, speed).SetEase(Ease.InOutSine);
+    }
     public void ChangeToCameraSlow(Camera second_Camera)
     {
         StartCoroutine(switchCameraSlow(second_Camera));
     }
 
-    public void ChangeToCamera2(Camera second_Camera)
+    public void ChangeToCamera(Camera second_Camera, Camera third_camera, float speed)
     {
+        main_Camera.transform.DOMove(second_Camera.transform.position, speed).SetEase(Ease.InExpo);
+        main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, speed).SetEase(Ease.InExpo).OnComplete(() => switcher(third_camera, speed));
 
     }
 }
