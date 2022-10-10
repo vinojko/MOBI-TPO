@@ -16,6 +16,8 @@ public class HouseIntro : MonoBehaviour
     public Image panel;
     public CanvasGroup houseGroup;
     public float speed = 6f;
+
+    float rotation = 0;
     void Start()
     {
         ButtonsShow();
@@ -52,7 +54,11 @@ public class HouseIntro : MonoBehaviour
             rotator.transform.Rotate(0, -Time.deltaTime, 0);
             yield return new WaitForSeconds(0f);
         }
-        
+        rotation = -Time.deltaTime;
+
+
+
+
     }
 
     public void RightAnswer()
@@ -69,6 +75,10 @@ public class HouseIntro : MonoBehaviour
     private IEnumerator Answer()
     {
         doRotate = false;
+        LeanTween.value(gameObject, rotation, 0f, 3f).setEase(LeanTweenType.easeOutExpo).setOnUpdate((value) =>
+        {
+            rotator.transform.Rotate(0, value, 0);
+        });
         LeanTween.moveLocal(buttons, new Vector3(0f, -677f, 0f), 3f).setEase(LeanTweenType.easeInOutExpo);
         FadeOut();
 

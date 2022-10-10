@@ -53,8 +53,6 @@ public class HandleVarnost : MonoBehaviour
     public void IncorrectSFX()
     {
         FindObjectOfType<AudioManager>().Play("Incorrect");
-        dataManager.data.verjetnostPrezivetja -= 9;
-
-
+        VPManager.instance.Decrease();
     }
 }

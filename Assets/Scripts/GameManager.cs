@@ -48,11 +48,7 @@ public class GameManager : MonoBehaviour
         UpdateGameState(currentState);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void UpdateGameState(GameState newState)
     {
         State = newState;

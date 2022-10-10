@@ -32,12 +32,9 @@ public class NextLevelAnim : MonoBehaviour
             
             Debug.Log("ANIMACIJA");
 
-            vp.text = FindObjectOfType<DataManager>().data.verjetnostPrezivetja.ToString() + "%";
+            dataManager.Load();
+            vp.text = dataManager.data.verjetnostPrezivetja.ToString() + "%";
         }
-
-
-             
-
 
     }
 
