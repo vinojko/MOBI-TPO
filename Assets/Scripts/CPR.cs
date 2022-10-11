@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class CPR : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class CPR : MonoBehaviour
 
     private Vector3 initHands;
 
-    public GameObject cprUI;
+    public GameObject cprUI, hand;
     public GameObject respirationIcon;
 
     public Camera defaultCam, respirationCam, CPRCam;
@@ -50,15 +51,21 @@ public class CPR : MonoBehaviour
 
     float lerpSpeed;
 
+    [SerializeField]
     private int cycle = 0;
 
     public GameObject lungs;
     public Image lungsFilled;
     public Image lungsImg;
 
+    Scene currentScene;
 
+    // Retrieve the name of this scene.
+    string sceneName;
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
         secElapsed = 0;
         taps = 0;
         initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
@@ -95,6 +102,13 @@ public class CPR : MonoBehaviour
         {
             UIAnimation();
             ChangeCameraCPR();
+
+            if (sceneName == "5 - AED")
+            {
+                HandFadeIn();
+            }
+
+
             //Depth.instance.DepthAnimation();
         }
     }
@@ -105,9 +119,6 @@ public class CPR : MonoBehaviour
         animator.SetBool("playCPR", true);
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("playCPR", false);
-
-
-
 
     }
 
@@ -157,8 +168,6 @@ public class CPR : MonoBehaviour
             cprCounter = 0;
         }
 
-
-
     }
 
     private void valueAnimation()
@@ -170,7 +179,6 @@ public class CPR : MonoBehaviour
                 mainSlider.value = value;
             });
         }
-
     }
 
     private void HandsAnimation()
@@ -245,7 +253,14 @@ public class CPR : MonoBehaviour
             hands.SetActive(false);
             respirationIcon.SetActive(false);
 
-            GameManager.instance.UpdateGameState(GameState.CPRKira);
+            if (sceneName == "4 - CPR")
+            {
+                GameManager.instance.UpdateGameState(GameState.CPRKira);
+            }else if (sceneName == "5 - AED")
+            {
+                GameManager.instance.UpdateGameState(GameState.AEDKoncano);
+            }
+                
 
         }
     }
@@ -314,6 +329,11 @@ public class CPR : MonoBehaviour
             lungsImg.color = tempColor2;
         });
 
+    }
+
+    private void HandFadeIn()
+    {
+        LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
     }
 
 }

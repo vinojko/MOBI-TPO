@@ -20,6 +20,9 @@ public class AEDPads : MonoBehaviour
     public DialogTrigger shockClicked;
 
     public GameObject pads;
+    public GameObject vsistranButton;
+
+    public bool isClicked = false;
     void Awake()
     {
         instance = this;
@@ -32,6 +35,7 @@ public class AEDPads : MonoBehaviour
             analysisDialog.TriggerDialog();
             StartCoroutine(FlashLight());
             pads.transform.DOLocalMove(new Vector3(-0.418f, 3.29f, 2.839f), 1f);
+            FadeIn();
         }
         
     }
@@ -59,7 +63,27 @@ public class AEDPads : MonoBehaviour
         //Sound
 
         shockClicked.TriggerDialog();
-        
+        yield return new WaitForSeconds(2f);
+        GameManager.instance.UpdateGameState(GameState.CPR);
+
+    }
+
+    public void VsiStran()
+    {
+        isClicked = true;
+        FadeOut();
+    }
+
+    private void FadeOut() 
+    {
+        LeanTween.moveLocal(vsistranButton, new Vector3(0f, -2035f, 0f), 1.5f).setEaseInOutExpo();
+
+    }
+
+    private void FadeIn()
+    {
+        LeanTween.moveLocal(vsistranButton, new Vector3(0f, -850f, 0f), 1.5f).setDelay(10.2f).setEaseInOutExpo();
+
     }
 
 }

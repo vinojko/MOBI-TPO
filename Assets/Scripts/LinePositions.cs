@@ -28,6 +28,7 @@ public class LinePositions : MonoBehaviour
         if (state == GameState.LinePositions) {
 
             LineAnimations();
+            lineDialog.TriggerDialog();
         } 
     
     }

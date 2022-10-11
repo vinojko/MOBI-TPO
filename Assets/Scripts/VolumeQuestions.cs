@@ -18,7 +18,7 @@ public class VolumeQuestions : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        if (state == GameState.BPM)
+        if (state == GameState.VolumeQuestion)
         {
             dialog1.TriggerDialog();
             StartCoroutine(FadeIn());
@@ -53,6 +53,6 @@ public class VolumeQuestions : MonoBehaviour
     private IEnumerator ChangeState()
     {
         yield return new WaitForSeconds(1f);
-        GameManager.instance.UpdateGameState(GameState.BPM);
+        GameManager.instance.UpdateGameState(GameState.LinePositions);
     }
 }
