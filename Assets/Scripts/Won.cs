@@ -17,6 +17,8 @@ public class Won : MonoBehaviour
         canvas.alpha = 0f;
         StartCoroutine(MoveCam());
         StartCoroutine(Fire());
+
+        FindObjectOfType<AudioManager>().Play("Won");
     }
 
     private IEnumerator MoveCam()

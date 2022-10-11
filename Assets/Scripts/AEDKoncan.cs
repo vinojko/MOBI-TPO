@@ -36,7 +36,7 @@ public class AEDKoncan : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         dialog.TriggerDialog();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7f);
         FaderMouth.instance.FadeDepth();
         yield return new WaitForSeconds(0.5f);
         WinOrLose();

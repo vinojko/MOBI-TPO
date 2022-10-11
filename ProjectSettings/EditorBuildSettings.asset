@@ -27,5 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Won.unity
     guid: f6f61e8260125c84284e97092460cd0f
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 97e3917855f974c4d814f88412748ee4, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d8ec816bddc9b45469e95e9f56dff4ce, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 0e7947d5f6abdbd42ac67be40e091f38, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 7da3d93064515204bb349dcbcd70d1d2, type: 2}
