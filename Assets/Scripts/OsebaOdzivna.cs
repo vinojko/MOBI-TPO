@@ -38,6 +38,7 @@ public class OsebaOdzivna : MonoBehaviour
     public void WrongAnswer()
     {
         wrongAnswer.TriggerDialog();
+        VPManager.instance.Decrease();
 
     }
 

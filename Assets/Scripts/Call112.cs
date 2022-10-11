@@ -86,6 +86,7 @@ public class Call112 : MonoBehaviour
         else
         {
             wrongNumber.TriggerDialog();
+            VPManager.instance.Decrease();
         }
     }
 

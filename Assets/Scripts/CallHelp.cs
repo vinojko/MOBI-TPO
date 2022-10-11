@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CallHelp : MonoBehaviour
 {
-    public DialogTrigger dialog1, dialog2, dialog3;
+    public DialogTrigger dialog1, dialog2, dialog3, wrongAnswer;
     public GameObject Answers;
     public GameObject MicUI;
     public Camera kiraCam;
@@ -70,6 +70,13 @@ public class CallHelp : MonoBehaviour
         dialog2.TriggerDialog();
 
     }
+    public void WrongAnswer()
+    {
+        wrongAnswer.TriggerDialog();
+
+        VPManager.instance.Decrease();
+    }
+
     private void StartAnimation()
     {
         LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(1.7f).setEaseInOutExpo();

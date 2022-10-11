@@ -44,5 +44,6 @@ public class HandPositions : MonoBehaviour
     public void WrongAnswer()
     {
         wrongAnswerDialog.TriggerDialog();
+        VPManager.instance.Decrease();
     }
 }

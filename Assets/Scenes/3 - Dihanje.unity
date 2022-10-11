@@ -6525,7 +6525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1193497c8195204987b42010ca273cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 566b49479c0dde542bfe2065091e0700, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10231,7 +10231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1eafc91994bbc447b886def11c880e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60095d73c8c7130499f436eb82a39fdc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13760,7 +13760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515469571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 961801824}
+        m_TargetAssemblyTypeName: CallHelp, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515469571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15188,7 +15200,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 565544268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 961801824}
+        m_TargetAssemblyTypeName: CallHelp, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &565544268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15511,7 +15535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 578272821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 875757864}
+        m_TargetAssemblyTypeName: CheckBreathing, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &578272821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22043,6 +22079,7 @@ MonoBehaviour:
   checkBreathingDialog: {fileID: 978299314}
   timerDialog: {fileID: 1706251171}
   timerEndDialog: {fileID: 545791330}
+  wrongAnswer: {fileID: 1898737264}
   StopWatch: {fileID: 476948049}
   CheckBreathingButton: {fileID: 1780495867}
   TimerCam: {fileID: 1190688995}
@@ -22050,6 +22087,50 @@ MonoBehaviour:
   mVolumeProfile: {fileID: 11400000, guid: 53ce91ea83b3d5141901fc859f95cf64, type: 2}
   mVignette: {fileID: 0}
   yesNo: {fileID: 956184441}
+--- !u!1 &877632262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877632263}
+  - component: {fileID: 877632264}
+  m_Layer: 0
+  m_Name: VPManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &877632263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877632262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114660262}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &877632264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877632262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2f5d75ae35f6a46ae85dbb9900b3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 1278133736}
 --- !u!1001 &881403042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23639,6 +23720,7 @@ MonoBehaviour:
   dialog1: {fileID: 1303341966}
   dialog2: {fileID: 112467103}
   dialog3: {fileID: 1190797452}
+  wrongAnswer: {fileID: 1898737264}
   Answers: {fileID: 18188620}
   MicUI: {fileID: 1762819344}
   kiraCam: {fileID: 1039809421}
@@ -23865,7 +23947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163.7, y: 6.5069}
+  m_AnchoredPosition: {x: -151.3, y: -37}
   m_SizeDelta: {x: 302.5965, y: 197.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970656857
@@ -23915,8 +23997,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 183.3
-  m_fontSizeBase: 183.3
+  m_fontSize: 154
+  m_fontSizeBase: 154
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24468,7 +24550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e57d84f50212514dab2768da9056404, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b254fdde002e2e44c89037848358c01e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27712,6 +27794,7 @@ Transform:
   - {fileID: 1278133735}
   - {fileID: 459203639}
   - {fileID: 1892098127}
+  - {fileID: 877632263}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32637,7 +32720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36bd77331a70c834680e9d3fbc5e779c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 328101259b2cc1e4e910a32ae6ec93a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34299,7 +34382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36bd77331a70c834680e9d3fbc5e779c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 328101259b2cc1e4e910a32ae6ec93a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38802,7 +38885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 611db32f9a9cc97408ef9ea56dadad56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b4521d1d5e64834da5fe320e7d498b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46577,7 +46660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195.59, y: -6.146179}
+  m_AnchoredPosition: {x: 195, y: -77}
   m_SizeDelta: {x: 542.1688, y: 178.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786799023
@@ -46600,7 +46683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: korak
+  m_text: sredinec
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -46627,8 +46710,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 166.5
-  m_fontSizeBase: 166.5
+  m_fontSize: 114.1
+  m_fontSizeBase: 114.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -46925,7 +47008,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: edba655919139984897b69e82f6248b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1448cbd248bfc904b883333b10cd216c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48623,8 +48706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 331359262}
   nextLevelUI: {fileID: 1766772559}
-  dataManager: {fileID: 0}
-  vp: {fileID: 0}
+  dataManager: {fileID: 1278133736}
+  vp: {fileID: 445575221}
 --- !u!1001 &1897748690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48782,7 +48865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Poskusite ponovno.
+    - "Napa\u010Den odgovor, Poskusite ponovno."
 --- !u!1001 &1903825308
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -45,6 +45,7 @@ public class VolumeQuestions : MonoBehaviour
     public void AnswerWrong()
     {
         wrongAnswer.TriggerDialog();
+        VPManager.instance.Decrease();
 
     }
 

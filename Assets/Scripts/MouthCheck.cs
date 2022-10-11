@@ -100,6 +100,7 @@ public class MouthCheck : MonoBehaviour
     {
         mouthWrong.TriggerDialog();
         FindObjectOfType<AudioManager>().Play("Incorrect");
+        VPManager.instance.Decrease();
     }
     public void MouthCorrect()
     {

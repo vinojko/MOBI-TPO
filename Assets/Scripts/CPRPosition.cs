@@ -52,5 +52,6 @@ public class CPRPosition : MonoBehaviour
     public void WrongAnswer()
     {
         wrongAnswer.TriggerDialog();
+        VPManager.instance.Decrease();
     }
 }

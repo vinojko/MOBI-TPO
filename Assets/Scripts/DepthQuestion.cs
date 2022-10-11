@@ -47,6 +47,7 @@ public class DepthQuestion : MonoBehaviour
     public void AnswerWrong()
     {
         wrongAnswer.TriggerDialog();
+        VPManager.instance.Decrease();
 
     }
 

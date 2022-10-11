@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 public class CheckBreathing : MonoBehaviour
 {
     // Start is called before the first frame update
-    public DialogTrigger checkBreathingDialog, timerDialog, timerEndDialog;
+    public DialogTrigger checkBreathingDialog, timerDialog, timerEndDialog, wrongAnswer;
     public GameObject StopWatch;
     public GameObject CheckBreathingButton;
     public Camera TimerCam;
@@ -144,6 +144,14 @@ public class CheckBreathing : MonoBehaviour
         yesNo.SetActive(false);
         GameManager.instance.UpdateGameState(GameState.CallHelp);
     }
+
+    public void WrongAnswer()
+    {
+        wrongAnswer.TriggerDialog();
+
+        VPManager.instance.Decrease();
+    }
+
 
     public void AgonalnoDihanje()
     {
