@@ -7,7 +7,7 @@ public class VPManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    int vp;
+    public int vp;
     public static VPManager instance;
     public DataManager dataManager;
 
@@ -21,6 +21,14 @@ public class VPManager : MonoBehaviour
         string sceneName = currentScene.name;
 
         if (sceneName == "1 - Varnost")
+        {
+            dataManager.Load();
+            dataManager.data.verjetnostPrezivetja = 90;
+            dataManager.Save();
+        }
+
+        // TESTIRANJE
+        if (sceneName == "5 - AED")
         {
             dataManager.Load();
             dataManager.data.verjetnostPrezivetja = 90;

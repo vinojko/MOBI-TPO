@@ -223,13 +223,16 @@ public class CPR : MonoBehaviour
 
         //Kamera nazaj na default
         yield return new WaitForSeconds(2.1f);
-        ChangeCamera.instance.ChangeToCamera(CPRCam);
+
+        if (GameManager.currentState != GameState.AEDKoncano)
+        {
+            ChangeCamera.instance.ChangeToCamera(CPRCam);
+        }
+        
         yield return new WaitForSeconds(0.5f);
 
         if (respirationCounter == 2)
         {
-
-
             respirationIcon.SetActive(false);
             hands.SetActive(true);
             respirationCounter = 0;
