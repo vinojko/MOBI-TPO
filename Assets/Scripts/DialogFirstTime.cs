@@ -9,7 +9,8 @@ public class DialogFirstTime : MonoBehaviour
     private Queue<string> sentences;
     public TextMeshProUGUI textMesh;
 
-    public float TypeSpeed;
+    public float TypeSpeed = 1.5f;
+    private float defaultTypeSpeed;
     // Start is called before the first frame update
     private Color32 purple;
     char prevLetter = '+';
@@ -20,6 +21,7 @@ public class DialogFirstTime : MonoBehaviour
     {
         purple = new Color32(233, 3, 218, 255);
         sentences = new Queue<string>();
+        defaultTypeSpeed = TypeSpeed;
     }
 
     void Awake()
@@ -109,7 +111,7 @@ public class DialogFirstTime : MonoBehaviour
             }
             else
             {
-                TypeSpeed = 0.03f;
+                TypeSpeed = defaultTypeSpeed;
             }
 
             yield return new WaitForSeconds(TypeSpeed);
