@@ -7930,6 +7930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2f5d75ae35f6a46ae85dbb9900b3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vp: 0
   dataManager: {fileID: 1332318363}
 --- !u!1001 &413400220
 PrefabInstance:
@@ -14335,7 +14336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11496292, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_graphyMode
