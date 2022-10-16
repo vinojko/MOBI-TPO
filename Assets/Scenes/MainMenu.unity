@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 113210802}
-  TypeSpeed: 0.015
+  TypeSpeed: 0.045
   DialogUI: {fileID: 1156819950}
 --- !u!1 &106798437
 GameObject:

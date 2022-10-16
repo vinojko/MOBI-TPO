@@ -9,7 +9,7 @@ public class DialogFirstTime : MonoBehaviour
     private Queue<string> sentences;
     public TextMeshProUGUI textMesh;
 
-    public float TypeSpeed = 1.5f;
+    public float TypeSpeed;
     private float defaultTypeSpeed;
     // Start is called before the first frame update
     private Color32 purple;
@@ -51,7 +51,7 @@ public class DialogFirstTime : MonoBehaviour
 
         //LeanTween.moveLocal(DialogUI, new Vector3(0f, -35f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
 
-        if(first)AnimationUIOpen();
+        if (first) AnimationUIOpen();
         first = false;
 
         sentences.Clear();
@@ -107,7 +107,7 @@ public class DialogFirstTime : MonoBehaviour
             }
             else if (letter.Equals(','))
             {
-                TypeSpeed = 0.13f;
+                TypeSpeed = 0.16f;
             }
             else
             {
