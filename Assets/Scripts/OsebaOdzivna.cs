@@ -31,7 +31,7 @@ public class OsebaOdzivna : MonoBehaviour
     public void RightAnswer()
     {
         rightAnswer.TriggerDialog();
-        GameManager.instance.UpdateGameState(GameState.PremakniZrtev);
+        GameManager.instance.UpdateGameState(GameState.OdzivnostKoncano);
         FadeOut();
         StartCoroutine(DialogTrig());
     }
@@ -55,7 +55,7 @@ public class OsebaOdzivna : MonoBehaviour
     IEnumerator DialogTrig()
     {
         yield return new WaitForSeconds(1f);
-        hrbetDialog.TriggerDialog();
+        //hrbetDialog.TriggerDialog();
 
     }
 }

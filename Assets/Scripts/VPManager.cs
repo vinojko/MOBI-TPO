@@ -23,7 +23,7 @@ public class VPManager : MonoBehaviour
         if (sceneName == "1 - Varnost")
         {
             dataManager.Load();
-            dataManager.data.verjetnostPrezivetja = 90;
+            dataManager.data.verjetnostPrezivetja = 100;
             dataManager.Save();
         }
 
@@ -31,7 +31,7 @@ public class VPManager : MonoBehaviour
         if (sceneName == "5 - AED")
         {
             dataManager.Load();
-            dataManager.data.verjetnostPrezivetja = 90;
+            dataManager.data.verjetnostPrezivetja = 100;
             dataManager.Save();
         }
 

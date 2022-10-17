@@ -6,7 +6,7 @@ public  class SaveData
 {
     public  bool varnost = true;
     public  bool odzivnost, dihanje, cpr, aed = false;
-    public int verjetnostPrezivetja = 90;
+    public int verjetnostPrezivetja = 100;
 
     /*public static int VerjetnostPrezivetja
     {

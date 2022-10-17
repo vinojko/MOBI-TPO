@@ -93,7 +93,7 @@ public class IntroAnimationVarnost : MonoBehaviour
         //MOZNOST PREZIVETJA
         ProbFadeIn();
         yield return new WaitForSeconds(5.5f);
-        ChangeProb();
+        //ChangeProb();
     }
 
     public void ChangeProb()
@@ -110,12 +110,12 @@ public class IntroAnimationVarnost : MonoBehaviour
         probabilityObject.SetActive(true);
         LeanTween.moveLocal(probabilityObject, new Vector3(-9f, 95f, 0f), 1.4f).setDelay(5f).setEase(LeanTweenType.easeInOutExpo);
 
-        LeanTween.value(gameObject, 0f, 1f, 1.2f).setDelay(9.2f).setOnUpdate((float value) =>
+        LeanTween.value(gameObject, 0f, 1f, 1.2f).setDelay(7.0f).setOnUpdate((float value) =>
         {
             vsakaNapaka.alpha = value;
         });
 
-        LeanTween.moveLocal(introScreen, new Vector3(-9f, -5000f, 0f), 1.4f).setDelay(11.5f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() =>
+        LeanTween.moveLocal(introScreen, new Vector3(-9f, -5000f, 0f), 1.4f).setDelay(10f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() =>
         {
             GameManager.instance.UpdateGameState(GameState.Footsteps);
         });

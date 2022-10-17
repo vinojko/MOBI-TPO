@@ -39,7 +39,7 @@ public class OdzivnostGlasnost : MonoBehaviour
         {
             Debug.Log("Uporabnik je prekoracil glasnost");
             dialogTrigger.TriggerDialog();
-            GameManager.instance.UpdateGameState(GameState.OdzivnostKoncano);
+            GameManager.instance.UpdateGameState(GameState.OsebaOdzivna);
         }
     }
 

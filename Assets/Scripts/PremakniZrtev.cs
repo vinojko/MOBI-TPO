@@ -8,9 +8,28 @@ public class PremakniZrtev : MonoBehaviour
     int BlendHash;
     public float animSpeed = 1.6f;
     public Camera cam;
+    public DialogTrigger hrbetDialog;
 
 
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnStateChanged;
+    }
 
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnStateChanged;
+    }
+
+    private void GameManagerOnStateChanged(GameState state)
+    {
+        if (state == GameState.PremakniZrtev)
+        {
+            hrbetDialog.TriggerDialog();
+
+        }
+
+    }
 
     void Start()
     {
