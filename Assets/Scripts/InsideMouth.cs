@@ -13,6 +13,8 @@ public class InsideMouth : MonoBehaviour
     public GameObject ui;
     public Camera cam;
 
+    public GameObject meatball;
+
 
     private float AnimationSpeed = 0.5f;
 
