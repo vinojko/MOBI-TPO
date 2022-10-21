@@ -7,7 +7,7 @@ public class LinePositions : MonoBehaviour
 {
     public Image line1, line2, line3, line4;
     public GameObject lines;
-    public DialogTrigger lineDialog;
+    public DialogTrigger polozajRok, ritem;
     public GameObject hand;
     public GameObject CPRSlider;
     void Awake()
@@ -27,8 +27,9 @@ public class LinePositions : MonoBehaviour
 
         if (state == GameState.LinePositions) {
 
-            LineAnimations();
-            lineDialog.TriggerDialog();
+            //LineAnimations();
+            //lineDialog.TriggerDialog();
+            StartCoroutine(Dialogs());
         } 
     
     }
@@ -68,6 +69,19 @@ public class LinePositions : MonoBehaviour
     {
         yield return new WaitForSeconds(4.0f);
         GameManager.instance.UpdateGameState(GameState.CPR);
+    }
+
+    private IEnumerator Dialogs()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        polozajRok.TriggerDialog();
+        yield return new WaitForSeconds(2f);
+        LineAnimations();
+
+        yield return new WaitForSeconds(5f);
+
+        ritem.TriggerDialog();
     }
 
 

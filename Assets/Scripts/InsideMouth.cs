@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class InsideMouth : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class InsideMouth : MonoBehaviour
 
 
     public GameObject mouth;
-    public DialogTrigger mouthDialog;
+    public DialogTrigger mouthDialog, meatballDialog, wrongAnswer;
     public GameObject ui;
     public Camera cam;
 
@@ -44,12 +45,15 @@ public class InsideMouth : MonoBehaviour
 
     public void AnswerYes()
     {
-        StartCoroutine(Fade());
-        GameManager.instance.UpdateGameState(GameState.CheckBreathing);
+        //StartCoroutine(Fade());
+        //meatballDialog.TriggerDialog();
+
     }
     public void AnswerNo()
     {
         //Dialog napacno...
+        meatballDialog.TriggerDialog();
+        GameManager.instance.UpdateGameState(GameState.Meatball);
     }
 
    public IEnumerator Fade()
@@ -70,7 +74,24 @@ public class InsideMouth : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         ui.SetActive(true);
 
+    }
+    public IEnumerator MeatBallRemoved()
+    {
+        meatball.transform.DOLocalMove(new Vector3(2500f, 19f, 0f), 1f);
+        yield return new WaitForSeconds(1.0f);
+        meatball.SetActive(false);
+        StartCoroutine(Fade());
+        GameManager.instance.UpdateGameState(GameState.CheckBreathing);
+
+    }
+
+    public void MeatballClicked()
+    {
+        if(GameManager.currentState == GameState.Meatball) StartCoroutine(MeatBallRemoved());
 
 
     }
+
+
+
 }

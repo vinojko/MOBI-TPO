@@ -16,6 +16,7 @@ public class MouthCheck : MonoBehaviour
     public GameObject mouth;
 
     public DialogTrigger mouthCheck, mouthWrong, mouthCorrect;
+    public GameObject meatball;
 
 
 
@@ -92,8 +93,8 @@ public class MouthCheck : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
         mouth.SetActive(true);
+        meatball.SetActive(true);
 
-        
     }
 
     public void MouthWrong()

@@ -115,6 +115,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Depth:
                 break;
+            case GameState.Meatball:
+                break;
             case GameState.BPM:
                 break;
         }
@@ -145,6 +147,7 @@ public enum GameState
     ChinLift,
     MouthCheck,
     MouthInside,
+    Meatball,
     CheckBreathing,
     CallHelp,
     Call112,

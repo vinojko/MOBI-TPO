@@ -60,6 +60,8 @@ public class CPR : MonoBehaviour
 
     Scene currentScene;
 
+    bool doVibrate = true;
+
     // Retrieve the name of this scene.
     string sceneName;
     void Start()
@@ -102,6 +104,7 @@ public class CPR : MonoBehaviour
         {
             UIAnimation();
             ChangeCameraCPR();
+            StartCoroutine(Vibrate());
 
             if (sceneName == "5 - AED")
             {
@@ -166,6 +169,8 @@ public class CPR : MonoBehaviour
         {
             Respiration();
             cprCounter = 0;
+            doVibrate = false;
+            StopCoroutine(Vibrate());
         }
 
     }
@@ -189,7 +194,7 @@ public class CPR : MonoBehaviour
 
     private void UIAnimation()
     {
-        LeanTween.moveLocal(cprUI, new Vector3(0f, -810f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.moveLocal(cprUI, new Vector3(0f, -785f, 0f), 3f).setEase(LeanTweenType.easeOutExpo).setDelay(8f);
     }
     private void UIAnimationClose()
     {
@@ -243,6 +248,18 @@ public class CPR : MonoBehaviour
             last = respirationTimerEnd;
 
             cycle++;
+       
+
+            if(respirationCounter == 2 && cycle == 3)
+            {
+                doVibrate = false;
+                StopCoroutine(Vibrate());
+            }
+            else
+            {
+                doVibrate = true;
+                StartCoroutine(Vibrate());
+            }
         }
         else
         {
@@ -259,11 +276,15 @@ public class CPR : MonoBehaviour
             if (sceneName == "4 - CPR")
             {
                 GameManager.instance.UpdateGameState(GameState.CPRKira);
+
             }else if (sceneName == "5 - AED")
             {
                 GameManager.instance.UpdateGameState(GameState.AEDKoncano);
+          
             }
-                
+
+            doVibrate = false;
+            StopCoroutine(Vibrate());
 
         }
     }
@@ -280,7 +301,7 @@ public class CPR : MonoBehaviour
 
     private void FillLungs()
     {
-        LeanTween.value(gameObject, 0f, 1f, 1f).setOnUpdate((value) =>
+        LeanTween.value(gameObject, 0f, 0.63f, 1.2f).setOnUpdate((value) =>
         {
             lungsFilled.fillAmount = value;
         });
@@ -295,7 +316,7 @@ public class CPR : MonoBehaviour
     {
         lungs.SetActive(true);
 
-        LeanTween.value(gameObject, 0f, 1f, 0.5f).setOnUpdate((value) =>
+        LeanTween.value(gameObject, 0f, 1f, 1f).setOnUpdate((value) =>
         {
             var tempColor = lungsFilled.color;
             tempColor.a = value;
@@ -310,7 +331,7 @@ public class CPR : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         FillLungs();
         FindObjectOfType<AudioManager>().Play("BreathIn");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.8f);
         HideLungs();
         
         yield return new WaitForSeconds(.5f);
@@ -337,6 +358,17 @@ public class CPR : MonoBehaviour
     private void HandFadeIn()
     {
         LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
+    }
+
+    private IEnumerator Vibrate()
+    {
+        while (doVibrate)
+        {
+            yield return new WaitForSeconds(0.5455f);
+            Vibration.Vibrate(20);
+            Debug.Log("Vibrating 20ms");
+        }
+
     }
 
 }

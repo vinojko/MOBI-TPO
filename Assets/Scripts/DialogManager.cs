@@ -33,7 +33,7 @@ public class DialogManager : MonoBehaviour
 
     private void GameManagerOnStateChanged(GameState state)
     {
-        if (state == GameState.OdzivnostKoncano || state == GameState.VarnostKoncano || state == GameState.CPRKoncano || state == GameState.AEDKoncano)
+        if (state == GameState.OdzivnostKoncano || state == GameState.VarnostKoncano || state == GameState.CPRKoncano || state == GameState.AEDKoncano || state == GameState.DihanjeKoncano)
         {
             AnimationUIClose();
         }

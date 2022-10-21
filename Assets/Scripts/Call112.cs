@@ -8,7 +8,7 @@ public class Call112 : MonoBehaviour
 
     public GameObject Answers;
     public Animator kiraAnim;
-    public GameObject phone;
+    public GameObject phone, phone3D;
 
     public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions;
 
@@ -76,7 +76,7 @@ public class Call112 : MonoBehaviour
         LeanTween.moveLocal(phone, new Vector3(118f, -2000f, 0f), 1.5f).setEaseInOutExpo();
     }
 
-    public void checkNumber()
+    public void CheckNumber()
     {
 
         if (phoneText.text.Equals("112"))
@@ -95,7 +95,7 @@ public class Call112 : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         ChangeCamera.instance.ChangeToCameraSlow(first);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2.5f);
         GameManager.instance.UpdateGameState(GameState.DihanjeKoncano);
     }
 
@@ -109,10 +109,10 @@ public class Call112 : MonoBehaviour
     {
         keypad.SetActive(false);
         call.SetActive(true);
-        correctNumber.TriggerDialog();
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1f);
         instructions.TriggerDialog();
-        yield return new WaitForSeconds(6.3f);
+        yield return new WaitForSeconds(9f);
+        phone3D.SetActive(true);
 
 
         PhoneAnimationEnd();
