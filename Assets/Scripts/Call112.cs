@@ -96,7 +96,7 @@ public class Call112 : MonoBehaviour
         ChangeCamera.instance.ChangeToCameraSlow(first);
 
         yield return new WaitForSeconds(2.5f);
-        GameManager.instance.UpdateGameState(GameState.DihanjeKoncano);
+        GameManager.instance.UpdateGameState(GameState.SendForAED);
     }
 
     private IEnumerator EndGame()

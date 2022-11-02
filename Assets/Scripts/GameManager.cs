@@ -119,6 +119,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.BPM:
                 break;
+            case GameState.SendForAED:
+                break;
         }
         OnGameStateChanged?.Invoke(newState);
         currentState = newState;
@@ -151,6 +153,7 @@ public enum GameState
     CheckBreathing,
     CallHelp,
     Call112,
+    SendForAED,
     DihanjeKoncano,
     /* --- 4 - CPR --- */
     HandPositions,

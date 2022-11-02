@@ -10005,7 +10005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\rUspe\u0161no ste opravili:\r\n <b>CPR</b>"
+  m_text: "\rUspe\u0161no ste opravili:\r\n <b>KPO</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -49674,7 +49674,7 @@ MonoBehaviour:
   dialog:
     sentences:
     - "Odli\u010Dno,\nsedaj lahko za\u010Dnete izvajati o\u017Eivljanje z uporabo
-      avtomatskega defibrilatorja (AED)."
+      AED."
 --- !u!1001 &1923552555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53273,7 +53273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Prispel je AED. Vzemite ga.
+    - "Prispel je AED. Vzemite ga. Pomo\u010D pa bo nadaljevala s KPO."
 --- !u!4 &2048145979
 Transform:
   m_ObjectHideFlags: 0
