@@ -20,7 +20,7 @@ public class IntroAnimation : MonoBehaviour
     void numberAnim()
     {
         LeanTween.moveLocal(number, new Vector3(-2f, 695f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
-        LeanTween.scale(number, new Vector3(0.35f,0.35f,0.35f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.scale(number, new Vector3(0.5f,0.5f,0.5f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
     }
 
     void titleAnim()

@@ -49,8 +49,8 @@ public class IntroAnimationVarnost : MonoBehaviour
 
     void numberAnim()
     {
-        LeanTween.moveLocal(number, new Vector3(-2f, 675f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
-        LeanTween.scale(number, new Vector3(0.5f, 0.5f, 0.5f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.moveLocal(number, new Vector3(-2f, 695f, 0f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.scale(number, new Vector3(0.35f, 0.35f, 0.35f), 2f).setDelay(0.5f).setEase(LeanTweenType.easeInOutExpo);
     }
 
     void titleAnim()
@@ -61,7 +61,7 @@ public class IntroAnimationVarnost : MonoBehaviour
 
     void handAnim()
     {
-        LeanTween.moveLocal(hand, new Vector3(0f, -200f, 0f), 1.4f).setDelay(2f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.moveLocal(hand, new Vector3(0f, -140f, 0f), 1.4f).setDelay(2f).setEase(LeanTweenType.easeInOutExpo);
     }
 
     void AnimEnd()

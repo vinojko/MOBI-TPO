@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Won.unity
     guid: f6f61e8260125c84284e97092460cd0f
+  - enabled: 1
+    path: Assets/Scenes/Lost.unity
+    guid: 415da51f7f1e1fa4ba5992b7e7113124
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 97e3917855f974c4d814f88412748ee4, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d8ec816bddc9b45469e95e9f56dff4ce, type: 2}
