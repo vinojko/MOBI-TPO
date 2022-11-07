@@ -42,8 +42,9 @@ public class CPR : MonoBehaviour
 
     public GameObject cprUI, hand;
     public GameObject respirationIcon;
+    public GameObject chinLift;
 
-    public Camera defaultCam, respirationCam, CPRCam;
+    public Camera defaultCam, respirationCam, CPRCam, headCam;
 
     List<float> bpms = new List<float>();
 
@@ -167,7 +168,7 @@ public class CPR : MonoBehaviour
 
         if (cprCounter == 30)
         {
-            Respiration();
+            StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
             StopCoroutine(Vibrate());
@@ -202,11 +203,15 @@ public class CPR : MonoBehaviour
         //Depth.instance.DepthAnimationClose();
     }
 
-    private void Respiration()
+    IEnumerator Respiration()
     {
         respirationTimerStart = Time.time;
         hands.SetActive(false);
-        respirationIcon.SetActive(true);
+        //respirationIcon.SetActive(true);
+        ChangeCamera.instance.ChangeToCamera(respirationCam);
+        yield return new WaitForSeconds(1f);
+        chinLift.SetActive(true);
+        
 
     }
 
@@ -215,8 +220,9 @@ public class CPR : MonoBehaviour
 
         respirationCounter++;
 
-        respirationIcon.SetActive(false);
-        ChangeCamera.instance.ChangeToCamera(respirationCam);
+        //respirationIcon.SetActive(false);
+        chinLift.SetActive(false);
+
         yield return new WaitForSeconds(0.4f);
         FaderMouth.instance.FadeDepth();
 
@@ -238,7 +244,8 @@ public class CPR : MonoBehaviour
 
         if (respirationCounter == 2)
         {
-            respirationIcon.SetActive(false);
+            //respirationIcon.SetActive(false);
+            chinLift.SetActive(false);
             hands.SetActive(true);
             respirationCounter = 0;
             respirationCounter = 0;
@@ -263,7 +270,8 @@ public class CPR : MonoBehaviour
         }
         else
         {
-            respirationIcon.SetActive(true);
+            //respirationIcon.SetActive(true);
+            chinLift.SetActive(true);
             hands.SetActive(false);
         }
 
@@ -272,6 +280,7 @@ public class CPR : MonoBehaviour
             UIAnimationClose();
             hands.SetActive(false);
             respirationIcon.SetActive(false);
+            chinLift.SetActive(false);
 
             if (sceneName == "4 - CPR")
             {
@@ -291,7 +300,11 @@ public class CPR : MonoBehaviour
 
     public void RespirationMouth()
     {
-        StartCoroutine(RespirationClicked());
+        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder)
+        {
+            StartCoroutine(RespirationClicked());
+        }
+            
     }
 
     private void ChangeCameraCPR()
