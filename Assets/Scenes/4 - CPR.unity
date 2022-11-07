@@ -1173,7 +1173,7 @@ MonoBehaviour:
   cprUI: {fileID: 981483413}
   hand: {fileID: 0}
   respirationIcon: {fileID: 819232065}
-  chinLift: {fileID: 0}
+  chinLift: {fileID: 819100259}
   defaultCam: {fileID: 2086945619}
   respirationCam: {fileID: 1687585329}
   CPRCam: {fileID: 755223486}
@@ -4492,7 +4492,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 206555030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34178041}
+        m_TargetAssemblyTypeName: CPR, Assembly-CSharp
+        m_MethodName: RespirationMouth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &206555030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14396,6 +14408,7 @@ Transform:
   - {fileID: 1875200070}
   - {fileID: 1878854461}
   - {fileID: 347840047}
+  - {fileID: 1974886699}
   - {fileID: 1667866433}
   - {fileID: 2073783758}
   m_Father: {fileID: 0}
@@ -43639,7 +43652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 688045648}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667866434
 MonoBehaviour:
@@ -47229,7 +47242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1828096420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34178041}
+        m_TargetAssemblyTypeName: CPR, Assembly-CSharp
+        m_MethodName: RespirationMouth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1828096420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51131,6 +51156,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967704893}
   m_CullTransparentMesh: 1
+--- !u!1 &1974886698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974886699}
+  - component: {fileID: 1974886700}
+  m_Layer: 0
+  m_Name: ButtonSingleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974886699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974886698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 688045648}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974886700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974886698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c3c93ab2e2c4242b56ca289ef3afc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftShoulder: 0
+  rightShoulder: 0
 --- !u!1001 &1980216050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54120,7 +54190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 688045648}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2073783759
 MonoBehaviour:
