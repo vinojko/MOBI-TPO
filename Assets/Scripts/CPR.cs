@@ -78,6 +78,15 @@ public class CPR : MonoBehaviour
 
     private void Update()
     {
+
+        if (ButtonSingleton.instance.leftShoulder  && ButtonSingleton.instance.rightShoulder)
+        {
+            StartCoroutine(RespirationClicked());
+            ButtonSingleton.instance.leftShoulder = false;
+            ButtonSingleton.instance.rightShoulder = false;
+
+
+        }
         lerpSpeed = 5f * Time.deltaTime;
 
         compressionCounterText.text = cprCounter.ToString();
