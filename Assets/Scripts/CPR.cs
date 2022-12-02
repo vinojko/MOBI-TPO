@@ -81,7 +81,8 @@ public class CPR : MonoBehaviour
 
         if (ButtonSingleton.instance.leftShoulder  && ButtonSingleton.instance.rightShoulder)
         {
-            StartCoroutine(RespirationClicked());
+            //StartCoroutine(RespirationClicked());
+            animator.SetBool("playChin", true);
             ButtonSingleton.instance.leftShoulder = false;
             ButtonSingleton.instance.rightShoulder = false;
 
