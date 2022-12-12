@@ -44,7 +44,7 @@ public class CPR : MonoBehaviour
     public GameObject respirationIcon;
     public GameObject chinLift;
 
-    public Camera defaultCam, respirationCam, CPRCam, headCam;
+    public Camera defaultCam, respirationCam, CPRCam, headCam, mouthCam;
 
     List<float> bpms = new List<float>();
 
@@ -82,9 +82,7 @@ public class CPR : MonoBehaviour
         if (ButtonSingleton.instance.leftShoulder  && ButtonSingleton.instance.rightShoulder)
         {
             //StartCoroutine(RespirationClicked());
-            animator.SetBool("playChin", true);
-            ButtonSingleton.instance.leftShoulder = false;
-            ButtonSingleton.instance.rightShoulder = false;
+            StartCoroutine(MoveChin());
 
 
         }
@@ -176,7 +174,7 @@ public class CPR : MonoBehaviour
 
         cprCounter++;
 
-        if (cprCounter == 30)
+        if (cprCounter == 3)
         {
             StartCoroutine(Respiration());
             cprCounter = 0;
@@ -230,9 +228,10 @@ public class CPR : MonoBehaviour
 
         respirationCounter++;
 
-        //respirationIcon.SetActive(false);
-        chinLift.SetActive(false);
+        respirationIcon.SetActive(false);
+        //chinLift.SetActive(false);
 
+        ChangeCamera.instance.ChangeToCamera(mouthCam);
         yield return new WaitForSeconds(0.4f);
         FaderMouth.instance.FadeDepth();
 
@@ -244,10 +243,11 @@ public class CPR : MonoBehaviour
 
         //Kamera nazaj na default
         yield return new WaitForSeconds(2.1f);
+        ChangeCamera.instance.ChangeToCamera(respirationCam);
 
         if (GameManager.currentState != GameState.AEDKoncano)
         {
-            ChangeCamera.instance.ChangeToCamera(CPRCam);
+            ChangeCamera.instance.ChangeToCamera(respirationCam);
         }
         
         yield return new WaitForSeconds(0.5f);
@@ -258,7 +258,8 @@ public class CPR : MonoBehaviour
             chinLift.SetActive(false);
             hands.SetActive(true);
             respirationCounter = 0;
-            respirationCounter = 0;
+            ChangeCamera.instance.ChangeToCamera(CPRCam);
+
 
             respirationTimerEnd = Time.time;
             respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
@@ -280,8 +281,8 @@ public class CPR : MonoBehaviour
         }
         else
         {
-            //respirationIcon.SetActive(true);
-            chinLift.SetActive(true);
+            respirationIcon.SetActive(true);
+            //chinLift.SetActive(true);
             hands.SetActive(false);
         }
 
@@ -310,10 +311,9 @@ public class CPR : MonoBehaviour
 
     public void RespirationMouth()
     {
-        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder)
-        {
-            StartCoroutine(RespirationClicked());
-        }
+        
+         StartCoroutine(RespirationClicked());
+        
             
     }
 
@@ -393,5 +393,19 @@ public class CPR : MonoBehaviour
         }
 
     }
+    private IEnumerator MoveChin()
+    {
+        animator.SetBool("playChin", true);
+        ButtonSingleton.instance.leftShoulder = false;
+        ButtonSingleton.instance.rightShoulder = false;
+
+
+        chinLift.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
+        respirationIcon.SetActive(true);
+       
+    }
+
+
 
 }

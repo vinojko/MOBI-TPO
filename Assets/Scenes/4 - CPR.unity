@@ -1178,6 +1178,7 @@ MonoBehaviour:
   respirationCam: {fileID: 1867940479}
   CPRCam: {fileID: 755223486}
   headCam: {fileID: 0}
+  mouthCam: {fileID: 1687585329}
   compressionRing: {fileID: 1982172532}
   respirationRing: {fileID: 283178516}
   cycle: 0
@@ -18432,7 +18433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 393.59998, y: -114.80005}
+  m_AnchoredPosition: {x: -60.429993, y: -114.80005}
   m_SizeDelta: {x: 283.0591, y: 283.0591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819232067
@@ -44192,7 +44193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687585326}
   m_LocalRotation: {x: 0.6713405, y: 0.2221802, z: -0.21500567, w: 0.67358035}
-  m_LocalPosition: {x: 1.696, y: -0.9419999, z: -9.704}
+  m_LocalPosition: {x: 1.708, y: -0.9430001, z: -9.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 923839311}
