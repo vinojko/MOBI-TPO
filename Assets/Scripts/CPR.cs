@@ -259,6 +259,9 @@ public class CPR : MonoBehaviour
             hands.SetActive(true);
             respirationCounter = 0;
             ChangeCamera.instance.ChangeToCamera(CPRCam);
+            animator.SetBool("playChin", false);
+            animator.SetBool("playReverseChin", true);
+
 
 
             respirationTimerEnd = Time.time;
@@ -395,6 +398,7 @@ public class CPR : MonoBehaviour
     }
     private IEnumerator MoveChin()
     {
+        animator.SetBool("playReverseChin", false);
         animator.SetBool("playChin", true);
         ButtonSingleton.instance.leftShoulder = false;
         ButtonSingleton.instance.rightShoulder = false;
