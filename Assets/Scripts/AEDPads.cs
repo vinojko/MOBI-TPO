@@ -14,6 +14,7 @@ public class AEDPads : MonoBehaviour
     public bool clicked = false;
 
     public GameObject light;
+    public Animator animator;
     public Camera AEDCam;
     public Camera defaultCam;
 
@@ -34,6 +35,8 @@ public class AEDPads : MonoBehaviour
         {
             analysisDialog.TriggerDialog();
             StartCoroutine(FlashLight());
+            StartCoroutine(BlippingAEDSound());
+            StartCoroutine(ChargingAEDSound());
             pads.transform.DOLocalMove(new Vector3(-0.418f, 3.29f, 2.839f), 1f);
             FadeIn();
         }
@@ -50,10 +53,12 @@ public class AEDPads : MonoBehaviour
         while (!clicked)
         {
             light.SetActive(true);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.20f);
             light.SetActive(false);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.20f);
         }
+        FindObjectOfType<AudioManager>().Stop("AEDBlipping");
+
 
         light.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -65,6 +70,21 @@ public class AEDPads : MonoBehaviour
         shockClicked.TriggerDialog();
         yield return new WaitForSeconds(2f);
         GameManager.instance.UpdateGameState(GameState.CPR);
+
+    }
+
+    private IEnumerator BlippingAEDSound()
+    {
+        yield return new WaitForSeconds(10f);
+        FindObjectOfType<AudioManager>().Play("AEDBlipping");
+
+
+    }
+    private IEnumerator ChargingAEDSound()
+    {
+        yield return new WaitForSeconds(5f);
+        FindObjectOfType<AudioManager>().Play("AEDCharging");
+
 
     }
 
@@ -83,6 +103,29 @@ public class AEDPads : MonoBehaviour
     private void FadeIn()
     {
         LeanTween.moveLocal(vsistranButton, new Vector3(0f, -850f, 0f), 1.5f).setDelay(10.2f).setEaseInOutExpo();
+
+    }
+
+    private IEnumerator ShockClickedCoroutine()
+    {
+        FindObjectOfType<AudioManager>().Play("AEDClick");
+        FindObjectOfType<AudioManager>().Play("AEDChargeShock");
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine(HanzAnimation());
+
+    }
+    public void ShockClicked()
+    {
+        StartCoroutine(ShockClickedCoroutine());
+
+    }
+
+    public IEnumerator HanzAnimation()
+    {
+      
+        animator.SetBool("playCPR", true);
+        yield return new WaitForSeconds(0.2f);
+        animator.SetBool("playCPR", false);
 
     }
 

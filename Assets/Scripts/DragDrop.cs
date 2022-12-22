@@ -17,6 +17,9 @@ public class DragDrop : MonoBehaviour
         offset = transform.position - MouseWorldPosition();
         transform.GetComponent<Collider>().enabled = false;
         startPosition = transform.position;
+
+        FindObjectOfType<AudioManager>().Play("StickerRip");
+
     }
 
     void OnMouseDrag()
@@ -50,13 +53,15 @@ public class DragDrop : MonoBehaviour
                     padLeft.SetActive(true);
                     AEDPads.instance.leftPadSet = true;
                     AEDPads.instance.PadsSet();
-                    
+                    FindObjectOfType<AudioManager>().Play("StickerPlace");
+
                 }
                 else if (destinationTag == "DropRight") {
 
                     padRight.SetActive(true);
                     AEDPads.instance.rightPadSet = true;
                     AEDPads.instance.PadsSet();
+                    FindObjectOfType<AudioManager>().Play("StickerPlace");
                 } 
 
                 gameObject.SetActive(false);

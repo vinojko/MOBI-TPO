@@ -21,7 +21,8 @@ public class CPR : MonoBehaviour
     public TextMeshProUGUI compressionCounterText;
     public TextMeshProUGUI respirationCounterText;
 
-
+    public DialogTrigger respirationDilaog;
+    public DialogTrigger chestCompression;
 
     float bpm = 0f;
     float lastBpm = 0f;
@@ -41,6 +42,7 @@ public class CPR : MonoBehaviour
     private Vector3 initHands;
 
     public GameObject cprUI, hand;
+    public Button handButton;
     public GameObject respirationIcon;
     public GameObject chinLift;
 
@@ -73,6 +75,7 @@ public class CPR : MonoBehaviour
         taps = 0;
         initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
         respirationIcon.SetActive(false);
+        handButton.interactable = false;
 
     }
 
@@ -111,7 +114,7 @@ public class CPR : MonoBehaviour
 
         if (state == GameState.CPR /* || state == GameState.CPRAED*/)
         {
-            UIAnimation();
+            StartCoroutine(UIAnimation());
             ChangeCameraCPR();
             StartCoroutine(Vibrate());
 
@@ -174,8 +177,9 @@ public class CPR : MonoBehaviour
 
         cprCounter++;
 
-        if (cprCounter == 3)
+        if (cprCounter == 30)
         {
+            respirationDilaog.TriggerDialog();
             StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
@@ -201,9 +205,13 @@ public class CPR : MonoBehaviour
         LeanTween.scale(hands, initHands, 0.2f).setDelay(0.2f);
     }
 
-    private void UIAnimation()
+    private IEnumerator UIAnimation()
     {
+        
         LeanTween.moveLocal(cprUI, new Vector3(0f, -785f, 0f), 3f).setEase(LeanTweenType.easeOutExpo).setDelay(8f);
+        yield return new WaitForSeconds(8.0f);
+        handButton.interactable = true;
+
     }
     private void UIAnimationClose()
     {
@@ -256,11 +264,17 @@ public class CPR : MonoBehaviour
         {
             //respirationIcon.SetActive(false);
             chinLift.SetActive(false);
+    
+            ChangeCamera.instance.ChangeToCamera(CPRCam);
+            animator.SetBool("playReverseChin", true);
+            yield return new WaitForSeconds(1.0f);
             hands.SetActive(true);
             respirationCounter = 0;
-            ChangeCamera.instance.ChangeToCamera(CPRCam);
             animator.SetBool("playChin", false);
-            animator.SetBool("playReverseChin", true);
+
+            chestCompression.TriggerDialog();
+
+
 
 
 

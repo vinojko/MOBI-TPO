@@ -74,7 +74,7 @@ public class KiraCPR : MonoBehaviour
         ChangeCamera.instance.ChangeToCameraSlow(AEDCam);
         yield return new WaitForSeconds(1f);
         aedTakenDialog.TriggerDialog();
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(4.0f);
         GameManager.instance.UpdateGameState(GameState.CPRKoncano);
     }
 

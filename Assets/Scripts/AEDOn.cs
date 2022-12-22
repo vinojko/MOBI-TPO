@@ -41,7 +41,7 @@ public class AEDOn : MonoBehaviour
     {
         if (GameManager.currentState == GameState.AED)
         {
-            Debug.Log("aed ON");
+            
             var rayOrigin = Camera.main.transform.position;
             var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
             RaycastHit hitInfo;
@@ -50,6 +50,7 @@ public class AEDOn : MonoBehaviour
                 if (hitInfo.transform.CompareTag(destinationTag))
                 {
                     Debug.Log("aed ON");
+                    FindObjectOfType<AudioManager>().Play("AEDClick");
                     AEDOnMaterial.EnableKeyword("_EMISSION");
                     //ChangeCamera.instance.ChangeToCamera(defaultCam);
                     StartCoroutine(MoveCameraDefault());
