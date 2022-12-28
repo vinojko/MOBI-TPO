@@ -9,6 +9,10 @@ using UnityEngine.SceneManagement;
 public class CPR : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    private int cycle = 0;
+    [SerializeField]
+    private int neededCompressions = 30;
     private int secElapsed;
     private int taps = 0;
     bool firstClick = true;
@@ -54,8 +58,7 @@ public class CPR : MonoBehaviour
 
     float lerpSpeed;
 
-    [SerializeField]
-    private int cycle = 0;
+   
 
     public GameObject lungs;
     public Image lungsFilled;
@@ -127,7 +130,7 @@ public class CPR : MonoBehaviour
             //Depth.instance.DepthAnimation();
         }
     }
-
+     
     public IEnumerator HanzAnimation()
     {
 
@@ -177,7 +180,7 @@ public class CPR : MonoBehaviour
 
         cprCounter++;
 
-        if (cprCounter == 30)
+        if (cprCounter == neededCompressions)
         {
             respirationDilaog.TriggerDialog();
             StartCoroutine(Respiration());
@@ -313,8 +316,10 @@ public class CPR : MonoBehaviour
             if (sceneName == "4 - CPR")
             {
                 GameManager.instance.UpdateGameState(GameState.CPRKira);
+                FindObjectOfType<AudioManager>().Stop("CPRRhytm");
 
-            }else if (sceneName == "5 - AED")
+            }
+            else if (sceneName == "5 - AED")
             {
                 GameManager.instance.UpdateGameState(GameState.AEDKoncano);
           
@@ -402,6 +407,7 @@ public class CPR : MonoBehaviour
 
     private IEnumerator Vibrate()
     {
+        FindObjectOfType<AudioManager>().Play("CPRRhytm");
         while (doVibrate)
         {
             yield return new WaitForSeconds(0.5455f);
@@ -412,13 +418,15 @@ public class CPR : MonoBehaviour
     }
     private IEnumerator MoveChin()
     {
-        animator.SetBool("playReverseChin", false);
-        animator.SetBool("playChin", true);
+        chinLift.SetActive(false);
         ButtonSingleton.instance.leftShoulder = false;
         ButtonSingleton.instance.rightShoulder = false;
+        animator.SetBool("playReverseChin", false);
+        animator.SetBool("playChin", true);
+        
 
 
-        chinLift.SetActive(false);
+        
         yield return new WaitForSeconds(1.0f);
         respirationIcon.SetActive(true);
        

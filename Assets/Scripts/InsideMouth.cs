@@ -58,7 +58,7 @@ public class InsideMouth : MonoBehaviour
 
    public IEnumerator Fade()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         FaderMouth.instance.FadeIn();
         FaderMouth.instance.FadeOut();
         yield return new WaitForSeconds(0.5f);

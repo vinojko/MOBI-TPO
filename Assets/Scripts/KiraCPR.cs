@@ -9,10 +9,13 @@ public class KiraCPR : MonoBehaviour
     public Camera kiraCam, AEDCam;
     public Animator kiraAnimator;
     int kiraHash;
+    private Vector3 initHands;
 
     public DialogTrigger kiraComes, aedTakenDialog;
-    public GameObject AED, AEDIcon, groundAED;
+    public GameObject AED, AEDIcon, groundAED, ghostHands;
 
+    
+   
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -36,6 +39,8 @@ public class KiraCPR : MonoBehaviour
     void Start()
     {
         kiraHash = Animator.StringToHash("Kira");
+        initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
+        ghostHands.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,7 +48,20 @@ public class KiraCPR : MonoBehaviour
     {
         
     }
-
+    private IEnumerator HandsAnimation()
+    {
+        while (true)
+        {
+            LeanTween.scale(ghostHands, initHands - new Vector3(0.2f, 0.2f, 0.2f), 0.2f);
+            LeanTween.scale(ghostHands, initHands, 0.2f).setDelay(0.2f);
+            yield return new WaitForSeconds(0.545f);
+        }
+        
+    }
+    private void HandFadeIn()
+    {
+        LeanTween.moveLocal(ghostHands, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
+    }
     private void StartRunning()
     {
 
@@ -74,7 +92,11 @@ public class KiraCPR : MonoBehaviour
         ChangeCamera.instance.ChangeToCameraSlow(AEDCam);
         yield return new WaitForSeconds(1f);
         aedTakenDialog.TriggerDialog();
-        yield return new WaitForSeconds(4.0f);
+        ghostHands.SetActive(true);
+        HandFadeIn();
+        yield return new WaitForSeconds(0.2f);
+        StartCoroutine(HandsAnimation());
+        yield return new WaitForSeconds(3.5f);
         GameManager.instance.UpdateGameState(GameState.CPRKoncano);
     }
 

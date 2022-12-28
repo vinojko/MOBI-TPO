@@ -34,10 +34,7 @@ public class Call112 : MonoBehaviour
             StartCoroutine(ShowAnswers());
 
         }
-        else
-        {
-            
-        }
+   
 
     }
 
@@ -111,7 +108,7 @@ public class Call112 : MonoBehaviour
         call.SetActive(true);
         yield return new WaitForSeconds(1f);
         instructions.TriggerDialog();
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(10f);
         phone3D.SetActive(true);
 
 

@@ -297,6 +297,11 @@ public class CPRAED : MonoBehaviour
             hands.SetActive(false);
         }
 
+        if (cycle == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("Ambulance");
+        }
+
         if (cycle == 3)
         {
             UIAnimationClose();

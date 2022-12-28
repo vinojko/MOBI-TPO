@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18132372, g: 0.22693606, b: 0.30736592, a: 1}
+  m_IndirectSpecularColor: {r: 0.18132377, g: 0.22693606, b: 0.30736592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5765,9 +5765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Po va\u0161i zaslugi je oseba pre\u017Eivela.\n\nUpam, da vam bo znanje,
-    ki ste ga dobili, pomagalo in \u010De ga \u017Eelite poglobiti se preizkusite
-    v kvizu.\n\nHvala za igranje.\n"
+  m_text: "Po va\u0161i zaslugi je oseba pre\u017Eivela.\n\nHvala za igranje.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}

@@ -14,6 +14,7 @@ public class AEDPads : MonoBehaviour
     public bool clicked = false;
 
     public GameObject light;
+    public GameObject ghostHands;
     public Animator animator;
     public Camera AEDCam;
     public Camera defaultCam;
@@ -39,6 +40,7 @@ public class AEDPads : MonoBehaviour
             StartCoroutine(ChargingAEDSound());
             pads.transform.DOLocalMove(new Vector3(-0.418f, 3.29f, 2.839f), 1f);
             FadeIn();
+            ghostHands.SetActive(false);
         }
         
     }
@@ -111,6 +113,7 @@ public class AEDPads : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("AEDClick");
         FindObjectOfType<AudioManager>().Play("AEDChargeShock");
         yield return new WaitForSeconds(2.5f);
+        Vibration.Vibrate(20);
         StartCoroutine(HanzAnimation());
 
     }

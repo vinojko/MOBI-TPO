@@ -24,13 +24,18 @@ public class OsebaOdzivna : MonoBehaviour
         {
             odzivna.TriggerDialog();
             FadeIn();
-
         }
     }
 
     public void RightAnswer()
     {
+        StartCoroutine(RightAnswerCoroutine());
+    }
+
+    private IEnumerator RightAnswerCoroutine()
+    {
         rightAnswer.TriggerDialog();
+        yield return new WaitForSeconds(1.0f);
         GameManager.instance.UpdateGameState(GameState.OdzivnostKoncano);
         FadeOut();
         StartCoroutine(DialogTrig());

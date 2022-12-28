@@ -35,7 +35,7 @@ public class AEDKoncan : MonoBehaviour
         ChangeCamera.instance.ChangeToCamera(houseCam , 0.1f);
 
         yield return new WaitForSeconds(0.5f);
-        dialog.TriggerDialog();
+        //dialog.TriggerDialog();
         yield return new WaitForSeconds(7f);
         FaderMouth.instance.FadeDepth();
         yield return new WaitForSeconds(0.5f);
@@ -52,7 +52,7 @@ public class AEDKoncan : MonoBehaviour
         }
         else
         {
-            //SceneManager.LoadScene("Lost");
+            SceneManager.LoadScene("Lost");
         }
     }
 }

@@ -28,12 +28,12 @@ public class VPManager : MonoBehaviour
         }
 
         // TESTIRANJE
-        if (sceneName == "5 - AED")
+        /*if (sceneName == "5 - AED")
         {
             dataManager.Load();
             dataManager.data.verjetnostPrezivetja = 100;
             dataManager.Save();
-        }
+        }*/
 
         dataManager.Load();
         vp = dataManager.data.verjetnostPrezivetja;
