@@ -6760,7 +6760,7 @@ RectTransform:
   - {fileID: 1385315925}
   - {fileID: 1001558596}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 20
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11150,7 +11150,7 @@ RectTransform:
   - {fileID: 2038056310}
   - {fileID: 676632432}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11812,7 +11812,7 @@ RectTransform:
   - {fileID: 132309037}
   - {fileID: 777335419}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18479,7 +18479,7 @@ RectTransform:
   - {fileID: 1828096417}
   - {fileID: 206555027}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -38332,11 +38332,11 @@ RectTransform:
   - {fileID: 586660747}
   - {fileID: 388293541}
   - {fileID: 1822610277}
-  - {fileID: 322044272}
   - {fileID: 1828211181}
   - {fileID: 572988955}
   - {fileID: 520788864}
   - {fileID: 819100260}
+  - {fileID: 322044272}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 16.553, y: 99.62, z: -4.102}
@@ -41921,7 +41921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.9, y: -287.57}
+  m_AnchoredPosition: {x: -22, y: -287.57}
   m_SizeDelta: {x: 106.66, y: 76.0938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595363516
@@ -41978,7 +41978,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -42007,7 +42007,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -48.798218, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -47493,7 +47493,7 @@ RectTransform:
   - {fileID: 1832698205}
   - {fileID: 1754238444}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -50411,7 +50411,7 @@ MonoBehaviour:
     sentences:
     - "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico in prsnim ko\u0161om
       in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljavanje . Za ritem si
-      pomagajte s sr\u010Dnim indikatorjem in glasbo."
+      pomagajte z drsnikom za globino sr\u010Dnim in glasbo."
 --- !u!1001 &1935483105
 PrefabInstance:
   m_ObjectHideFlags: 0

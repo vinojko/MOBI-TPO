@@ -17,10 +17,10 @@ public class GhostHands : MonoBehaviour
     private void GameManagerOnStateChanged(GameState state)
     {
 
-        if (state == GameState.CPR /* || state == GameState.CPRAED*/)
+        if (state != GameState.AED)
         {
   
-            //Depth.instance.DepthAnimation();
+            
         }
     }
     private void HandsAnimation()

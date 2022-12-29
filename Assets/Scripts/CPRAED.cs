@@ -21,7 +21,8 @@ public class CPRAED : MonoBehaviour
     public TextMeshProUGUI compressionCounterText;
     public TextMeshProUGUI respirationCounterText;
 
-
+    [SerializeField]
+    float ambulanceArrival = 30f;
 
     float bpm = 0f;
     float lastBpm = 0f;
@@ -116,11 +117,11 @@ public class CPRAED : MonoBehaviour
             UIAnimation();
             ChangeCameraCPR();
             StartCoroutine(Vibrate());
+            StartCoroutine(AmbulanceArrival());
+            FindObjectOfType<AudioManager>().Play("Ambulance");
 
-            if (sceneName == "5 - AED")
-            {
-                HandFadeIn();
-            }
+            HandFadeIn();
+            
 
 
             //Depth.instance.DepthAnimation();
@@ -297,32 +298,9 @@ public class CPRAED : MonoBehaviour
             hands.SetActive(false);
         }
 
-        if (cycle == 2)
-        {
-            FindObjectOfType<AudioManager>().Play("Ambulance");
-        }
+       
 
-        if (cycle == 3)
-        {
-            UIAnimationClose();
-            hands.SetActive(false);
-            respirationIcon.SetActive(false);
-            chinLift.SetActive(false);
-
-            if (sceneName == "4 - CPR")
-            {
-                GameManager.instance.UpdateGameState(GameState.CPRKira);
-
-            }else if (sceneName == "5 - AED")
-            {
-                GameManager.instance.UpdateGameState(GameState.AEDKoncano);
-          
-            }
-
-            doVibrate = false;
-            StopCoroutine(Vibrate());
-
-        }
+      
     }
 
     public void RespirationMouth()
@@ -421,6 +399,21 @@ public class CPRAED : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         respirationIcon.SetActive(true);
        
+    }
+
+    private IEnumerator AmbulanceArrival()
+    {
+        yield return new WaitForSeconds(ambulanceArrival);
+        UIAnimationClose();
+        hands.SetActive(false);
+        respirationIcon.SetActive(false);
+        chinLift.SetActive(false);
+   
+        GameManager.instance.UpdateGameState(GameState.AEDKoncano);
+
+        doVibrate = false;
+        StopCoroutine(Vibrate());
+
     }
 
 
