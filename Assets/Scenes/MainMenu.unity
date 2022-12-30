@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 113210802}
-  TypeSpeed: 0.045
+  TypeSpeed: 0.05
   DialogUI: {fileID: 1156819950}
 --- !u!1 &106798437
 GameObject:
@@ -4246,10 +4246,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Za\u010Deli bomo z zagotavljanjem varnosti, in preko preverjanje odzivnosti
-      in dihanja, klica na pomo\u010D/112, poslali po avtomatski zunanji defibrillator,
-      izvajanja kardiopulmonalnega o\u017Eivljanja (KPO), kon\u010Dali z uporabo
-      AED."
+    - "Za\u010Deli bomo s:\r\n- Palec: Preveri varnosti,\r\n- Kazalec: Preveri odzivnost
+      in dihanje,\r\n- Sredinec: Pokli\u010Di 112 in po\u0161lji po avtomatski zunanji
+      defibrilator (AED),\r\n- Prstanec: Za\u010Dni kardiopulmonalno o\u017Eivljanje
+      (KPO), \r\n- Mezinec: Uporabi AED."
 --- !u!1 &1562828935
 GameObject:
   m_ObjectHideFlags: 0

@@ -76,7 +76,7 @@ public class Call112 : MonoBehaviour
     public void CheckNumber()
     {
 
-        if (phoneText.text.Equals("112"))
+        if (phoneText.text.Equals("112") || phoneText.text.Equals("911"))
         {
             StartCoroutine(CallInstructions());
         }
