@@ -20,7 +20,6 @@ public class IntroAnimationVarnost : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Kitchen");
        /* numberAnim();
         titleAnim();
         handAnim();
@@ -42,6 +41,7 @@ public class IntroAnimationVarnost : MonoBehaviour
         if(state == GameState.IntroAnimation)
         {
             StartCoroutine(Animate());
+            FindObjectOfType<AudioManager>().Play("Theme");
         }
 
     }

@@ -28,6 +28,7 @@ public class ShowFootsteps : MonoBehaviour
         if(state == GameState.Footsteps)
         {
             startDialog.TriggerDialog();
+            //FindObjectOfType<AudioManager>().Play("Theme");
         }
 
 

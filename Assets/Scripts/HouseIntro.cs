@@ -69,7 +69,7 @@ public class HouseIntro : MonoBehaviour
     public void WrongAnswer()
     {
         wrongAnswer.SetActive(true);
-        StartCoroutine(Answer());
+        //StartCoroutine(Answer());
     }
 
     private IEnumerator Answer()

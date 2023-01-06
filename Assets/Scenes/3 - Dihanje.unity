@@ -1872,7 +1872,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50499664}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 50499664}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &50499664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6688,7 +6700,7 @@ Transform:
   m_LocalPosition: {x: 0.644, y: 1.92, z: -23.097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1729759335}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9.54, y: 225.7, z: 0}
 --- !u!114 &240602701
@@ -10748,7 +10760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 417953599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 417953599}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &417953599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14457,6 +14481,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 515469571}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515469571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15962,6 +15998,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WrongAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 565544268}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18116,6 +18164,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000282398074188, guid: 642aa9de4ab3d994a94a76aae2abbedd, type: 3}
   m_PrefabInstance: {fileID: 650551231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &652930420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652930421}
+  - component: {fileID: 652930422}
+  m_Layer: 0
+  m_Name: ButtonInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652930421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652930420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114660262}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652930422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652930420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8411e832a1a2d14fbae6b9605ceb337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &653158120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19897,6 +19988,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: CorrectAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 726481873}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28829,6 +28932,7 @@ Transform:
   - {fileID: 459203639}
   - {fileID: 1892098127}
   - {fileID: 877632263}
+  - {fileID: 652930421}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39318,6 +39422,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: CorrectAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1574584678}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1574584678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47491,6 +47607,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4735269973372288, guid: 1483cae5230049048a75f92f530f1516, type: 3}
   m_PrefabInstance: {fileID: 1724877042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1729759334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729759335}
+  - component: {fileID: 1729759336}
+  m_Layer: 0
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1729759335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729759334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 240602700}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729759336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729759334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a257897ce04dc64eb5ae266c62846be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
+  StrengthMultiplier: 0.095
 --- !u!1 &1731953033
 GameObject:
   m_ObjectHideFlags: 0
@@ -50103,6 +50265,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: CorrectAnswer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1841454603}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -52774,13 +52948,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CheckBreathing, Assembly-CSharp
+      - m_Target: {fileID: 652930422}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
         m_MethodName: WrongAnswer
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1961088594}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
