@@ -9,6 +9,7 @@ TagManager:
   - DropRight
   - AEDOn
   - AEDShock
+  - TearArea
   layers:
   - Default
   - TransparentFX

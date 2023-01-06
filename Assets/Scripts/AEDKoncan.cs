@@ -10,6 +10,10 @@ public class AEDKoncan : MonoBehaviour
     public GameObject ambulance;
     public GameObject redLight, blueLight;
     public GameObject doctorIcon, AEDIcon;
+
+    public Animator packageAnim;
+    public Vector3 dragDistance;
+    private Touch firstDetectedTouch;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -32,6 +36,22 @@ public class AEDKoncan : MonoBehaviour
 
             doctorIcon.SetActive(true);
             AEDIcon.SetActive(false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.touchCount > 0)
+        {
+
+            firstDetectedTouch = Input.GetTouch(0);
+
+            if (Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+
+                dragDistance = firstDetectedTouch.deltaPosition;
+                Debug.Log(dragDistance);
+            }
         }
     }
 
@@ -59,7 +79,7 @@ public class AEDKoncan : MonoBehaviour
 
     private void WinOrLose()
     {
-        if(VPManager.instance.vp >= 72)
+        if(VPManager.instance.vp >= 73)
         {
             SceneManager.LoadScene("Won");
         }

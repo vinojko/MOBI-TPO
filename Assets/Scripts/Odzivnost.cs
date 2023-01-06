@@ -52,6 +52,10 @@ public class Odzivnost : MonoBehaviour
         {
             GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
             zavpijteDialog.TriggerDialog();
+            ButtonSingleton.instance.leftShoulder = false;
+            ButtonSingleton.instance.rightShoulder = false;
+
+
         }
     }
 

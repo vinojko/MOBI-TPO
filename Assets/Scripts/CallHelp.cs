@@ -50,7 +50,7 @@ public class CallHelp : MonoBehaviour
     {
         if (state == GameState.CallHelp)
         {
-            dialog1.TriggerDialog();
+            //dialog1.TriggerDialog();
             StartCoroutine(ShowAnswers());
 
         }
@@ -58,7 +58,7 @@ public class CallHelp : MonoBehaviour
 
     private IEnumerator ShowAnswers()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         LeanTween.moveLocal(Answers, new Vector3(0f, -50f, 0f), 1.5f).setEaseInOutExpo();
 
     }

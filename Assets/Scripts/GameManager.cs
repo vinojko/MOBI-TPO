@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         }
         else if (sceneName == "3 - Dihanje")
         {
-            currentState = GameState.DihanjeZacetek;
+            currentState = GameState.CallHelp;
         }
         else if (sceneName == "4 - CPR")
         {
@@ -107,6 +107,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.AED:
                 break;
+            case GameState.OpenPackage:
+                break;
             case GameState.VolumeQuestion:
                 break;
             case GameState.AEDShock:
@@ -167,6 +169,7 @@ public enum GameState
     CPRKoncano,
     /* --- 5 - AED --- */
     AED,
+    OpenPackage,
     AEDShock,
     AEDKoncano
 

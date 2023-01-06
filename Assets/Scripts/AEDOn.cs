@@ -51,7 +51,8 @@ public class AEDOn : MonoBehaviour
                     AEDOnMaterial.EnableKeyword("_EMISSION");
                     //ChangeCamera.instance.ChangeToCamera(defaultCam);
                     StartCoroutine(MoveCameraDefault());
-                    StartCoroutine(Pads());
+                    GameManager.instance.UpdateGameState(GameState.OpenPackage);
+                    //StartCoroutine(Pads());
 
                 }
 
@@ -74,7 +75,7 @@ public class AEDOn : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         
-        ChangeCamera.instance.ChangeToCamera(AEDCam);
+        //ChangeCamera.instance.ChangeToCamera(AEDCam);
         ghostHands.SetActive(false);
     }
 
