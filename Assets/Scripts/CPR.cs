@@ -30,6 +30,9 @@ public class CPR : MonoBehaviour
 
     public DialogTrigger respirationDilaog;
     public DialogTrigger chestCompression;
+    public DialogTrigger lungTooMuch;
+    public DialogTrigger lungTooLittle;
+    public DialogTrigger lungOkay;
 
     float bpm = 0f;
     float lastBpm = 0f;
@@ -44,6 +47,8 @@ public class CPR : MonoBehaviour
     public Slider mainSlider;
     public Slider depthSlider;
     public GameObject hands;
+    public CanvasGroup fadeImage;
+    public Image fadeImage2;
     public Animator animator;
 
     private Vector3 initHands;
@@ -52,6 +57,7 @@ public class CPR : MonoBehaviour
     public Button handButton;
     public GameObject respirationIcon;
     public GameObject chinLift;
+    float resultValue = 0.0f;
 
     public Camera defaultCam, respirationCam, CPRCam, headCam, mouthCam;
 
@@ -248,23 +254,40 @@ public class CPR : MonoBehaviour
 
         ChangeCamera.instance.ChangeToCamera(mouthCam);
         yield return new WaitForSeconds(0.4f);
-        FaderMouth.instance.FadeDepth();
+        //FaderMouth.instance.FadeDepth();
+        
 
         lungs.SetActive(true);
 
         //Pljuca - 500 ml
         ShowLungs();
-
-
-        
+      
     }
 
     public void RespirationMouth()
     {
         
-         StartCoroutine(RespirationClicked());
-        
+         StartCoroutine(RespirationClicked());     
             
+    }
+
+    void FadeImageIn()
+    {
+        LeanTween.reset();
+        LeanTween.value(gameObject, 0f, 1f, 0.4f).setOnUpdate((value) =>
+        {
+            fadeImage.alpha = value;
+
+        });
+    }
+    void FadeImageOut()
+    {
+        LeanTween.reset();
+        LeanTween.value(gameObject, 1f, 0f, 0.4f).setOnUpdate((float value) =>
+        {
+            fadeImage.alpha = value;
+
+        });
     }
 
     private void ChangeCameraCPR()
@@ -283,6 +306,7 @@ public class CPR : MonoBehaviour
 
     private void ShowLungs()
     {
+        FadeImageIn();
         StartCoroutine(showLungs());
     }
 
@@ -319,6 +343,7 @@ public class CPR : MonoBehaviour
             tempColor2.a = value;
             lungsImg.color = tempColor2;
         });
+       
 
     }
 
@@ -345,10 +370,7 @@ public class CPR : MonoBehaviour
         ButtonSingleton.instance.rightShoulder = false;
         animator.SetBool("playReverseChin", false);
         animator.SetBool("playChin", true);
-        
-
-
-        
+ 
         yield return new WaitForSeconds(1.0f);
         respirationIcon.SetActive(true);
        
@@ -358,23 +380,13 @@ public class CPR : MonoBehaviour
     {
         //0.634f - max
         //0.45f - min
-        float resultValue;
-        LeanTween.value(gameObject, 0f, 1f, 1.3f).setOnUpdate((value) =>
+        
+        LeanTween.value(gameObject, 0f, 1f, 1.2f).setOnUpdate((value) =>
         {
             if (released)
             {
-                if (value > 0.634f)
-                {
-                    Debug.Log("Prevec");
-                }
-                else if( value < 0.45f)
-                {
-                    Debug.Log("Premal");
-                }
-                else
-                {
-                    Debug.Log("Okay");
-                }
+                resultValue = value;
+            
                 released = false;
                 LeanTween.cancel(gameObject);
             };
@@ -391,13 +403,36 @@ public class CPR : MonoBehaviour
     public void LungFillEnd()
     {
         released = true;
+        
+       
         StartCoroutine(LungFillEndCoroutine());
 
     }
 
     public IEnumerator LungFillEndCoroutine()
     {
-    
+        if (resultValue > 0.634f)
+        {
+            Debug.Log("Prevec");
+            lungTooMuch.TriggerDialog();
+            yield return new WaitForSeconds(2.5f);
+
+        }
+        else if (resultValue < 0.45f)
+        {
+            Debug.Log("Premal");
+            lungTooLittle.TriggerDialog();
+            yield return new WaitForSeconds(2.5f);
+        }
+        else
+        {
+            Debug.Log("Okay");
+            lungOkay.TriggerDialog();
+            yield return new WaitForSeconds(1f);
+        }
+
+        
+        FadeImageOut();
         HideLungs();
 
         yield return new WaitForSeconds(.5f);
@@ -427,16 +462,11 @@ public class CPR : MonoBehaviour
 
             chestCompression.TriggerDialog();
 
-
-
-
-
             respirationTimerEnd = Time.time;
             respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
             last = respirationTimerEnd;
 
             cycle++;
-
 
             if (respirationCounter == 2 && cycle == 3)
             {
