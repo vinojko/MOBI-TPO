@@ -63,12 +63,12 @@ public class HouseIntro : MonoBehaviour
 
     public void RightAnswer()
     {
-        rightAnswer.SetActive(true);
+        //rightAnswer.SetActive(true);
         StartCoroutine(Answer());
     }
     public void WrongAnswer()
     {
-        wrongAnswer.SetActive(true);
+        //wrongAnswer.SetActive(true);
         //StartCoroutine(Answer());
     }
 

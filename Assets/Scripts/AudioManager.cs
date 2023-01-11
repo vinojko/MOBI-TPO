@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Credit to Brackeys youtube tutorial on Audio managers, as the majority of this code and learning how to use it was made by him.
 
@@ -39,7 +40,13 @@ public partial class AudioManager : MonoBehaviour
 
     void Start()
     {
-        //Play("Theme");
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name != "1 - Varnost" && scene.name != "Lost" && scene.name != "Won" && scene.name != "MainMenu")
+        {
+            Play("Theme");
+        }
+        
 
     }
 
@@ -61,5 +68,14 @@ public partial class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
         s.source.Stop();
+    }
+
+    public void StopAll()
+    {
+       
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
     }
 }

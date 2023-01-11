@@ -30,6 +30,7 @@ public class CPR : MonoBehaviour
 
     public DialogTrigger respirationDilaog;
     public DialogTrigger chestCompression;
+    public DialogTrigger lungHold;
     public DialogTrigger lungTooMuch;
     public DialogTrigger lungTooLittle;
     public DialogTrigger lungOkay;
@@ -129,7 +130,7 @@ public class CPR : MonoBehaviour
         {
             StartCoroutine(UIAnimation());
             ChangeCameraCPR();
-            StartCoroutine(Vibrate());
+            //StartCoroutine(Vibrate());
 
             if (sceneName == "5 - AED")
             {
@@ -196,7 +197,7 @@ public class CPR : MonoBehaviour
             StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
-            StopCoroutine(Vibrate());
+ 
         }
 
     }
@@ -250,13 +251,11 @@ public class CPR : MonoBehaviour
         respirationCounter++;
 
         respirationIcon.SetActive(false);
-        //chinLift.SetActive(false);
+        lungHold.TriggerDialog();
 
         ChangeCamera.instance.ChangeToCamera(mouthCam);
         yield return new WaitForSeconds(0.4f);
-        //FaderMouth.instance.FadeDepth();
         
-
         lungs.SetActive(true);
 
         //Pljuca - 500 ml
@@ -352,17 +351,7 @@ public class CPR : MonoBehaviour
         LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
     }
 
-    private IEnumerator Vibrate()
-    {
-        FindObjectOfType<AudioManager>().Play("CPRRhytm");
-        while (doVibrate)
-        {
-            yield return new WaitForSeconds(0.5455f);
-            Vibration.Vibrate(20);
-            Debug.Log("Vibrating 20ms");
-        }
-
-    }
+ 
     private IEnumerator MoveChin()
     {
         chinLift.SetActive(false);
@@ -380,8 +369,8 @@ public class CPR : MonoBehaviour
     {
         //0.634f - max
         //0.45f - min
-        
-        LeanTween.value(gameObject, 0f, 1f, 1.2f).setOnUpdate((value) =>
+        FindObjectOfType<AudioManager>().Play("BreathIn");
+        LeanTween.value(gameObject, 0f, 1f, 2f).setOnUpdate((value) =>
         {
             if (released)
             {
@@ -395,8 +384,6 @@ public class CPR : MonoBehaviour
             
 
         });
-
-        Debug.Log("Lmao");
 
 
     }
@@ -415,6 +402,7 @@ public class CPR : MonoBehaviour
         {
             Debug.Log("Prevec");
             lungTooMuch.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().WrongAnswerSFX();
             yield return new WaitForSeconds(2.5f);
 
         }
@@ -422,12 +410,14 @@ public class CPR : MonoBehaviour
         {
             Debug.Log("Premal");
             lungTooLittle.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().WrongAnswerSFX();
             yield return new WaitForSeconds(2.5f);
         }
         else
         {
             Debug.Log("Okay");
             lungOkay.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().CorrectAnswerSFX();
             yield return new WaitForSeconds(1f);
         }
 
@@ -471,12 +461,11 @@ public class CPR : MonoBehaviour
             if (respirationCounter == 2 && cycle == 3)
             {
                 doVibrate = false;
-                StopCoroutine(Vibrate());
+         
             }
             else
             {
                 doVibrate = true;
-                StartCoroutine(Vibrate());
             }
         }
         else
@@ -506,11 +495,8 @@ public class CPR : MonoBehaviour
             }
 
             doVibrate = false;
-            StopCoroutine(Vibrate());
+
 
         }
     }
-
-
-
 }

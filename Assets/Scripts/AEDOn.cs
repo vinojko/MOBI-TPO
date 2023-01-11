@@ -26,7 +26,7 @@ public class AEDOn : MonoBehaviour
         doctorIcon.SetActive(true);
         AEDIcon.SetActive(false);
         GameManager.instance.UpdateGameState(GameState.AED);
-        initHands = new Vector3(3.03889f, 6.0774f, 3.798612f);
+        initHands = new Vector3(0.0168298f, 0.005682782f, 0.02379949f);
     }
 
  
@@ -75,8 +75,8 @@ public class AEDOn : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         
-        //ChangeCamera.instance.ChangeToCamera(AEDCam);
-        ghostHands.SetActive(false);
+        ChangeCamera.instance.ChangeToCamera(AEDCam);
+        //ghostHands.SetActive(false);
     }
 
     private IEnumerator MoveCameraDefault()
@@ -99,7 +99,7 @@ public class AEDOn : MonoBehaviour
     {
         while (true)
         {
-            LeanTween.scale(ghostHands, initHands - new Vector3(0.2f, 0.2f, 0.2f), 0.2f);
+            LeanTween.scale(ghostHands, new Vector3(0.01601312f, 0.004920493f, 0.02060703f), 0.2f);
             LeanTween.scale(ghostHands, initHands, 0.2f).setDelay(0.2f);
             yield return new WaitForSeconds(0.545f);
         }

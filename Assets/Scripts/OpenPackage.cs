@@ -18,22 +18,15 @@ public class OpenPackage : MonoBehaviour
     public Animator coverAnim;
 
     bool tearAreaClicked = false;
+    private bool once = true;
 
     public string startTearArea = "TearArea";
-    private Vector3 startPosition;
-    Vector3 offset;
-
-
 
     private void OnMouseUp()
     {
         tearAreaClicked = false;
     }
 
-    private void Start()
-    {
-      
-    }
 
     public void DetectObjectWithRaycast()
     {
@@ -48,8 +41,7 @@ public class OpenPackage : MonoBehaviour
                     tearAreaClicked = true;
                 }
             }
-        }
-            
+        }   
 
     }
 
@@ -84,7 +76,6 @@ public class OpenPackage : MonoBehaviour
 
         }
 
-
     }
     IEnumerator PackageCoverFadeIn()
     {
@@ -107,7 +98,6 @@ public class OpenPackage : MonoBehaviour
 
     IEnumerator MoveCover() { 
 
-
         coverAnim.SetBool("playCover", true);
         
         yield return new WaitForSeconds(0.13f);
@@ -120,15 +110,19 @@ public class OpenPackage : MonoBehaviour
 
     IEnumerator BeginOpening()
     {
-        packageAnim.SetBool("packageOpen", true);
-        FindObjectOfType<AudioManager>().Play("PaperTear");
-        StartCoroutine(PackageFadeOut());
-        yield return new WaitForSeconds(0.5f);
-        RemoveTopPackage();
-        yield return new WaitForSeconds(1.2f);
-        StartCoroutine(MoveCover());
 
+        if(GameManager.currentState == GameState.OpenPackage && once)
+        {
+            packageAnim.SetBool("packageOpen", true);
+            FindObjectOfType<AudioManager>().Play("PaperTear");
+            StartCoroutine(PackageFadeOut());
+            yield return new WaitForSeconds(0.5f);
+            RemoveTopPackage();
+            yield return new WaitForSeconds(1.2f);
+            StartCoroutine(MoveCover());
 
+            once = false;
+        }
 
     }
     public void SwipeRight()

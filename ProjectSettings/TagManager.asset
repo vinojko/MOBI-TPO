@@ -10,6 +10,11 @@ TagManager:
   - AEDOn
   - AEDShock
   - TearArea
+  - QuestionVarnost
+  - QuestionOdzivnost
+  - QuestionDihanje
+  - QuestionCPR
+  - QuestionAED
   layers:
   - Default
   - TransparentFX

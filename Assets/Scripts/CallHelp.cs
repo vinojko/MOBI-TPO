@@ -12,7 +12,7 @@ public class CallHelp : MonoBehaviour
     private bool MicEnable = false;
     //Za tesatiranje mikrofona na racunalniku
     public bool micTesterPass = false;
-    private float threshold = 0.30f;
+    private float threshold = 0.3f;
     public Animator kiraAnimator;
     int kiraHash;
     void Awake()
@@ -35,7 +35,7 @@ public class CallHelp : MonoBehaviour
     private void Update()
     {
 
-        if ((MicEnable && MicInput.MicLoudness >= threshold) || micTesterPass == true)
+        if ((MicEnable && MicInput.MicLoudness >= threshold))
         {
             MicEnable = false;
             dialog3.TriggerDialog();
@@ -79,12 +79,18 @@ public class CallHelp : MonoBehaviour
 
     private void StartAnimation()
     {
-        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(1.7f).setEaseInOutExpo();
-        MicEnable = true;
+        StartCoroutine(StartAnimationCoroutine());
     }
 
+    private IEnumerator StartAnimationCoroutine()
+    {
+        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(1.7f).setEaseInOutExpo();
+        yield return new WaitForSeconds(3.9f);
+        MicEnable = true;
+    }
     private void EndAnimation()
     {
+      
         LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 1.7f).setDelay(0.2f).setEase(LeanTweenType.easeOutElastic);
     }
 

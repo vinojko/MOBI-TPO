@@ -11,6 +11,7 @@ public class DataHandler : MonoBehaviour
 
     public Button  odzivnostButton, dihanjeButton, CPRButton, AEDButton;
     public GameObject odzivnostLock, dihanjeLock, CPRLock, AEDLock;
+    public GameObject tutorial;
     void Start()
     {
         dataManager.Load();
@@ -20,6 +21,10 @@ public class DataHandler : MonoBehaviour
         CPRButton.interactable = false;
         AEDButton.interactable = false;
 
+        if (!dataManager.data.showTutorial)
+        {
+            tutorial.SetActive(false);
+        }
 
         if (dataManager.data.odzivnost)
         {

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class CPRAED : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static CPRAED instance;
     private int secElapsed;
     private int taps = 0;
     bool firstClick = true;
@@ -16,6 +17,8 @@ public class CPRAED : MonoBehaviour
     private float respirationTimerStart;
     private float respirationTimerEnd;
     private float respirationTimerDiff = 0f;
+    public bool released = false;
+
 
     public TextMeshProUGUI bpmText;
     public TextMeshProUGUI compressionCounterText;
@@ -37,6 +40,7 @@ public class CPRAED : MonoBehaviour
     public Slider mainSlider;
     public Slider depthSlider;
     public GameObject hands;
+    public CanvasGroup fadeImage;
     public Animator animator;
 
     private Vector3 initHands;
@@ -53,6 +57,7 @@ public class CPRAED : MonoBehaviour
     public Image compressionRing, respirationRing;
 
     float lerpSpeed;
+    float resultValue = 0.0f;
 
     [SerializeField]
     private int cycle = 0;
@@ -64,6 +69,14 @@ public class CPRAED : MonoBehaviour
     Scene currentScene;
 
     bool doVibrate = true;
+
+
+    public DialogTrigger respirationDilaog;
+    public DialogTrigger chestCompression;
+    public DialogTrigger lungHold;
+    public DialogTrigger lungTooMuch;
+    public DialogTrigger lungTooLittle;
+    public DialogTrigger lungOkay;
 
     // Retrieve the name of this scene.
     string sceneName;
@@ -101,6 +114,7 @@ public class CPRAED : MonoBehaviour
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
+        instance = this;
     }
 
 
@@ -116,7 +130,6 @@ public class CPRAED : MonoBehaviour
         {
             UIAnimation();
             ChangeCameraCPR();
-            StartCoroutine(Vibrate());
             StartCoroutine(AmbulanceArrival());
             FindObjectOfType<AudioManager>().Play("Ambulance");
 
@@ -182,7 +195,7 @@ public class CPRAED : MonoBehaviour
             StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
-            StopCoroutine(Vibrate());
+
         }
 
     }
@@ -239,7 +252,7 @@ public class CPRAED : MonoBehaviour
 
         ChangeCamera.instance.ChangeToCamera(mouthCam);
         yield return new WaitForSeconds(0.4f);
-        FaderMouth.instance.FadeDepth();
+        //FaderMouth.instance.FadeDepth();
 
         lungs.SetActive(true);
 
@@ -247,56 +260,6 @@ public class CPRAED : MonoBehaviour
         ShowLungs();
 
 
-        //Kamera nazaj na default
-        yield return new WaitForSeconds(2.1f);
-        ChangeCamera.instance.ChangeToCamera(respirationCam);
-
-        if (GameManager.currentState != GameState.AEDKoncano)
-        {
-            ChangeCamera.instance.ChangeToCamera(respirationCam);
-        }
-        
-        yield return new WaitForSeconds(0.5f);
-
-        if (respirationCounter == 2)
-        {
-            //respirationIcon.SetActive(false);
-            chinLift.SetActive(false);
-    
-            ChangeCamera.instance.ChangeToCamera(CPRCam);
-            animator.SetBool("playReverseChin", true);
-            yield return new WaitForSeconds(1.0f);
-            hands.SetActive(true);
-            respirationCounter = 0;
-            animator.SetBool("playChin", false);
-            
-
-
-
-            respirationTimerEnd = Time.time;
-            respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
-            last = respirationTimerEnd;
-
-            cycle++;
-       
-
-            if(respirationCounter == 2 && cycle == 3)
-            {
-                doVibrate = false;
-                StopCoroutine(Vibrate());
-            }
-            else
-            {
-                doVibrate = true;
-                StartCoroutine(Vibrate());
-            }
-        }
-        else
-        {
-            respirationIcon.SetActive(true);
-            //chinLift.SetActive(true);
-            hands.SetActive(false);
-        }
 
        
 
@@ -324,8 +287,28 @@ public class CPRAED : MonoBehaviour
         });
     }
 
+    void FadeImageIn()
+    {
+        LeanTween.reset();
+        LeanTween.value(gameObject, 0f, 1f, 0.4f).setOnUpdate((value) =>
+        {
+            fadeImage.alpha = value;
+
+        });
+    }
+
+    void FadeImageOut()
+    {
+        LeanTween.reset();
+        LeanTween.value(gameObject, 1f, 0f, 0.4f).setOnUpdate((float value) =>
+        {
+            fadeImage.alpha = value;
+
+        });
+    }
     private void ShowLungs()
     {
+        FadeImageIn();
         StartCoroutine(showLungs());
     }
 
@@ -345,15 +328,7 @@ public class CPRAED : MonoBehaviour
         });
 
 
-        yield return new WaitForSeconds(0.3f);
-        FillLungs();
-        FindObjectOfType<AudioManager>().Play("BreathIn");
-        yield return new WaitForSeconds(1.8f);
-        HideLungs();
-        
-        yield return new WaitForSeconds(.5f);
-        lungs.SetActive(false);
-        lungsFilled.fillAmount = 0f;
+        yield return null;
 
     }
 
@@ -377,16 +352,7 @@ public class CPRAED : MonoBehaviour
         LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
     }
 
-    private IEnumerator Vibrate()
-    {
-        while (doVibrate)
-        {
-            yield return new WaitForSeconds(0.5455f);
-            Vibration.Vibrate(20);
-            Debug.Log("Vibrating 20ms");
-        }
-
-    }
+  
     private IEnumerator MoveChin()
     {
         animator.SetBool("playReverseChin", false);
@@ -411,11 +377,146 @@ public class CPRAED : MonoBehaviour
    
         GameManager.instance.UpdateGameState(GameState.AEDKoncano);
 
-        doVibrate = false;
-        StopCoroutine(Vibrate());
 
+    }
+    public void LungFillStart()
+    {
+        //0.634f - max
+        //0.45f - min
+        FindObjectOfType<AudioManager>().Play("BreathIn");
+        LeanTween.value(gameObject, 0f, 1f, 2f).setOnUpdate((value) =>
+        {
+            if (released)
+            {
+                resultValue = value;
+
+                released = false;
+                LeanTween.cancel(gameObject);
+            };
+            lungsFilled.fillAmount = value;
+            resultValue = value;
+
+
+        });
+
+        Debug.Log("Lmao");
+
+
+    }
+    public void LungFillEnd()
+    {
+        released = true;
+
+
+        StartCoroutine(LungFillEndCoroutine());
+
+    }
+
+    public IEnumerator LungFillEndCoroutine()
+    {
+        if (resultValue > 0.634f)
+        {
+            Debug.Log("Prevec");
+            lungTooMuch.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().WrongAnswerSFX();
+            yield return new WaitForSeconds(2.5f);
+
+        }
+        else if (resultValue < 0.45f)
+        {
+            Debug.Log("Premal");
+            lungTooLittle.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().WrongAnswerSFX();
+            yield return new WaitForSeconds(2.5f);
+        }
+        else
+        {
+            Debug.Log("Okay");
+            lungOkay.TriggerDialog();
+            FindObjectOfType<ButtonInteraction>().CorrectAnswerSFX();
+            yield return new WaitForSeconds(1f);
+        }
+
+
+        FadeImageOut();
+        HideLungs();
+
+        yield return new WaitForSeconds(.5f);
+        lungs.SetActive(false);
+        lungsFilled.fillAmount = 0f;
+
+        ChangeCamera.instance.ChangeToCamera(respirationCam);
+
+        if (GameManager.currentState != GameState.AEDKoncano)
+        {
+            ChangeCamera.instance.ChangeToCamera(respirationCam);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (respirationCounter == 2)
+        {
+            //respirationIcon.SetActive(false);
+            chinLift.SetActive(false);
+
+            ChangeCamera.instance.ChangeToCamera(CPRCam);
+            animator.SetBool("playReverseChin", true);
+            yield return new WaitForSeconds(1.0f);
+            hands.SetActive(true);
+            respirationCounter = 0;
+            animator.SetBool("playChin", false);
+
+            chestCompression.TriggerDialog();
+
+            respirationTimerEnd = Time.time;
+            respirationTimerDiff = respirationTimerEnd - respirationTimerStart;
+            last = respirationTimerEnd;
+
+            cycle++;
+
+            if (respirationCounter == 2 && cycle == 3)
+            {
+      
+            }
+            else
+            {
+           
+            }
+        }
+        else
+        {
+            respirationIcon.SetActive(true);
+            //chinLift.SetActive(true);
+            hands.SetActive(false);
+        }
+
+        if (cycle == 3)
+        {
+            UIAnimationClose();
+            hands.SetActive(false);
+            respirationIcon.SetActive(false);
+            chinLift.SetActive(false);
+
+            if (sceneName == "4 - CPR")
+            {
+                GameManager.instance.UpdateGameState(GameState.CPRKira);
+                FindObjectOfType<AudioManager>().Stop("CPRRhytm");
+
+            }
+            else if (sceneName == "5 - AED")
+            {
+                GameManager.instance.UpdateGameState(GameState.AEDKoncano);
+
+            }
+
+      
+
+        }
     }
 
 
 
 }
+
+
+

@@ -12,7 +12,7 @@ public class Call112 : MonoBehaviour
 
     public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions;
 
-    public GameObject keypad, call;
+    public GameObject keypad, call, speakerOn;
 
     [SerializeField]TextMeshProUGUI phoneText;
 
@@ -35,7 +35,6 @@ public class Call112 : MonoBehaviour
 
         }
    
-
     }
 
 
@@ -102,6 +101,14 @@ public class Call112 : MonoBehaviour
         ChangeCamera.instance.ChangeToCameraSlow(first);
     }
 
+    public void SpeakerOn()
+    {
+        speakerOn.SetActive(true);
+        PhoneAnimationEnd();
+        StartCoroutine(EndCamera());
+
+    }
+
     private IEnumerator CallInstructions()
     {
         keypad.SetActive(false);
@@ -112,9 +119,9 @@ public class Call112 : MonoBehaviour
         phone3D.SetActive(true);
 
 
-        PhoneAnimationEnd();
+        
 
-        StartCoroutine(EndCamera());
+        
     }
 
 

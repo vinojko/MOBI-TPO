@@ -6,6 +6,7 @@ public class FirstTime : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public DataManager dataManager;
     public DialogTrigger dialog1, dialog2;
     public GameObject hand;
 
@@ -16,6 +17,7 @@ public class FirstTime : MonoBehaviour
     public GameObject firstPanel;
     void Start()
     {
+        FindObjectOfType<AudioManager>().StopAll();
         StartFirstTime();
     }
 
@@ -51,19 +53,21 @@ public class FirstTime : MonoBehaviour
         LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.0f).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1f).setDelay(2.5f).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(4.8f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(8.0f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(10.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(9.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(12.0f).setEase(LeanTweenType.easeOutExpo);
     }
 
     public IEnumerator Buttons()
     {
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(8.5f);
         dialog2.TriggerDialog();
         ButtonsAnim();
-        yield return new WaitForSeconds(11.0f);
+        yield return new WaitForSeconds(14.5f);
         FadeOut();
         yield return new WaitForSeconds(4.1f);
         firstPanel.SetActive(false);
+        dataManager.data.showTutorial = false;
+        dataManager.Save();
     }
 
     private void FadeOut()

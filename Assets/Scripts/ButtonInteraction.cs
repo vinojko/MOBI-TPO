@@ -31,6 +31,16 @@ public class ButtonInteraction : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Correct");
     }
 
+    public void CorrectAnswerSFX()
+    {
+        FindObjectOfType<AudioManager>().Play("Correct");
+    }
+
+    public void WrongAnswerSFX()
+    {
+        FindObjectOfType<AudioManager>().Play("Incorrect");
+    }
+
     public void WrongAnswer(Image image)
 
     {
