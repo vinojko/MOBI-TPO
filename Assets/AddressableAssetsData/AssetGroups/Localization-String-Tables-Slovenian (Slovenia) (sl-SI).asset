@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-sl-SI
     - Preload
+  - m_GUID: 6c2ea330eaa2ba14e822e53a24efb845
+    m_Address: Varnost_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e1a414d4854f2cb4ab1a0937f24287ef, type: 2}
   m_SchemaSet:
