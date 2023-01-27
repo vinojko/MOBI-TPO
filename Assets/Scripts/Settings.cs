@@ -26,13 +26,13 @@ public class Settings : MonoBehaviour
         }
         else
         {
-            LeanTween.rotate(settingsIcon, new Vector3(0f, 0f, 0f), 0.3f).setEase(LeanTweenType.easeOutBack);
             AnimationClose();
+            LeanTween.rotate(settingsIcon, new Vector3(0f, 0f, 0f), 0.3f).setEase(LeanTweenType.easeOutBack);
 
         }
 
         settingsStatus = !settingsStatus;
-        
+
     }
 
     public void AnimationOpen()
@@ -42,6 +42,14 @@ public class Settings : MonoBehaviour
         LeanTween.scale(GER, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
     }
     public void AnimationClose()
+    {
+        LeanTween.scale(GER, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(ENG, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
+        LeanTween.scale(SLO, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
+
+    }
+
+    public void SLOSelected()
     {
         LeanTween.scale(GER, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(ENG, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
