@@ -24,7 +24,11 @@ public class AEDPads : MonoBehaviour
     public GameObject pads;
     public GameObject vsistranButton;
 
+    public GameObject MicUI;
+    private float threshold = 0.3f;
+
     public bool isClicked = false;
+    private bool MicEnable = false;
     void Awake()
     {
         instance = this;
@@ -43,6 +47,16 @@ public class AEDPads : MonoBehaviour
             ghostHands.SetActive(false);
         }
         
+    }
+
+    private void Update()
+    {
+        if ((MicEnable && MicInput.MicLoudness >= threshold))
+        {
+            MicEnable = false;
+            VsiStran();
+
+        }
     }
 
     private IEnumerator FlashLight()
@@ -93,7 +107,19 @@ public class AEDPads : MonoBehaviour
     public void VsiStran()
     {
         isClicked = true;
-        FadeOut();
+        EndAnimation();
+    }
+
+    private void StartAnimationMIC()
+    {
+        StartCoroutine(StartAnimationCoroutine());
+    }
+
+    private IEnumerator StartAnimationCoroutine()
+    {
+        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(10.5f).setEaseInOutExpo();
+        yield return null;
+        MicEnable = true;
     }
 
     private void FadeOut() 
@@ -101,10 +127,16 @@ public class AEDPads : MonoBehaviour
         LeanTween.moveLocal(vsistranButton, new Vector3(0f, -2035f, 0f), 1.5f).setEaseInOutExpo();
 
     }
+    private void EndAnimation()
+    {
+
+        LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 2.5f).setDelay(0.3f).setEase(LeanTweenType.easeOutElastic);
+    }
 
     private void FadeIn()
     {
-        LeanTween.moveLocal(vsistranButton, new Vector3(0f, -850f, 0f), 1.5f).setDelay(10.2f).setEaseInOutExpo();
+        //LeanTween.moveLocal(vsistranButton, new Vector3(0f, -850f, 0f), 1.5f).setDelay(10.2f).setEaseInOutExpo();
+        StartAnimationMIC();
 
     }
 

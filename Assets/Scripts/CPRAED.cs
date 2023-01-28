@@ -227,6 +227,7 @@ public class CPRAED : MonoBehaviour
     private void UIAnimationClose()
     {
         LeanTween.moveLocal(cprUI, new Vector3(0f, -4000f, 0f), 3f).setEase(LeanTweenType.easeOutExpo);
+        lungs.SetActive(false);
         //Depth.instance.DepthAnimationClose();
     }
 
