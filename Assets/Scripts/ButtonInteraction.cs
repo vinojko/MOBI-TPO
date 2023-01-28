@@ -57,4 +57,9 @@ public class ButtonInteraction : MonoBehaviour
         CameraShaker.Presets.Explosion2D();
         FindObjectOfType<AudioManager>().Play("Incorrect");
     }
+
+    public void WrongAnswerSubtract(Image image)
+    {
+        VPManager.instance.Decrease();
+    }
 }
