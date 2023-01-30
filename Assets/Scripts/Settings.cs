@@ -13,6 +13,13 @@ public class Settings : MonoBehaviour
     [SerializeField]
     GameObject SLO, ENG, GER;
 
+    [SerializeField]
+    Image muteIcon, unmutIcon;
+    [SerializeField]
+    Image muteButton;
+
+    bool isMuted = false;
+
     public float animationSpeed;
 
     bool settingsStatus = true;
@@ -54,5 +61,19 @@ public class Settings : MonoBehaviour
         LeanTween.scale(GER, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(ENG, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
         LeanTween.scale(SLO, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
+    }
+
+    public void Mute()
+    {
+        if (isMuted)
+        {
+            muteButton = muteIcon;
+        }
+        else
+        {
+            muteButton = unmutIcon;
+        }
+
+        isMuted = !isMuted;
     }
 }

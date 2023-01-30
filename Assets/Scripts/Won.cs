@@ -15,6 +15,7 @@ public class Won : MonoBehaviour
     public GameObject clouds;
     void Start()
     {
+        
         //canvas.alpha = 0f;
         StartCoroutine(MoveCam());
         StartCoroutine(Fire());
@@ -22,15 +23,15 @@ public class Won : MonoBehaviour
         
         nextButton.SetActive(false);
         quiz.SetActive(false);
+        FaderMouth.instance.FadeOut(1f, 3f);
     }
 
     private IEnumerator MoveCam()
     {
-
+        yield return new WaitForSeconds(0.1f);
         FindObjectOfType<AudioManager>().Play("Won");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
         showText();
-        yield return new WaitForSeconds(1f);
         ChangeCamera.instance.ChangeToCamera(sky, 9f);
         
         yield return new WaitForSeconds(2f);

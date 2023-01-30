@@ -62,6 +62,21 @@ public partial class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void FadeOut(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+        LeanTween.value(gameObject, s.source.volume, 0f, 3f).setEase(LeanTweenType.easeInOutExpo).setOnUpdate((value) =>
+        {
+            s.source.volume = value;
+        });
+    }
+
     //this addition to the code was made by me, the rest was from Brackeys tutorial
     public void Stop(string name)
     {

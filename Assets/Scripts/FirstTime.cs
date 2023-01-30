@@ -18,6 +18,9 @@ public class FirstTime : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().StopAll();
+        FindObjectOfType<AudioManager>().Play("MainMenu");
+
+
         StartFirstTime();
     }
 

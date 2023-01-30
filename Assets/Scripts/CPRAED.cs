@@ -260,10 +260,6 @@ public class CPRAED : MonoBehaviour
         //Pljuca - 500 ml
         ShowLungs();
 
-
-
-       
-
       
     }
 
