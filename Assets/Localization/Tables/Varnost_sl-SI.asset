@@ -22,5 +22,25 @@ MonoBehaviour:
     m_Localized: Polij z vodo
     m_Metadata:
       m_Items: []
+  - m_Id: 2093950511521792
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104300564815872
+    m_Localized: ODZIVNOST DIHANJE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104453606580224
+    m_Localized: "POKLI\u010CI 112\nPO\u0160LJI PO AED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108789686444032
+    m_Localized: KPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108898352472064
+    m_Localized: AED
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

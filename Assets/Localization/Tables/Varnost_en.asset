@@ -22,5 +22,27 @@ MonoBehaviour:
     m_Localized: Pour water
     m_Metadata:
       m_Items: []
+  - m_Id: 2093950511521792
+    m_Localized: SAFETY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104300564815872
+    m_Localized: RESPONSIVENESS BREATHING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104453606580224
+    m_Localized: 'CALL 911
+
+      ASK A BYSTANDER TO BRING AED'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108789686444032
+    m_Localized: CPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108898352472064
+    m_Localized: AED
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

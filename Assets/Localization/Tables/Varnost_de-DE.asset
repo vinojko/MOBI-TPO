@@ -22,5 +22,25 @@ MonoBehaviour:
     m_Localized: "Gie\xDFe Wasser"
     m_Metadata:
       m_Items: []
+  - m_Id: 2093950511521792
+    m_Localized: SICHERHEIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104300564815872
+    m_Localized: "REAKTIONSF\xC4HIGKEIT ATMEN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104453606580224
+    m_Localized: RUFE 911 AN. BITTE EINE UMSTEHENDE PERSON, EINEN AED ZU BRINGEN.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108789686444032
+    m_Localized: HLW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108898352472064
+    m_Localized: AED
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -103,11 +103,15 @@ public class DialogFirstTime : MonoBehaviour
             }
             else if (letter.Equals('.'))
             {
-                TypeSpeed = 0.16f;
+                TypeSpeed = 0.22f;
             }
             else if (letter.Equals(','))
             {
-                TypeSpeed = 0.16f;
+                TypeSpeed = 0.20f;
+            }
+            else if (prevLetter.Equals('-') && letter.Equals(' '))
+            {
+                TypeSpeed = 0.65f;
             }
             else
             {
@@ -128,11 +132,6 @@ public class DialogFirstTime : MonoBehaviour
     void EndDialog()
     {
         AnimationUIClose();
-    }
-
-    void CheckCorrectState()
-    {
-
     }
 
     void AnimationUIOpen()

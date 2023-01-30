@@ -17,9 +17,9 @@ public class FirstTime : MonoBehaviour
     public GameObject firstPanel;
     void Start()
     {
+
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("MainMenu");
-
 
         StartFirstTime();
     }
@@ -40,32 +40,32 @@ public class FirstTime : MonoBehaviour
 
     public IEnumerator AnimationUp()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
         FindObjectOfType<DialogFirstTime>().AnimationUIOpenUp();
     }
 
     public IEnumerator MoveHand()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
 
         LeanTween.moveLocal(hand, new Vector3(-16f, -277f, 0f), 3f).setEase(LeanTweenType.easeInOutExpo);
     }
 
     void ButtonsAnim()
     {
-        LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.0f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1f).setDelay(2.5f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(4.8f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(9.0f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(12.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.3f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1f).setDelay(3.5f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(7.8f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(12.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(15.0f).setEase(LeanTweenType.easeOutExpo);
     }
 
     public IEnumerator Buttons()
     {
-        yield return new WaitForSeconds(8.5f);
+        yield return new WaitForSeconds(11f);
         dialog2.TriggerDialog();
         ButtonsAnim();
-        yield return new WaitForSeconds(14.5f);
+        yield return new WaitForSeconds(17.5f);
         FadeOut();
         yield return new WaitForSeconds(4.1f);
         firstPanel.SetActive(false);

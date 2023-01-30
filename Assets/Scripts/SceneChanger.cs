@@ -15,6 +15,7 @@ public class SceneChanger : MonoBehaviour
     {
         FaderMouth.instance.FadeIn();
         FindObjectOfType<AudioManager>().FadeOut("MainMenu");
+        yield return new WaitForSeconds(0.1f);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
 
