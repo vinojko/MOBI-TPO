@@ -22,6 +22,7 @@ public class HouseIntro : MonoBehaviour
     {
         ButtonsShow();
         StartCoroutine(RotateHouse());
+        FindObjectOfType<AudioManager>().Play("City");
     }
 
     // Update is called once per frame

@@ -65,7 +65,7 @@ public class FirstTime : MonoBehaviour
         yield return new WaitForSeconds(11f);
         dialog2.TriggerDialog();
         ButtonsAnim();
-        yield return new WaitForSeconds(17.5f);
+        yield return new WaitForSeconds(18.5f);
         FadeOut();
         yield return new WaitForSeconds(4.1f);
         firstPanel.SetActive(false);

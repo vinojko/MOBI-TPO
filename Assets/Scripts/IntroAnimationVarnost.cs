@@ -42,6 +42,7 @@ public class IntroAnimationVarnost : MonoBehaviour
         {
             StartCoroutine(Animate());
             FindObjectOfType<AudioManager>().Play("Theme");
+            FindObjectOfType<AudioManager>().FadeOut("City");
         }
 
     }
