@@ -42,5 +42,68 @@ MonoBehaviour:
     m_Localized: AED
     m_Metadata:
       m_Items: []
+  - m_Id: 2489369079160832
+    m_Localized: "Zu Beginn ist auf eine sichere\nAnn\xE4herung zu achten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490146640207872
+    m_Localized: "Wie viele pl\xF6tzliche Herzstillst\xE4nde treten im h\xE4uslichen
+      Umfeld auf?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490498542313472
+    m_Localized: Weniger als <b>50%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490633561153536
+    m_Localized: Zwischen <b>60-70%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490730747371520
+    m_Localized: Mehr als <b>70%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490872368046080
+    m_Localized: der Daumen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490983135420416
+    m_Localized: "\xDCBERLEBENSWAHRSCHEINLICHKEIT:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491082309738496
+    m_Localized: "Ab hier verringert jede falsche Entscheidung die \xDCberlebenschancen
+      eines Menschen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491214522589184
+    m_Localized: "Mit einem Feuerl\xF6scher l\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491330012749824
+    m_Localized: "\"FALSCH! Da sich \xD6l und Wasser nicht mischen,\nkann das gie\xDFende
+      Wasser Feuer noch mehr ausbreiten.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491366855516160
+    m_Localized: "FALSCH! Die Suche nach einem Feuerl\xF6scher kostet wertvolle Zeit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491483775934464
+    m_Localized: "HERZLICHEN GL\xDCCKW\xDCNSCH!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491590109929472
+    m_Localized: "Sie haben erfolgreich abgeschlossen:\n <b>SICHERHEIT</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492050061500416
+    m_Localized: "Mit einem Feuerl\xF6scher l\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494383268929536
+    m_Localized: "SICHERHEIT\n\xDCBERPR\xDCFEN"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

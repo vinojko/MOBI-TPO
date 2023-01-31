@@ -20,6 +20,7 @@ public class DragDropQuiz : MonoBehaviour, IDragHandler, IBeginDragHandler, IPoi
     {
         Debug.Log("Begin Drag");
         lastMousePosition = eventData.position;
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
     void Start()
@@ -61,28 +62,34 @@ public class DragDropQuiz : MonoBehaviour, IDragHandler, IBeginDragHandler, IPoi
                     case "QuestionVarnost":
                         QuizResults.instance.varnost = true;
                         StartCoroutine(QuizResults.instance.End());
+                        FindObjectOfType<AudioManager>().Play("Correct");
                         break;
                     case "QuestionOdzivnost":
                         QuizResults.instance.odzivnost = true;
                         StartCoroutine(QuizResults.instance.End());
+                        FindObjectOfType<AudioManager>().Play("Correct");
                         break;
                     case "QuestionDihanje":
                         QuizResults.instance.dihanje = true;
                         StartCoroutine(QuizResults.instance.End());
+                        FindObjectOfType<AudioManager>().Play("Correct");
                         break;
                     case "QuestionCPR":
                         QuizResults.instance.kpo = true;
                         StartCoroutine(QuizResults.instance.End());
+                        FindObjectOfType<AudioManager>().Play("Correct");
                         break;
                     case "QuestionAED":
                         QuizResults.instance.aed = true;
                         StartCoroutine(QuizResults.instance.End());
+                        FindObjectOfType<AudioManager>().Play("Correct");
                         break;
                 }
             }
             else
             {
                 transform.position = startPosition;
+                FindObjectOfType<AudioManager>().Play("Incorrect");
             }
         }
     

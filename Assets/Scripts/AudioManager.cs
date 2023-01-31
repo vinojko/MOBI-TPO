@@ -10,6 +10,7 @@ public partial class AudioManager : MonoBehaviour
 {
 
     public Sound[] sounds;
+    public Sound[] soundsCopy;
 
     public static AudioManager instance;
     //AudioManager
@@ -17,6 +18,7 @@ public partial class AudioManager : MonoBehaviour
     void Awake()
     {
 
+        
         if (instance == null)
             instance = this;
         else
@@ -36,10 +38,14 @@ public partial class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+
     }
 
     void Start()
     {
+      
+        
         Scene scene = SceneManager.GetActiveScene();
 
         if (scene.name != "1 - Varnost" && scene.name != "Lost" && scene.name != "Won" && scene.name != "MainMenu")
@@ -75,6 +81,33 @@ public partial class AudioManager : MonoBehaviour
         {
             s.source.volume = value;
         });
+    }
+
+    public void SetVolume(string name,float value)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+       
+        s.source.volume = value;
+        
+    }
+
+    public void InitVolume(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+
+        s.source.volume = s.volume;
     }
 
     //this addition to the code was made by me, the rest was from Brackeys tutorial

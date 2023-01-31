@@ -6343,6 +6343,13 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Won
+    clip: {fileID: 8300000, guid: 7963911821c6eae499c88dc2f7b2a940, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  soundsCopy: []
 --- !u!4 &1730511796
 Transform:
   m_ObjectHideFlags: 0

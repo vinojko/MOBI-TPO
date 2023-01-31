@@ -44,5 +44,73 @@ MonoBehaviour:
     m_Localized: AED
     m_Metadata:
       m_Items: []
+  - m_Id: 2489369079160832
+    m_Localized: 'In the beginning, it is necessary
+
+      to ensure a safe approach.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490146640207872
+    m_Localized: How many sudden cardiac arrests occur in the home environment?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490498542313472
+    m_Localized: Less than <b>50%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490633561153536
+    m_Localized: Between <b>60-70%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490730747371520
+    m_Localized: More than <b>70%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490872368046080
+    m_Localized: Thumb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490983135420416
+    m_Localized: 'PROBABILITY OF SURVIVAL:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491082309738496
+    m_Localized: From here on, every wrong decision reduces a person's chance of
+      survival.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491214522589184
+    m_Localized: Extinguish with a fire extinguisher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491330012749824
+    m_Localized: '"WRONG! Since oil and water do not mix,
+
+      pouring water can
+      spread the fire even more."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491366855516160
+    m_Localized: WRONG! Searching for a fire extinguisher takes up valuable time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491483775934464
+    m_Localized: CONGRATULATIONS!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491590109929472
+    m_Localized: "You have successfully completed:\n <b>SAFETY</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492050061500416
+    m_Localized: Extinguish with a fire extinguisher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494383268929536
+    m_Localized: 'CHECK FOR
+
+      SAFETY'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

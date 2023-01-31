@@ -39,6 +39,66 @@ MonoBehaviour:
     m_Key: 1AED
     m_Metadata:
       m_Items: []
+  - m_Id: 2489369079160832
+    m_Key: 1StartDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490146640207872
+    m_Key: 1SrcniZastoji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490498542313472
+    m_Key: 1ManjKot50
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490633561153536
+    m_Key: 1Med60in70
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490730747371520
+    m_Key: 1VecKot70
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490872368046080
+    m_Key: 1Palec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490983135420416
+    m_Key: 1VerjetnostPrezivetja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491082309738496
+    m_Key: 1VPTekst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491214522589184
+    m_Key: 1Pokrij
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491330012749824
+    m_Key: 1PolijNepravilno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491366855516160
+    m_Key: 1PogasiNepravilno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491483775934464
+    m_Key: 1Cestitam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491590109929472
+    m_Key: 1EndVarnost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492050061500416
+    m_Key: 1Pogasi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494383268929536
+    m_Key: 1Preverimo
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

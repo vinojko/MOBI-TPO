@@ -20,15 +20,16 @@ public class FirstTime : MonoBehaviour
 
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("MainMenu");
+        FindObjectOfType<AudioManager>().InitVolume("MainMenu");
 
-        StartFirstTime();
+        dialog1.TriggerDialog();
+        StartCoroutine(AnimationUp());
+        StartCoroutine(MoveHand());
+        StartCoroutine(Buttons());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     void StartFirstTime()
     {

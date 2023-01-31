@@ -42,5 +42,69 @@ MonoBehaviour:
     m_Localized: AED
     m_Metadata:
       m_Items: []
+  - m_Id: 2489369079160832
+    m_Localized: "Na za\u010Detku je potrebno zagotoviti\nvaren pristop."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490146640207872
+    m_Localized: "Koliko nenadnih sr\u010Dnih zastojev se zgodi v doma\u010Dem okolju?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490498542313472
+    m_Localized: Manj kot <b>50%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490633561153536
+    m_Localized: Med <b>60-70%</b>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490730747371520
+    m_Localized: "Ve\u010D kot <b>70%</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490872368046080
+    m_Localized: Palec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2490983135420416
+    m_Localized: "VERJETNOST PRE\u017DIVETJA:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491082309738496
+    m_Localized: "Od tukaj naprej vsaka napa\u010Dna odlo\u010Ditev osebi zmanj\u0161a
+      mo\u017Enost pre\u017Eivetja."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491214522589184
+    m_Localized: Pogasi z gasilnim aparatom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491330012749824
+    m_Localized: "\"NEPRAVILNO! Ker se olje in voda ne me\u0161ata,\nlahko polivanje
+      vode ogenj raz\u0161iri.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491366855516160
+    m_Localized: "NEPRAVILNO! Iskanje gasilnega aparata nam vzame dragocen \u010Das."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491483775934464
+    m_Localized: "\u010CESTITAM!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2491590109929472
+    m_Localized: "Uspe\u0161no si opravil:\n <b>VARNOST</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492050061500416
+    m_Localized: Pogasi z gasilnim aparatom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494383268929536
+    m_Localized: 'PREVERIMO
+
+      VARNOST'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

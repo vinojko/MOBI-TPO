@@ -20,7 +20,6 @@ public class DataHandler : MonoBehaviour
         dihanjeButton.interactable = false;
         CPRButton.interactable = false;
         AEDButton.interactable = false;
-        FindObjectOfType<AudioManager>().Play("City");
 
         if (!dataManager.data.showTutorial)
         {
