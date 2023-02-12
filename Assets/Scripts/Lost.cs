@@ -16,7 +16,7 @@ public class Lost : MonoBehaviour
         btn.alpha = 0f;
         FindObjectOfType<AudioManager>().StopAll();
         StartCoroutine(end());
-        vp.text = dataManager.data.verjetnostPrezivetja.ToString() + "%";
+        vp.text = dataManager.data.verjetnostPrezivetja.ToString() + "%.";
         
     }
 

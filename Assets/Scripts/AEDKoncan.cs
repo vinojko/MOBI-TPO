@@ -8,7 +8,7 @@ public class AEDKoncan : MonoBehaviour
 {
     public Camera houseCam;
     public DialogTrigger dialog;
-    public GameObject ambulance;
+    public GameObject ambulance, canvasFirst;
     public GameObject redLight, blueLight;
     public GameObject doctorIcon, AEDIcon;
 
@@ -69,6 +69,7 @@ public class AEDKoncan : MonoBehaviour
         FaderMouth.instance.FadeIn();
         yield return new WaitForSeconds(2f);
         FadeImageOut();
+        canvasFirst.SetActive(false);
         ChangeCamera.instance.ChangeToCamera(houseCam , 0.1f);
 
         yield return new WaitForSeconds(0.5f);

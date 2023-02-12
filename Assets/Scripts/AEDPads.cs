@@ -51,7 +51,7 @@ public class AEDPads : MonoBehaviour
 
     private void Update()
     {
-        if ((MicEnable && MicInput.MicLoudness >= threshold))
+        if (MicEnable && (MicInput.MicLoudness >= threshold))
         {
             MicEnable = false;
             VsiStran();
@@ -94,14 +94,11 @@ public class AEDPads : MonoBehaviour
         yield return new WaitForSeconds(10f);
         FindObjectOfType<AudioManager>().Play("AEDBlipping");
 
-
     }
     private IEnumerator ChargingAEDSound()
     {
         yield return new WaitForSeconds(5f);
         FindObjectOfType<AudioManager>().Play("AEDCharging");
-
-
     }
 
     public void VsiStran()
@@ -117,8 +114,8 @@ public class AEDPads : MonoBehaviour
 
     private IEnumerator StartAnimationCoroutine()
     {
-        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2.2f).setDelay(10.5f).setEaseInOutExpo();
-        yield return null;
+        LeanTween.moveLocal(MicUI, new Vector3(-300f, -850f, 0f), 2f).setDelay(10.5f).setEaseInOutExpo();
+        yield return new WaitForSeconds(12f);
         MicEnable = true;
     }
 
@@ -129,8 +126,9 @@ public class AEDPads : MonoBehaviour
     }
     private void EndAnimation()
     {
+        //LeanTween.cancel(MicUI);
 
-        LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 2.5f).setDelay(0.3f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.moveLocal(MicUI, new Vector3(-1200f, -850f, 0f), 2.5f).setDelay(0.3f).setEase(LeanTweenType.easeOutExpo);
     }
 
     private void FadeIn()
