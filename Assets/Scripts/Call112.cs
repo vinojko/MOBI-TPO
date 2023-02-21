@@ -10,7 +10,7 @@ public class Call112 : MonoBehaviour
     public Animator kiraAnim;
     public GameObject phone, phone3D;
 
-    public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions;
+    public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions, speakerDialog;
 
     public GameObject keypad, call, speakerOn;
 
@@ -51,6 +51,7 @@ public class Call112 : MonoBehaviour
         KiraPhoneAnimation();
         PhoneAnimation();
         callAmbulance.TriggerDialog();
+        StartCoroutine(SpeakerOnDialog());
 
     }
 
@@ -61,6 +62,12 @@ public class Call112 : MonoBehaviour
         {
             kiraAnim.SetFloat("Kira", value);
         });
+    }
+
+    IEnumerator SpeakerOnDialog()
+    {
+        yield return new WaitForSeconds(14f);
+        speakerDialog.TriggerDialog();
     }
 
     private void PhoneAnimation()

@@ -58,7 +58,7 @@ public class ButtonInteraction : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Incorrect");
     }
 
-    public void WrongAnswerSubtract(Image image)
+    public void WrongAnswerSubtract()
     {
         VPManager.instance.Decrease();
     }

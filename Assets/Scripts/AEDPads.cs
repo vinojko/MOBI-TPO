@@ -43,8 +43,9 @@ public class AEDPads : MonoBehaviour
             StartCoroutine(BlippingAEDSound());
             StartCoroutine(ChargingAEDSound());
             pads.transform.DOLocalMove(new Vector3(-0.418f, 3.29f, 2.839f), 1f);
+            StartCoroutine(GhostHandsOff());
             FadeIn();
-            ghostHands.SetActive(false);
+            
         }
         
     }
@@ -59,7 +60,14 @@ public class AEDPads : MonoBehaviour
         }
     }
 
-    private IEnumerator FlashLight()
+
+    private IEnumerator GhostHandsOff()
+    {
+        yield return new WaitForSeconds(6f);
+        ghostHands.SetActive(false);
+
+    }
+        private IEnumerator FlashLight()
     {
         yield return new WaitForSeconds(10f);
         ChangeCamera.instance.ChangeToCamera(AEDCam);
