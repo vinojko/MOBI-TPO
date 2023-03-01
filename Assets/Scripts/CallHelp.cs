@@ -43,6 +43,8 @@ public class CallHelp : MonoBehaviour
             ChangeCamera.instance.ChangeToCameraSlow(kiraCam);
             StartRunning();
             GameManager.instance.UpdateGameState(GameState.Call112);
+            // -- TEST -- 
+            //GameManager.instance.UpdateGameState(GameState.AEDSign);
         }
     }
 

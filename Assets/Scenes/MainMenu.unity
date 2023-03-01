@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5274,7 +5274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Za\u010Deli bomo s:\r\n- Palec: Preveri varnosti,\r\n- Kazalec: Preveri odzivnost
+    - "Za\u010Deli bomo s:\r\n- Palec: Preveri varnost,\r\n- Kazalec: Preveri odzivnost
       in dihanje,\r\n- Sredinec: Pokli\u010Di 112 in po\u0161lji po avtomatski zunanji
       defibrilator (AED),\r\n- Prstanec: Za\u010Dni kardiopulmonalno o\u017Eivljanje
       (KPO), \r\n- Mezinec: Uporabi AED."

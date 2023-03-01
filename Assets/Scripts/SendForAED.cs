@@ -53,6 +53,6 @@ public class SendForAED : MonoBehaviour
     {
         correctAnswerDialog.TriggerDialog();
         yield return new WaitForSeconds(6f);
-        GameManager.instance.UpdateGameState(GameState.DihanjeKoncano);
+        GameManager.instance.UpdateGameState(GameState.AEDSign);
     }
 }

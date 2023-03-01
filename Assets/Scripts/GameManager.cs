@@ -113,6 +113,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.AEDShock:
                 break;
+            case GameState.AEDSign:
+                break;
             case GameState.AEDKoncano:
                 break;
             case GameState.Depth:
@@ -156,6 +158,7 @@ public enum GameState
     CallHelp,
     Call112,
     SendForAED,
+    AEDSign,
     DihanjeKoncano,
     /* --- 4 - CPR --- */
     HandPositions,

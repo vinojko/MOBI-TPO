@@ -56,9 +56,9 @@ public class FirstTime : MonoBehaviour
     {
         LeanTween.scale(firstButton, new Vector3(1f, 1f, 1f), 1f).setDelay(1.3f).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(secondButton, new Vector3(1f, 1f, 1f), 1f).setDelay(3.5f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(7.8f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(12.0f).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(15.0f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(thirdButton, new Vector3(1f, 1f, 1f), 1f).setDelay(6.7f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fourthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(12.6f).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(16.3f).setEase(LeanTweenType.easeOutExpo);
     }
 
     public IEnumerator Buttons()
@@ -66,7 +66,7 @@ public class FirstTime : MonoBehaviour
         yield return new WaitForSeconds(11f);
         dialog2.TriggerDialog();
         ButtonsAnim();
-        yield return new WaitForSeconds(19f);
+        yield return new WaitForSeconds(19.5f);
         FadeOut();
         yield return new WaitForSeconds(4.1f);
         firstPanel.SetActive(false);
