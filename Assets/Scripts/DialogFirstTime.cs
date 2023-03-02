@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class DialogFirstTime : MonoBehaviour
@@ -14,6 +15,8 @@ public class DialogFirstTime : MonoBehaviour
     // Start is called before the first frame update
     private Color32 purple;
     char prevLetter = '+';
+
+    [SerializeField] UnityEvent m_ShowIcon;
 
     public GameObject DialogUI;
     private bool first = true;
@@ -112,6 +115,7 @@ public class DialogFirstTime : MonoBehaviour
             else if (prevLetter.Equals('-') && letter.Equals(' '))
             {
                 TypeSpeed = 0.65f;
+                m_ShowIcon.Invoke();
             }
             else
             {

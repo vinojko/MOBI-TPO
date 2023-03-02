@@ -78,6 +78,8 @@ public class CPRAED : MonoBehaviour
     public DialogTrigger lungTooLittle;
     public DialogTrigger lungOkay;
 
+    public GameObject doctorIcon, AEDIcon;
+
     // Retrieve the name of this scene.
     string sceneName;
     void Start()
@@ -128,6 +130,8 @@ public class CPRAED : MonoBehaviour
 
         if (state == GameState.CPR)
         {
+            doctorIcon.SetActive(true);
+            AEDIcon.SetActive(false);
             UIAnimation();
             ChangeCameraCPR();
             StartCoroutine(AmbulanceArrival());
@@ -192,6 +196,7 @@ public class CPRAED : MonoBehaviour
 
         if (cprCounter == 30)
         {
+            respirationDilaog.TriggerDialog();
             StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
@@ -249,6 +254,7 @@ public class CPRAED : MonoBehaviour
         respirationCounter++;
 
         respirationIcon.SetActive(false);
+        lungHold.TriggerDialog();
         //chinLift.SetActive(false);
 
         ChangeCamera.instance.ChangeToCamera(mouthCam);
@@ -473,7 +479,7 @@ public class CPRAED : MonoBehaviour
 
             if (respirationCounter == 2 && cycle == 3)
             {
-      
+                doVibrate = false;
             }
             else
             {

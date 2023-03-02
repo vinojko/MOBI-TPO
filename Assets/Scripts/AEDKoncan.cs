@@ -67,16 +67,18 @@ public class AEDKoncan : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         FaderMouth.instance.FadeIn();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.3f);
+        ChangeCamera.instance.ChangeToCamera(houseCam, 0.1f);
+        yield return new WaitForSeconds(0.3f);
         FadeImageOut();
         canvasFirst.SetActive(false);
-        ChangeCamera.instance.ChangeToCamera(houseCam , 0.1f);
+        
 
         yield return new WaitForSeconds(0.5f);
         dialog.TriggerDialog();
         yield return new WaitForSeconds(4.5f);
         FaderMouth.instance.FadeIn();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         WinOrLose();
 
     }

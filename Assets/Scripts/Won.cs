@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Won : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class Won : MonoBehaviour
     public Light fire;
 
     public GameObject clouds;
+
+    public DataManager dataManager;
+    public TextMeshProUGUI vp;
     void Start()
     {
-        
+        dataManager.Load();
+        vp.text = dataManager.data.verjetnostPrezivetja.ToString() + "%.";
         //canvas.alpha = 0f;
         StartCoroutine(MoveCam());
         StartCoroutine(Fire());

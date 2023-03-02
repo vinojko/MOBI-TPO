@@ -12,11 +12,16 @@ public class FirstTime : MonoBehaviour
 
     public GameObject firstButton, secondButton, thirdButton, fourthButton, fifthButton;
 
+    public List<GameObject> buttons;
+
     public CanvasGroup canvas;
+    private int idx = 0;
 
     public GameObject firstPanel;
     void Start()
     {
+
+        buttons =  new List<GameObject> { firstButton, secondButton, thirdButton, fourthButton, fifthButton };
 
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("MainMenu");
@@ -61,18 +66,45 @@ public class FirstTime : MonoBehaviour
         LeanTween.scale(fifthButton, new Vector3(1f, 1f, 1f), 1f).setDelay(16.3f).setEase(LeanTweenType.easeOutExpo);
     }
 
+    public void ButtonAnim()
+    {
+        LeanTween.scale(buttons[idx], new Vector3(1f, 1f, 1f), 1f).setEase(LeanTweenType.easeOutExpo);
+
+        
+
+        if (idx == 4)
+        {
+            StartCoroutine(EndFirstTime());
+        }
+        idx++;
+
+
+    }
+
     public IEnumerator Buttons()
     {
         yield return new WaitForSeconds(11f);
         dialog2.TriggerDialog();
-        ButtonsAnim();
-        yield return new WaitForSeconds(19.5f);
+        //ButtonsAnim();
+        /*yield return new WaitForSeconds(19.5f);
         FadeOut();
         yield return new WaitForSeconds(4.1f);
         firstPanel.SetActive(false);
         dataManager.data.showTutorial = false;
+        dataManager.Save();*/
+    }
+
+    public IEnumerator EndFirstTime()
+    {
+        yield return new WaitForSeconds(4f);
+        FadeOut();
+        yield return new WaitForSeconds(4f);
+        firstPanel.SetActive(false);
+        dataManager.data.showTutorial = false;
         dataManager.Save();
     }
+
+
 
     private void FadeOut()
     {

@@ -2841,7 +2841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Pravilno!
+    - 'Pravilno! Oseba je neodzivna. '
 --- !u!1001 &102298024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8719,7 +8719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Napa\u010Den odgovor, Poskusite ponovno."
+    - "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno. "
 --- !u!1 &405917322
 GameObject:
   m_ObjectHideFlags: 0
@@ -9048,7 +9048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Pravilen odgovor, sedaj odstranite opazno oviro iz ust.
+    - Pravilen odgovor. Sedaj odstrani opazno oviro iz ust [Tapni na oviro].
 --- !u!1001 &413400220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9578,7 +9578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Polo\u017Eite prste na brado in roko na \u010Delo. Pazljivo premaknite glavo
+    - "Polo\u017Ei prste na brado in daj roko na \u010Delo. Pazljivo premakni glavo
       nazaj. "
 --- !u!1001 &433585084
 PrefabInstance:
@@ -9810,8 +9810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Da preverite \u010De je oseba odzivna, jo primite za ramena in jo rahlo\nstresite
-      [STRESEMO TELEFON]."
+    - "Da preveri\u0161, \u010De je oseba odzivna, jo primi za ramena in jo rahlo\r\nstresi
+      [Stresi telefon]."
 --- !u!4 &445226458
 Transform:
   m_ObjectHideFlags: 0
@@ -17050,7 +17050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pokleknite do \u017Ertve in prislonite uho, da lahko poslu\u0161ate dihanje."
+    - "Poklekni do osebe in prisloni uho, da lahko poslu\u0161a\u0161 dihanje."
 --- !u!1001 &743402799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18081,7 +18081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Preverite, ali je dihalna pot prosta.
+    - Preveri, ali je dihalna pot prosta.
 --- !u!1001 &784240579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18968,7 +18968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'Zavpijte: Ali ste v redu?'
+    - 'Zavpij v telefon: Ali ste v redu?'
 --- !u!1 &812283869
 GameObject:
   m_ObjectHideFlags: 0
@@ -20454,7 +20454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Osebo premaknemo na hrbet [Podrsljaj v desno].
+    - Osebo premakni na hrbet [Podrsljaj v desno].
 --- !u!4 &879146095
 Transform:
   m_ObjectHideFlags: 0
@@ -20613,7 +20613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Napa\u010Den odgovor, poskusite ponovno."
+    - "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno. "
 --- !u!1 &888250856
 GameObject:
   m_ObjectHideFlags: 0
@@ -22539,7 +22539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Sedaj morate preveriti odzivnost.\nPristopite do \u017Ertve."
+    - "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
 --- !u!1 &964347997
 GameObject:
   m_ObjectHideFlags: 0
@@ -27180,7 +27180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Da preverite dihanje, morate osebo\nsle\u010Dti.  [PODSRLJAJ NAVZDOL]"
+    - "Da preveri\u0161 dihanje, mora\u0161 osebo\r\nsle\u010Di [Podrsljaj navzdol]."
 --- !u!4 &1190206756
 Transform:
   m_ObjectHideFlags: 0
@@ -33913,7 +33913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pravilno! Uspe\u0161no ste opravili ste odzivnost in dihanje."
+    - Pravilno! Oseba je neodzivna in ne diha normalno. Le tako naprej.
 --- !u!1001 &1531860128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42956,7 +42956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Pravilno!
+    - Pravilno! Le tako naprej.
 --- !u!4 &1698306664
 Transform:
   m_ObjectHideFlags: 0
@@ -45100,7 +45100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pozorno poslu\u0161ajte dihanje 10 sekund."
+    - "Pozorno poslu\u0161aj dihanje 10 sekund."
 --- !u!1 &1790644196
 GameObject:
   m_ObjectHideFlags: 0
@@ -48448,7 +48448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Napa\u010Den odgovor, Poskusite ponovno."
+    - "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno. "
 --- !u!1 &1894102874
 GameObject:
   m_ObjectHideFlags: 0

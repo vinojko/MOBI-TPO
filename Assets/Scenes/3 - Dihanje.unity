@@ -18925,7 +18925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Ali spodnji znak predstavlja mesto, kjer se nahaja spodnji avtomatski defibrilator?
+    - Ali spodnji znak predstavlja mesto, kjer se nahaja avtomatski defibrilator
+      (AED)?
 --- !u!1 &602755754
 GameObject:
   m_ObjectHideFlags: 0
@@ -28282,7 +28283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Kaj menite, da je naslednji korak?
+    - "Kaj meni\u0161, da je naslednji korak?"
 --- !u!1001 &963927015
 PrefabInstance:
   m_ObjectHideFlags: 0

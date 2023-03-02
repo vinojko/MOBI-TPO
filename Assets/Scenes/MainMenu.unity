@@ -243,6 +243,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMesh: {fileID: 113210802}
   TypeSpeed: 0.054
+  m_ShowIcon:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416667529}
+        m_TargetAssemblyTypeName: FirstTime, Assembly-CSharp
+        m_MethodName: ButtonAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   DialogUI: {fileID: 1156819950}
 --- !u!1 &53909232
 GameObject:
@@ -1258,6 +1273,7 @@ MonoBehaviour:
   thirdButton: {fileID: 693832135}
   fourthButton: {fileID: 1500303974}
   fifthButton: {fileID: 1115985016}
+  buttons: []
   canvas: {fileID: 1792622392}
   firstPanel: {fileID: 1792622390}
 --- !u!1 &462620598
@@ -1764,7 +1780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &525922769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5534,7 +5550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015974, y: -148.9}
+  m_AnchoredPosition: {x: 0.000030517578, y: -62.74997}
   m_SizeDelta: {x: 49.9854, y: 54.6312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528016515

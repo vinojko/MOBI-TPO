@@ -41761,8 +41761,8 @@ MonoBehaviour:
   dialog:
     sentences:
     - "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico in prsnim ko\u0161om
-      in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljavanje . Za ritem si
-      pomagajte s sr\u010Dnim indikatorjem in glasbo."
+      in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljanje. Za ritem si pomagajte
+      s sr\u010Dnim indikatorjem in glasbo."
 --- !u!1001 &1500278396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52121,8 +52121,8 @@ MonoBehaviour:
   dialog:
     sentences:
     - "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico in prsnim ko\u0161om
-      in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljavanje . Za ritem si
-      pomagajte z drsnikom za globino sr\u010Dnim in glasbo."
+      in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljanje . Za ritem si pomagajte
+      z drsnikom za globino sr\u010Dnim in glasbo."
 --- !u!1001 &1935483105
 PrefabInstance:
   m_ObjectHideFlags: 0
