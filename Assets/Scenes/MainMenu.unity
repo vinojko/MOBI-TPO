@@ -4767,8 +4767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pozdravljeni, sem Daniel.\nDanes sem tukaj, da vas nau\u010Dim\ntemeljne postopke
-      o\u017Eivljanja\nodrasle osebe, s pomo\u010Djo\nmnemotehnike 5-prstov. "
+    - "Pozdravljen/a, sem Daniel. \r\nTukaj sem, da te nau\u010Dim\r\ntemeljnih postopkov
+      o\u017Eivljanja\r\nodrasle osebe s pomo\u010Djo\r\nmnemotehnike 5-tih prstov,
+      in sicer: "
 --- !u!4 &1299381119
 Transform:
   m_ObjectHideFlags: 0

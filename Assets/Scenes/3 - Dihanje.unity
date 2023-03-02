@@ -15949,7 +15949,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 961801824}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CallHelp, Assembly-CSharp
         m_MethodName: WrongAnswer
         m_Mode: 1
@@ -17762,7 +17762,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 961801824}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CallHelp, Assembly-CSharp
         m_MethodName: WrongAnswer
         m_Mode: 1
@@ -19740,8 +19740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pravilno. Re\u0161evalci bodo pri vas \u010Dez 7 minut. Z uporabo AED drasti\u010Dno
-      izbolj\u0161ate stopnjo pre\u017Eivetje osebe."
+    - "Pravilno. Re\u0161evalci bodo pri tebi \u010Dez 7 minut. Z uporabo AED se
+      drasti\u010Dno izbolj\u0161a stopnja pre\u017Eivetja \u017Ertve. "
 --- !u!1001 &627980772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22524,7 +22524,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 961801824}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CallHelp, Assembly-CSharp
         m_MethodName: AnswerRight
         m_Mode: 1
@@ -28116,7 +28116,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961801823}
-  - component: {fileID: 961801824}
   m_Layer: 0
   m_Name: CallHelp
   m_TagString: Untagged
@@ -28138,27 +28137,6 @@ Transform:
   m_Father: {fileID: 688045648}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &961801824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961801822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdd6f9f95d4c2141be3c707eb99e2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog1: {fileID: 1303341966}
-  dialog2: {fileID: 112467103}
-  dialog3: {fileID: 1190797452}
-  wrongAnswer: {fileID: 1898737264}
-  Answers: {fileID: 18188620}
-  MicUI: {fileID: 1762819344}
-  kiraCam: {fileID: 1039809421}
-  micTesterPass: 0
-  kiraAnimator: {fileID: 1280332003}
 --- !u!1001 &962045042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28283,7 +28261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Kaj meni\u0161, da je naslednji korak?"
+    - "Mimo je pri\u0161la prijateljica. Kaj ji boste naro\u010Dili?"
 --- !u!1001 &963927015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33560,8 +33538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Telefon dajte na zvo\u010Dnik in ga polo\u017Eite ob \u017Ertev. Tako boste
-      lahko la\u017Eje komunicirali z dispe\u010Dersko slu\u017Ebo."
+    - "Telefon daj na zvo\u010Dnik, da bo\u0161 imel/a proste roke."
 --- !u!1 &1162118277
 GameObject:
   m_ObjectHideFlags: 0
@@ -34328,7 +34305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Kaj boste naro\u010Dili osebi?"
+    - "Mimo je pri\u0161la prijateljica. Kaj ji boste naro\u010Dili?"
 --- !u!1001 &1192351138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36830,9 +36807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'Pravilno!
-
-      Kaj menite, da je naslednji korak?'
+    - "Pravilno!\nKaj meni\u0161, da je naslednji korak?"
 --- !u!1 &1303639392
 GameObject:
   m_ObjectHideFlags: 0
@@ -38379,8 +38354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Odli\u010Dno!\nSedaj se lahko osredoto\u010Dite na CPR, medtem, ko oseba telefonira
-      z re\u0161evalci in odide po AED."
+    - "Odli\u010Dno!\r\nSedaj se lahko osredoto\u010Di\u0161 na o\u017Eivljanje,
+      medtem ko oseba telefonira z dispe\u010Dersko slu\u017Ebo in odide po AED."
 --- !u!4 &1359411016
 Transform:
   m_ObjectHideFlags: 0
@@ -39850,6 +39825,7 @@ MonoBehaviour:
   kiraAnim: {fileID: 1280332003}
   phone: {fileID: 176755509}
   phone3D: {fileID: 188865056}
+  kiraCam: {fileID: 1039809421}
   callAmbulance: {fileID: 393894665}
   wrongNumber: {fileID: 788194517}
   correctNumber: {fileID: 1359411015}
@@ -39860,6 +39836,7 @@ MonoBehaviour:
   speakerOn: {fileID: 2048589418}
   phoneText: {fileID: 522014370}
   first: {fileID: 33433269}
+  kiraAnimator: {fileID: 1280332003}
 --- !u!1001 &1429810751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60079,6 +60056,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1961088594}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

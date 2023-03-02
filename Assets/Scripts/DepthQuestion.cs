@@ -53,7 +53,7 @@ public class DepthQuestion : MonoBehaviour
 
     private IEnumerator ChangeState()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3.3f);
         GameManager.instance.UpdateGameState(GameState.BPM);
     }
 }

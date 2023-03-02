@@ -52,7 +52,7 @@ public class BPMQuestion : MonoBehaviour
 
     private IEnumerator ChangeState()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         GameManager.instance.UpdateGameState(GameState.VolumeQuestion);
     }
 }

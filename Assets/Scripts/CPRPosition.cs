@@ -41,7 +41,7 @@ public class CPRPosition : MonoBehaviour
     {
         //rightAnswerDialog.TriggerDialog();
         LeanTween.moveLocal(cprPositions, new Vector3(200f, -760f, 0f), 1.7f).setDelay(0.3f).setEase(LeanTweenType.easeOutExpo);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         GameManager.instance.UpdateGameState(GameState.Depth);
     }
     public void RightAnswer()

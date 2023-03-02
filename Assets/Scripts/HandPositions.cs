@@ -37,8 +37,15 @@ public class HandPositions : MonoBehaviour
 
     public void CloseHandPositions()
     {
+        StartCoroutine(CloseHandPositionsCoroutine());
+    }
+
+    IEnumerator CloseHandPositionsCoroutine()
+    {
         rightAnswerDialog.TriggerDialog();
+        
         LeanTween.moveLocal(handPositions, new Vector3(0f, -760f, 0f), 1.7f).setDelay(0.3f).setEase(LeanTweenType.easeOutExpo);
+        yield return new WaitForSeconds(2f);
         GameManager.instance.UpdateGameState(GameState.CPRPositions);
     }
     public void WrongAnswer()

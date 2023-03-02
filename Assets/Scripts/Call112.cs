@@ -9,6 +9,7 @@ public class Call112 : MonoBehaviour
     public GameObject Answers;
     public Animator kiraAnim;
     public GameObject phone, phone3D;
+    public Camera kiraCam;
 
     public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions, speakerDialog;
 
@@ -17,6 +18,9 @@ public class Call112 : MonoBehaviour
     [SerializeField]TextMeshProUGUI phoneText;
 
     [SerializeField] Camera first;
+    public Animator kiraAnimator;
+
+    int kiraHash;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -31,16 +35,23 @@ public class Call112 : MonoBehaviour
     {
         if (state == GameState.Call112)
         {
-            StartCoroutine(ShowAnswers());
+            
 
         }
    
     }
-
+    void Start()
+    {
+        kiraHash = Animator.StringToHash("Kira");
+        StartCoroutine(ShowAnswers());
+    }
 
     private IEnumerator ShowAnswers()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
+
+        ChangeCamera.instance.ChangeToCameraSlow(kiraCam);
+        StartRunning();
         LeanTween.moveLocal(Answers, new Vector3(0f, -150f, 0f), 1.5f).setEaseInOutExpo();
 
     }
@@ -79,6 +90,21 @@ public class Call112 : MonoBehaviour
         LeanTween.moveLocal(phone, new Vector3(118f, -2000f, 0f), 1.5f).setEaseInOutExpo();
     }
 
+
+    private void StartRunning()
+    {
+
+        kiraAnimator.SetBool("StartRunning", true);
+        /*LeanTween.value(gameObject, 1f, 2f, 0.5f).setOnUpdate((value) =>
+        {
+            kiraAnimator.SetFloat(kiraHash, value);
+        });*/
+
+        LeanTween.value(gameObject, 0f, 1f, 0.5f).setDelay(1.6f).setOnUpdate((value) =>
+        {
+            kiraAnimator.SetFloat(kiraHash, value);
+        });
+    }
     public void CheckNumber()
     {
 
