@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2461fb8282b104288dd4b3e8bf6891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycle: 2
+  cycle: 0
   neededCompressions: 30
   released: 0
   bpmText: {fileID: 311686902}
@@ -22956,8 +22956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Sedaj morate za\u010Deti s KPO.\nKateri polo\u017Eaj telesa pri stisih prsnega
-      ko\u0161a je pravilen?"
+    - "Izberite pravilno skico rok, ki se uporablja za izvajanje stisov prsnega ko\u0161a
+      odrasle osebe."
 --- !u!1001 &967734001
 PrefabInstance:
   m_ObjectHideFlags: 0

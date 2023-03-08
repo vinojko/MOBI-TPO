@@ -11,7 +11,7 @@ public class Call112 : MonoBehaviour
     public GameObject phone, phone3D;
     public Camera kiraCam;
 
-    public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions, speakerDialog;
+    public DialogTrigger callAmbulance, wrongNumber, correctNumber, instructions, speakerDialog, wrongAnswer, rightAnswer;
 
     public GameObject keypad, call, speakerOn;
 
@@ -59,12 +59,29 @@ public class Call112 : MonoBehaviour
     public void AnswerRight()
     {
         LeanTween.moveLocal(Answers, new Vector3(0f, -1035f, 0f), 1.5f).setEaseInOutExpo();
+        rightAnswer.TriggerDialog();
+        StartCoroutine(AnswerRightCoroutine());
+
+    }
+
+    IEnumerator AnswerRightCoroutine()
+    {
+
+        yield return new WaitForSeconds(2f);
+        LeanTween.moveLocal(Answers, new Vector3(0f, -1035f, 0f), 1.5f).setEaseInOutExpo();
         KiraPhoneAnimation();
         PhoneAnimation();
         callAmbulance.TriggerDialog();
         StartCoroutine(SpeakerOnDialog());
 
     }
+
+    public void AnswerWrong()
+    {
+        wrongAnswer.TriggerDialog();
+
+    }
+
 
     private void KiraPhoneAnimation()
     {

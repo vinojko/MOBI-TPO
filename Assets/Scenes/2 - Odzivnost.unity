@@ -9578,8 +9578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Polo\u017Ei prste na brado in daj roko na \u010Delo. Pazljivo premakni glavo
-      nazaj. "
+    - "Polo\u017Ei eno roko na \u010Delu in s prsti druge roke pod brado\r previdno
+      zvrni glavo navzad in dvigni brado tako, da\r odpre\u0161 dihalno pot."
 --- !u!1001 &433585084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45100,7 +45100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pozorno poslu\u0161aj dihanje 10 sekund."
+    - "Glej, poslu\u0161aj in \u010Duti dihanje, ne ve\u010D kot 10 sekund."
 --- !u!1 &1790644196
 GameObject:
   m_ObjectHideFlags: 0
