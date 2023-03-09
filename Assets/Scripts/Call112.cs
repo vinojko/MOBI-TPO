@@ -94,7 +94,7 @@ public class Call112 : MonoBehaviour
 
     IEnumerator SpeakerOnDialog()
     {
-        yield return new WaitForSeconds(16.7f);
+        yield return new WaitForSeconds(19.3f);
         speakerDialog.TriggerDialog();
     }
 
