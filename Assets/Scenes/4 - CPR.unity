@@ -8395,7 +8395,6 @@ Transform:
   - {fileID: 885053681}
   - {fileID: 206841873}
   - {fileID: 1891011792}
-  - {fileID: 941061631}
   - {fileID: 2048145979}
   - {fileID: 1918803819}
   m_Father: {fileID: 0}
@@ -8513,7 +8512,6 @@ MonoBehaviour:
   lines: {fileID: 1057371871}
   polozajRok: {fileID: 154813217}
   ritem: {fileID: 1891011793}
-  ritem2: {fileID: 941061632}
   hand: {fileID: 1339671121}
   CPRSlider: {fileID: 0}
 --- !u!1001 &373958294
@@ -22515,52 +22513,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4939186415333680, guid: 84379d6e673414945882c82e70d1c161, type: 3}
   m_PrefabInstance: {fileID: 940965233}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &941061630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 941061631}
-  - component: {fileID: 941061632}
-  m_Layer: 0
-  m_Name: 30:2 dialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &941061631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941061630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7271378, y: -1.3431673, z: -23.184185}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 370027080}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &941061632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941061630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329799f5fbd413c4a83e623106415e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    sentences:
-    - "Izvesti je potrebno 30 stisov prsnega ko\u0161a in dati 2 vpiha. Pa za\u010Dnimo\u2026"
 --- !u!1001 &942715341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51431,7 +51383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'Za ritem si pomagaj z glasbo in indikatorjem globine. '
+    - "Za ritem si pomagaj z glasbo in indikatorjem globine. Izvesti je potrebno
+      30 stisov prsnega ko\u0161a in dati 2 vpiha. Pa za\u010Dnimo\u2026"
 --- !u!1 &1894688382
 GameObject:
   m_ObjectHideFlags: 0
@@ -51659,7 +51612,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370027080}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1918803820
 MonoBehaviour:
@@ -56116,7 +56069,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370027080}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049143145
 GameObject:

@@ -8,7 +8,7 @@ public class Odzivnost : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject leftShoulder, rightShoulder;
 
-    public bool pass = false;
+    bool showShoulders = false;
 
     public DialogTrigger odzivnostDialog;
 
@@ -48,7 +48,7 @@ public class Odzivnost : MonoBehaviour
     void Update()
     {
 
-        if ((ButtonSingleton.instance.leftShoulder &&  ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken) || pass == true)
+        if (ButtonSingleton.instance.leftShoulder &&  ButtonSingleton.instance.rightShoulder && ShakeCheck.instance.isShaken)
         {
             GameManager.instance.UpdateGameState(GameState.OdzivnostGlasnost);
             zavpijteDialog.TriggerDialog();

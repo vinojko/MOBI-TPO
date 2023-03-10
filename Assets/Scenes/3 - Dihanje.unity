@@ -10581,7 +10581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pokli\u010Dita nujno medicinsko pomo\u010D."
+    - "Pokli\u010Dite re\u0161evalno slu\u017Ebo.\n"
 --- !u!1 &397396925
 GameObject:
   m_ObjectHideFlags: 0
@@ -17223,7 +17223,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Za\u010Dni KPO"
+  m_text: Pojdi po AED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -19764,8 +19764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pravilno. Nujna medicinska pomo\u010D bo pri tebi \u010Dez 7 minut. Z uporabo
-      AED se drasti\u010Dno izbolj\u0161a stopnja pre\u017Eivetja osebe.. "
+    - "Pravilno. Re\u0161evalci bodo pri tebi \u010Dez 7 minut. Z uporabo AED se
+      drasti\u010Dno izbolj\u0161a stopnja pre\u017Eivetja \u017Ertve. "
 --- !u!1001 &627980772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33608,8 +33608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Telefon dajta na zvo\u010Dnik in ga odlo\u017Eita na tla za la\u017Eje komunikacijo
-      z dispe\u010Dersko slu\u017Ebo med izvajanjem o\u017Eivljanja."
+    - "Telefon daj na zvo\u010Dnik (da bo\u0161 lahko komuniciral z dispe\u010Dersko
+      slu\u017Ebo) in ga odlo\u017Ei na tla. "
 --- !u!1 &1162118277
 GameObject:
   m_ObjectHideFlags: 0
@@ -41059,7 +41059,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pojdi po AED
+  m_text: "Za\u010Dni s KPO"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -53153,7 +53153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Odli\u010Dno! Sedaj se lahko osredoto\u010Di\u0161 na izvajanje o\u017Eivljanja,
+    - "Odli\u010Dno! Sedaj se lahko osredoto\u010Di\u0161 na izvajanje o\u017Eivljanje,
       medtem ko prijateljica komunicira z dispe\u010Dersko slu\u017Ebo in ji pove:\r\n\u2022
       kdo kli\u010De (Tina),\r\n\u2022 tel. \u0161t. (040 123 456),\r\n\u2022 kje
       se nahaja (\u017Ditna ulica 15, 2000 Maribor) in\r\n\u2022 kaj se je zgodilo
@@ -54207,7 +54207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - AED je oddaljen minuto hoje. Ali gre prijateljica po njega?
+    - "AED je oddaljen minuto hoje. Ali gre\u0161 po njega?"
 --- !u!1001 &1743165236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58337,8 +58337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32.365, y: 11}
-  m_SizeDelta: {x: -64.7295, y: -57.2325}
+  m_AnchoredPosition: {x: 32.3647, y: 0}
+  m_SizeDelta: {x: -64.7295, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907042944
 MonoBehaviour:
@@ -58360,7 +58360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pokli\u010Di nujno medicinsko pomo\u010D in pojdi po AED"
+  m_text: "Pokli\u010Di 112"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
