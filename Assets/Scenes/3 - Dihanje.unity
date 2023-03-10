@@ -19765,7 +19765,7 @@ MonoBehaviour:
   dialog:
     sentences:
     - "Pravilno. Nujna medicinska pomo\u010D bo pri tebi \u010Dez 7 minut. Z uporabo
-      AED se drasti\u010Dno izbolj\u0161a stopnja pre\u017Eivetja osebe.. "
+      AED se drasti\u010Dno izbolj\u0161a stopnja pre\u017Eivetja osebe."
 --- !u!1001 &627980772
 PrefabInstance:
   m_ObjectHideFlags: 0

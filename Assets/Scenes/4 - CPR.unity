@@ -51431,7 +51431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'Za ritem si pomagaj z glasbo in indikatorjem globine. '
+    - 'Za ritem si pomagaj z glasbo ter indikatorjem za frekvenco in globino.. '
 --- !u!1 &1894688382
 GameObject:
   m_ObjectHideFlags: 0

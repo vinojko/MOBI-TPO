@@ -4768,8 +4768,7 @@ MonoBehaviour:
   dialog:
     sentences:
     - "Pozdravljen/a, sem Daniel. \r\nTukaj sem, da te nau\u010Dim\r\ntemeljnih postopkov
-      o\u017Eivljanja\r\nodrasle osebe s pomo\u010Djo\r\nmnemotehnike 5-tih prstov,
-      in sicer: "
+      o\u017Eivljanja\r\nodrasle osebe s pomo\u010Djo\r\nmnemotehnike 5-tih prstov."
 --- !u!4 &1299381119
 Transform:
   m_ObjectHideFlags: 0
