@@ -28604,7 +28604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Pokleknite do \u017Ertve in prislonite uho, da lahko poslu\u0161ate dihanje."
+    - "Pokleknite do osebe in prislonite uho, da lahko poslu\u0161ate dihanje."
 --- !u!1 &978570053
 GameObject:
   m_ObjectHideFlags: 0
@@ -33608,7 +33608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - "Telefon dajta na zvo\u010Dnik in ga odlo\u017Eita na tla za la\u017Eje komunikacijo
+    - "Telefon dajta na zvo\u010Dnik in ga odlo\u017Eita na tla za la\u017Ejo komunikacijo
       z dispe\u010Dersko slu\u017Ebo med izvajanjem o\u017Eivljanja."
 --- !u!1 &1162118277
 GameObject:

@@ -7,7 +7,7 @@ public class LinePositions : MonoBehaviour
 {
     public Image line1, line2, line3, line4;
     public GameObject lines;
-    public DialogTrigger polozajRok, ritem, ritem2;
+    public DialogTrigger polozajRok, ritem, ritem2, paZacnimo;
     public GameObject hand;
     public GameObject CPRSlider;
     void Awake()
@@ -82,8 +82,10 @@ public class LinePositions : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         ritem.TriggerDialog();
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(4f);
         ritem2.TriggerDialog();
+        yield return new WaitForSeconds(4.1f);
+        paZacnimo.TriggerDialog();
     }
 
 

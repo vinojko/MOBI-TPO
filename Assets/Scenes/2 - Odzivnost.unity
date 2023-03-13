@@ -6175,7 +6175,7 @@ RectTransform:
   m_LocalScale: {x: 1.5697, y: 8.127528, z: 1.5697}
   m_Children: []
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14219,7 +14219,7 @@ RectTransform:
   m_LocalScale: {x: 1.0350454, y: 5.6022873, z: 1.0350454}
   m_Children: []
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24453,7 +24453,7 @@ RectTransform:
   m_LocalScale: {x: 1.0350454, y: 5.6022873, z: 1.0350454}
   m_Children: []
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -32512,12 +32512,12 @@ RectTransform:
   m_Children:
   - {fileID: 586660747}
   - {fileID: 686266360}
-  - {fileID: 1731171315}
   - {fileID: 1855441369}
   - {fileID: 245593994}
   - {fileID: 641673513}
   - {fileID: 1064059369}
   - {fileID: 1675112407}
+  - {fileID: 1731171315}
   - {fileID: 123155405}
   - {fileID: 1532382050}
   - {fileID: 703225120}
@@ -42240,7 +42240,7 @@ RectTransform:
   - {fileID: 100900161}
   - {fileID: 1062652201}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43783,7 +43783,7 @@ RectTransform:
   m_Children:
   - {fileID: 1140851928}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -47220,7 +47220,7 @@ RectTransform:
   - {fileID: 493937293}
   - {fileID: 2093971889}
   m_Father: {fileID: 1443669284}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
