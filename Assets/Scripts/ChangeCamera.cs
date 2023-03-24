@@ -95,10 +95,4 @@ public class ChangeCamera : MonoBehaviour
         main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, 2f).SetEase(Ease.InOutSine);
     }
 
-    public void ChangeToCamera(Camera second_Camera, Camera third_camera, float speed)
-    {
-        main_Camera.transform.DOMove(second_Camera.transform.position, speed).SetEase(Ease.InExpo);
-        main_Camera.transform.DORotate(second_Camera.transform.rotation.eulerAngles, speed).SetEase(Ease.InExpo).OnComplete(() => switcher(third_camera, speed));
-
-    }
 }
