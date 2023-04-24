@@ -9,6 +9,7 @@ public class OdzivnostGlasnost : MonoBehaviour
     public float threshold = 0.20f;
 
     public DialogTrigger dialogTrigger;
+    public bool pass = false;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnStateChanged;
@@ -35,7 +36,7 @@ public class OdzivnostGlasnost : MonoBehaviour
     {
         Debug.Log(MicInput.MicLoudness);
   
-        if(MicInput.MicLoudness >= threshold && (GameManager.currentState == GameState.OdzivnostGlasnost))
+        if ((MicInput.MicLoudness >= threshold && (GameManager.currentState == GameState.OdzivnostGlasnost)) || pass)
         {
             Debug.Log("Uporabnik je prekoracil glasnost");
             dialogTrigger.TriggerDialog();

@@ -13,12 +13,9 @@ public partial class AudioManager : MonoBehaviour
     public Sound[] soundsCopy;
 
     public static AudioManager instance;
-    //AudioManager
 
     void Awake()
-    {
-
-        
+    {    
         if (instance == null)
             instance = this;
         else
@@ -39,13 +36,10 @@ public partial class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
 
-
     }
 
     void Start()
     {
-      
-        
         Scene scene = SceneManager.GetActiveScene();
 
         if (scene.name != "1 - Varnost" && scene.name != "Lost" && scene.name != "Won" && scene.name != "MainMenu")
@@ -53,7 +47,6 @@ public partial class AudioManager : MonoBehaviour
             Play("Theme");
         }
         
-
     }
 
     public void Play(string name)

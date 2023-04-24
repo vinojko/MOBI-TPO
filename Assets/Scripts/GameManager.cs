@@ -140,8 +140,8 @@ public enum GameState
     Footsteps,
     IntroAnimation,
     Varnost,
-    /* --- 2 - ODZIVNOST --- */
     VarnostKoncano,
+    /* --- 2 - ODZIVNOST --- */
     OdzivnostZacetek,
     OsebaOdzivna,
     PremakniZrtev,

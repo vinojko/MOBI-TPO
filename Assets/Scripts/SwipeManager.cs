@@ -65,7 +65,6 @@ public class SwipeManager : MonoBehaviour
             else if (deltaX < 0)
             {
                 this.OnSwipeLeft.Invoke();
-                //Debug.Log("left");
             }
         }
 
@@ -75,13 +74,12 @@ public class SwipeManager : MonoBehaviour
             if (deltaY > 0)
             {
                 this.OnSwipeUp.Invoke();
-               Debug.Log("SWIPE UP");
+               Debug.Log("Swiped up");
             }
             else if (deltaY < 0)
             {
                 this.OnSwipeDown.Invoke();
-                Debug.Log("Swipe Down");
-                //Debug.Log("down");
+                Debug.Log("Swiped Down");
             }
         }
 

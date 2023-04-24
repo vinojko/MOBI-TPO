@@ -85,7 +85,7 @@ public class AEDKoncan : MonoBehaviour
 
     private void WinOrLose()
     {
-        if (VPManager.instance.vp >= 73)
+        if (VPManager.instance.vp >= 50)
         {
             SceneManager.LoadScene("Won");
         }
