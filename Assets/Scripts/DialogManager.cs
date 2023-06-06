@@ -82,7 +82,7 @@ public class DialogManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
-            FindObjectOfType<AudioManager>().Play("Clack");
+            //FindObjectOfType<AudioManager>().Play("Clack");
 
             //Purple #f700ce - ce bos rabu
             if (letter.Equals('[')) {

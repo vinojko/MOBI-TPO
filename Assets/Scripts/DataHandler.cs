@@ -23,7 +23,7 @@ public class DataHandler : MonoBehaviour
 
         if (!dataManager.data.showTutorial)
         {
-            tutorial.SetActive(false);
+            tutorial.SetActive(true);
         }
 
         if (dataManager.data.odzivnost)

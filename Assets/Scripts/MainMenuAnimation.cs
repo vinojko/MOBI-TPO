@@ -27,7 +27,8 @@ public class MainMenuAnimation : MonoBehaviour
 
     void LogoAnim()
     {
-        LeanTween.moveLocal(Logo, new Vector3(0f, 172f, 0f), 1.5f).setDelay(0.1f).setEase(LeanTweenType.easeOutExpo);
+        RectTransform rectTransform = Logo.GetComponent<RectTransform>();
+        LeanTween.move(rectTransform, new Vector2(150f, -300f), 1.5f).setDelay(0.1f).setEase(LeanTweenType.easeOutExpo);
     }
 
     void ButtonsAnim()

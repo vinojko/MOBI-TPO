@@ -140,16 +140,22 @@ public class DialogFirstTime : MonoBehaviour
 
     void AnimationUIOpen()
     {
-        LeanTween.moveLocalY(DialogUI, 80f, 2f).setDelay(0f).setEase(LeanTweenType.easeInOutQuart);
+        RectTransform rectTransform = DialogUI.GetComponent<RectTransform>();
+
+        LeanTween.move(rectTransform, new Vector2(0, -1140f), 2f).setDelay(0f).setEase(LeanTweenType.easeInOutQuart);
     }
     public void AnimationUIOpenUp()
     {
-        LeanTween.moveLocalY(DialogUI, 800f, 2f).setDelay(0f).setEase(LeanTweenType.easeInOutQuart);
+        RectTransform rectTransform = DialogUI.GetComponent<RectTransform>();
+
+
+        LeanTween.move(rectTransform, new Vector2(0, -180f), 2f).setDelay(0f).setEase(LeanTweenType.easeInOutQuart);
     }
 
     public void AnimationUIClose()
     {
-        LeanTween.moveLocalY(DialogUI, 2085f, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
+        float targetY = Screen.height * 2.085f;
+        LeanTween.moveLocalY(DialogUI, targetY, 0.9f).setDelay(0.2f).setEase(LeanTweenType.easeInOutQuart);
     }
 
 
