@@ -13,7 +13,7 @@ public class Won : MonoBehaviour
     public GameObject nextButton, quiz;
     public Light fire;
 
-    public GameObject clouds;
+    public GameObject clouds;   
 
     public DataManager dataManager;
     public TextMeshProUGUI vp;
