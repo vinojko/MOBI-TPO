@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dihanje Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dihanje
+  m_TableCollectionNameGuidString: df76ec7d3c2c90746bb7911ebf3b5663
+  m_Entries:
+  - m_Id: 113727406080
+    m_Key: 3StartDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160288374784
+    m_Key: 3ChinDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266739810304
+    m_Key: 3MouthInsideDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 344506400768
+    m_Key: 3MouthDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403121799168
+    m_Key: 3MouthCorrect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468431306752
+    m_Key: 3MouthWrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 598249209856
+    m_Key: 3SpeakerOnDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 721851154432
+    m_Key: 3Wrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 764981182464
+    m_Key: 3CallHelpDialog1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1003813240832
+    m_Key: 3CallHelpDialogAnswerRight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1101175619584
+    m_Key: WhatToDo?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1157651922944
+    m_Key: 3AEDSign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1271745380352
+    m_Key: 3SendForAED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320000847872
+    m_Key: 3CallAmbulance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1373226565632
+    m_Key: AmbulanceInstuctions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1524976484352
+    m_Key: WrongNumber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1570878947328
+    m_Key: CorrectNumber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714202509312
+    m_Key: SendForAED Correct
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1865105178624
+    m_Key: 3CallHelp1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2056596127744
+    m_Key: 3CallHelp2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2112871104512
+    m_Key: 3CallHelp3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2312478031872
+    m_Key: KiraAnswer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2794835574784
+    m_Key: KiraAnswer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2827106549760
+    m_Key: KiraAnswer3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304208629760
+    m_Key: 3EndScreenText
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1698765132520

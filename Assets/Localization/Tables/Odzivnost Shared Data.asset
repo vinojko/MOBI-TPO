@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Odzivnost Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Odzivnost
+  m_TableCollectionNameGuidString: 3c09229b1c46f9b44806b21d94ce2b7e
+  m_Entries:
+  - m_Id: 15014461440
+    m_Key: '2StartDialog
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10627777986560
+    m_Key: '2Kazalec
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10723370369024
+    m_Key: '2Hrbet
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10826332143616
+    m_Key: '2OdzivnostDialog
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11014081773568
+    m_Key: 2ZavpijteDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11203991470080
+    m_Key: 2Wrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11336397258752
+    m_Key: '2Right
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11596125339648
+    m_Key: '2UndressDialog
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12285027188736
+    m_Key: '2ChinDialog
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12366769979392
+    m_Key: 2MouthInsideDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12516598906880
+    m_Key: 2MouthDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12736527237120
+    m_Key: 2MouthCorrect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12838578847744
+    m_Key: 2MouthWrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12967192985600
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13009400266752
+    m_Key: 2Meatball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13128623357952
+    m_Key: 2CheckBreathingDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13359121334272
+    m_Key: 2TimerDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13405237706752
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13467367931904
+    m_Key: 2EndDialog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22253591756800
+    m_Key: '2OsebaOdzivna
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24763945615360
+    m_Key: 2OdzivnostUspesno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49636482908160
+    m_Key: 2AliOsebaDiha
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1698749691828

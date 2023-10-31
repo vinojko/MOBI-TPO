@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CPR_sl-SI
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sl-SI
+  m_SharedData: {fileID: 11400000, guid: 62bdc7eda4493b348ae9475cbc51edff, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 35272949760
+    m_Localized: "Izberite pravilno skico rok, ki se uporablja za izvajanje stisov
+      prsnega ko\u0161a odrasle osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3616424230912
+    m_Localized: "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico
+      in prsnim ko\u0161om in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljanje.
+      Za ritem si pomagajte s sr\u010Dnim indikatorjem in glasbo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3638117171200
+    m_Localized: Pravilen odgovor! Le tako naprej.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3656333033472
+    m_Localized: "Pravilen odgovor! To je povpre\u010Dna dol\u017Eina palca. Le tako
+      naprej."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3672409800704
+    m_Localized: Pravilen odgovor! To je ritem pesmi Stayin' Alive od skupine Bee
+      Gees. Le tako naprej.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3819411767296
+    m_Localized: "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3850491559936
+    m_Localized: "Kateri polo\u017Eaj telesa pri stisih prsnega ko\u0161a je pravilen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3861002485760
+    m_Localized: "Nadaljujte s stisi prsnega ko\u0161a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3910205865984
+    m_Localized: "Kak\u0161na naj bo globina stiskanja prsnega ko\u0161a?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4211101040640
+    m_Localized: "Kolik\u0161en naj bo volumen vpiha?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4239571976192
+    m_Localized: "Koliko stisov prsnega ko\u0161a moramo narediti v eni minuti?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4259742384128
+    m_Localized: "Pravilen odgovor!\nsedaj roke polo\u017Eimo med klju\u010Dnico
+      in prsnim ko\u0161om in za\u010Dnemo izvajati  kardiopulmonalno o\u017Eivljanje
+      . Za ritem si pomagajte z drsnikom za globino sr\u010Dnim in glasbo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4292529258496
+    m_Localized: "Izvedi umetne vpihe. [Dr\u017Ei spodnjo ikono \"umetni vpihi\"
+      in jo pravo\u010Dasno spusti]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4310824812544
+    m_Localized: "Sedaj roke polo\u017Ei na sredino med klju\u010Dnico in spodnjim
+      rebrnim lokom ter za\u010Dni s stisi prsnega ko\u0161a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4331116855296
+    m_Localized: "Koli\u010Dina vpihnjenega zraka je prevelika! Bodite bolj pozorni."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4341120270336
+    m_Localized: "Koli\u010Dina vpihnjenega zraka je premajhna! Bodite bolj pozorni."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4380639002624
+    m_Localized: "Odli\u010Dno!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4410267566080
+    m_Localized: Za ritem si pomagaj z glasbo ter indikatorjem za frekvenco in globino.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4429645250560
+    m_Localized: "Izvesti je potrebno 30 stisov prsnega ko\u0161a in dati 2 vpiha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4451849895936
+    m_Localized: "Pa za\u010Dnimo\u2026 [S tapkanje izvajaj stise prsnega kosa]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4465816928256
+    m_Localized: Prispel je AED. Vzemi ga, prijateljica pa bo nadaljevala s KPO.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4528165257216
+    m_Localized: "Odli\u010Dno, sedaj lahko za\u010Dne\u0161 izvajati o\u017Eivljanje
+      z uporabo AED. Le tako naprej."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4926246649856
+    m_Localized: Izvedi umetne vpihe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11795476414464
+    m_Localized: "Stisi prsnega ko\u0161a na minuto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12063630852096
+    m_Localized: "\u0160tevilo stisov prsnega ko\u0161a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12311015096320
+    m_Localized: "\u0160tevilo potrebnih vpihov"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12385132642304
+    m_Localized: 'GLOBINA
+
+      (cm)
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15651392356352
+    m_Localized: "\rUspe\u0161no ste opravili:\r\n <b>KPO</b>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

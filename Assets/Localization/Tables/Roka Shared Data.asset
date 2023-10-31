@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Roka Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Roka
+  m_TableCollectionNameGuidString: 26f5c7cf97db4a343b9ae9475da54728
+  m_Entries:
+  - m_Id: 65299972096
+    m_Key: Varnost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368766255104
+    m_Key: Odzivnost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463364587520
+    m_Key: Poklici
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517871333376
+    m_Key: CPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23421902553088
+    m_Key: 'OdzivnostInIdhanje
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40467730169856
+    m_Key: Sredinec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59685636833280
+    m_Key: Prstanec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60438048833536
+    m_Key: IzvajamoKPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61722613153792
+    m_Key: 
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1698755110764

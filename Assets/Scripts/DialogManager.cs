@@ -55,7 +55,7 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-            
+
         DisplayNextSentence();
 
 
@@ -70,13 +70,13 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
         textMesh.text = "";
 
@@ -85,13 +85,15 @@ public class DialogManager : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Clack");
 
             //Purple #f700ce - ce bos rabu
-            if (letter.Equals('[')) {
+            if (letter.Equals('['))
+            {
                 textMesh.text += "<color=#f700ce>";
-            
+
             }
             textMesh.text += letter;
 
-            if(prevLetter.Equals('.') && letter.Equals(' ')){
+            if (prevLetter.Equals('.') && letter.Equals(' '))
+            {
                 TypeSpeed = 0.38f;
             }
             else if (letter.Equals('.'))

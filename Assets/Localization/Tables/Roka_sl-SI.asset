@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Roka_sl-SI
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sl-SI
+  m_SharedData: {fileID: 11400000, guid: 26f5c7cf97db4a343b9ae9475da54728, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 65299972096
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368766255104
+    m_Localized: 'ODZIVNOST
+
+      DIHANJE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463364587520
+    m_Localized: "POKLI\u010CI 112\nPO\u0160LJI PO AED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517871333376
+    m_Localized: CPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23421902553088
+    m_Localized: ODZIVNOST in DIHANJE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40467730169856
+    m_Localized: Sredinec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59685636833280
+    m_Localized: Prstanec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60438048833536
+    m_Localized: IZVAJAMO KPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61722613153792
+    m_Localized: "Stisi prsnega ko\u0161a na minuto"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

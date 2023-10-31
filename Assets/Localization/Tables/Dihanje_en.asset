@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dihanje_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: df76ec7d3c2c90746bb7911ebf3b5663, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 113727406080
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160288374784
+    m_Localized: Place your fingers on the chin and your hand on the forehead. Carefully
+      tilt the head back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266739810304
+    m_Localized: Is the airway clear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403121799168
+    m_Localized: Correct! Keep it up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 344506400768
+    m_Localized: Is the airway clear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468431306752
+    m_Localized: Wrong answer. Are you sure? Try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 598249209856
+    m_Localized: Put the phone on speaker and place it on the ground for easier communication
+      with the dispatch service while performing resuscitation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 721851154432
+    m_Localized: Wrong answer. Are you sure? Try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 764981182464
+    m_Localized: Correct! What do you think is the next step?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1003813240832
+    m_Localized: Correct! If possible, make yourself noticeable and call people in
+      the nearby vicinity, as this way one person can perform CPR while the other
+      calls for emergency assistance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1101175619584
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1157651922944
+    m_Localized: Does the sign below represent the location where the AED is?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1271745380352
+    m_Localized: The AED is a minute's walk away. Should your friend go get it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320000847872
+    m_Localized: Call emergency medical help.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1373226565632
+    m_Localized: "Great! Now you can focus on performing CPR while your friend communicates
+      with the dispatch service, telling them:\r\n\u2022 who is calling (Tina),\r\n\u2022
+      phone number (040 123 456),\r\n\u2022 location (\u017Ditna ulica 15, 2000 Maribor),
+      and\r\n\u2022 what has happened (the person is unresponsive and not breathing
+      normally)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1524976484352
+    m_Localized: Wrong number, try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1570878947328
+    m_Localized: Great! Now you can focus on performing CPR while your friend calls
+      the dispatch service and goes to get the AED.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714202509312
+    m_Localized: Correct. Emergency medical help will be with you in 7 minutes. Using
+      the AED drastically improves the person's chance of survival.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1865105178624
+    m_Localized: Start CPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2056596127744
+    m_Localized: Call for help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2112871104512
+    m_Localized: Find the AED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2312478031872
+    m_Localized: Call emergency medical help and go get the AED.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2794835574784
+    m_Localized: Start CPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2827106549760
+    m_Localized: Go get the AED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304208629760
+    m_Localized: 'You have successfully completed: <b>CALL 911 AND SEND FOR AED</b>.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

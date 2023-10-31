@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AED_sl-SI
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sl-SI
+  m_SharedData: {fileID: 11400000, guid: f0c2b9a425f1f4743af45148b5e32bc7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 25567330304
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36636098560
+    m_Localized: "Odpri embala\u017Eo [Podrsljaj v desno], odstrani nalepke - elektrode
+      in slednje namesti na gol prsni ko\u0161 osebe, kot je prikazano."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64695992320
+    m_Localized: "Analiziram sr\u010Dni ritem.\nNe dotikaj se osebe.\n. . . .\nSvetujem
+      \u0161ok, polnim, umakni se. \n. . . .\nPrepri\u010Dajte se, da se nih\u010De
+      ne dotika osebe in pritisnite utripajo\u010D gumb za \u0161ok."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96975355904
+    m_Localized: "Izveden \u0161ok. Sedaj se je varno dotakniti osebe, za\u010Dni
+      z o\u017Eivljanjem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76402294784
+    m_Localized: "Izveden \u0161ok. Sedaj se je varno dotakniti osebe, za\u010Dni
+      z o\u017Eivljanjem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138503159808
+    m_Localized: "Napa\u010Den odgovor, poskusite ponovno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182635626496
+    m_Localized: "Prispela je nujna medicinska pomo\u010D, ki bo zdaj prevzela osebo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213178548224
+    m_Localized: "Izvedite umetne vpihe. [Dr\u017Eite gumb in ga pravo\u010Dasno
+      spustite]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338730844160
+    m_Localized: "Koli\u010Dina vpihnjenega zraka je prevelika! Bodite bolj pozorni."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372960559104
+    m_Localized: "\rUspe\u0161no ste opravili:\r\n <b>CPR</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3409645043712
+    m_Localized: UPORABIMO AED
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -387,7 +387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "IZDELAL:\nDaniel Vinoj\u010Di\u0107\n\nVODJA PROJEKTA:\nNino Fija\u010Dko"
+  m_text: "MADE BY:\nDaniel Vinoj\u010Di\u0107\n\nPROJECT LEAD:\nNino Fija\u010Dko"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -2146,6 +2146,7 @@ GameObject:
   - component: {fileID: 201315611}
   - component: {fileID: 201315613}
   - component: {fileID: 201315612}
+  - component: {fileID: 201315614}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2269,6 +2270,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201315610}
   m_CullTransparentMesh: 1
+--- !u!114 &201315614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201315610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:3f1b168e4e4bf8f4e904aae155eaa9d6
+    m_TableEntryReference:
+      m_KeyId: 78918877184
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 201315612}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!4 &201369694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4100926488305314, guid: 1b09a7fc50f421946b2eda7e5f09e698, type: 3}
@@ -4120,6 +4160,7 @@ GameObject:
   - component: {fileID: 442693574}
   - component: {fileID: 442693576}
   - component: {fileID: 442693575}
+  - component: {fileID: 442693577}
   m_Layer: 5
   m_Name: VarnostText
   m_TagString: Untagged
@@ -4243,6 +4284,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442693573}
   m_CullTransparentMesh: 1
+--- !u!114 &442693577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442693573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:26f5c7cf97db4a343b9ae9475da54728
+    m_TableEntryReference:
+      m_KeyId: 65299972096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 442693575}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!4 &444606254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4082468324179482, guid: f6a0cd899fb3b8c449a40e5fb69e258d, type: 3}
@@ -4721,6 +4801,7 @@ GameObject:
   - component: {fileID: 489154113}
   - component: {fileID: 489154115}
   - component: {fileID: 489154114}
+  - component: {fileID: 489154116}
   m_Layer: 5
   m_Name: DihanjeText
   m_TagString: Untagged
@@ -4844,6 +4925,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489154112}
   m_CullTransparentMesh: 1
+--- !u!114 &489154116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489154112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:26f5c7cf97db4a343b9ae9475da54728
+    m_TableEntryReference:
+      m_KeyId: 463364587520
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489154114}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!1001 &491539544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6680,7 +6800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Naprej
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -7166,7 +7286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.6, y: 217.4}
+  m_AnchoredPosition: {x: -319.24, y: 285.8}
   m_SizeDelta: {x: 201.2907, y: 201.2907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652613436
@@ -8240,7 +8360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hvala za igranje.
+  m_text: Thank you for playing.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -8857,7 +8977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Odli\u010Dno!"
+  m_text: Great!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -11160,7 +11280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 313.3}
+  m_AnchoredPosition: {x: 5, y: 414.3}
   m_SizeDelta: {x: 201.2907, y: 201.2907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099577280
@@ -13052,7 +13172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300.5, y: 217.4}
+  m_AnchoredPosition: {x: 351.9, y: 284.8}
   m_SizeDelta: {x: 201.2907, y: 201.2907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285813728
@@ -14064,7 +14184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -5.797, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.9, y: 957.80005}
+  m_AnchoredPosition: {x: -121.29, y: 957.80005}
   m_SizeDelta: {x: 481.2306, y: 174.9913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401234325
@@ -14087,7 +14207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dosegli ste '
+  m_text: You have achieved
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
@@ -15255,6 +15375,7 @@ GameObject:
   - component: {fileID: 1506753293}
   - component: {fileID: 1506753295}
   - component: {fileID: 1506753294}
+  - component: {fileID: 1506753296}
   m_Layer: 5
   m_Name: VarnostText
   m_TagString: Untagged
@@ -15378,6 +15499,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506753292}
   m_CullTransparentMesh: 1
+--- !u!114 &1506753296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506753292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:26f5c7cf97db4a343b9ae9475da54728
+    m_TableEntryReference:
+      m_KeyId: 1517871333376
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1506753294}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!4 &1510477833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4961715093905436, guid: d7348193d18053242b67736aafdf8c03, type: 3}
@@ -18099,6 +18259,7 @@ GameObject:
   - component: {fileID: 1778422700}
   - component: {fileID: 1778422702}
   - component: {fileID: 1778422701}
+  - component: {fileID: 1778422703}
   m_Layer: 5
   m_Name: OdzivnostText
   m_TagString: Untagged
@@ -18122,8 +18283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000055808, y: -118}
-  m_SizeDelta: {x: 186.0348, y: 62.5777}
+  m_AnchoredPosition: {x: 6.3938, y: -118}
+  m_SizeDelta: {x: 265.3177, y: 62.5777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778422701
 MonoBehaviour:
@@ -18224,6 +18385,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778422699}
   m_CullTransparentMesh: 1
+--- !u!114 &1778422703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778422699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:26f5c7cf97db4a343b9ae9475da54728
+    m_TableEntryReference:
+      m_KeyId: 368766255104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778422701}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!1001 &1781499450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24035,7 +24235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -5.797, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 439.4, y: 0.31347656}
+  m_AnchoredPosition: {x: 526.9, y: 0.31347656}
   m_SizeDelta: {x: 481.2306, y: 174.9913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1869754316
@@ -25821,7 +26021,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Po va\u0161i zaslugi je oseba pre\u017Eivela.\n\n"
+  m_text: 'Thanks to you, the person survived.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}
   m_sharedMaterial: {fileID: -7179481690808653495, guid: 4b135c9e2fd85094cb6f6087f8335683, type: 2}

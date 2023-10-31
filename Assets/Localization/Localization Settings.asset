@@ -26,18 +26,18 @@ MonoBehaviour:
     m_Items: []
   m_ProjectLocaleIdentifier:
     m_Code: sl-SI
-  m_InitializeSynchronously: 0
+  m_InitializeSynchronously: 1
   references:
     version: 1
     00000000:
       type: {class: SpecificLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
       data:
         m_LocaleId:
-          m_Code: sl-SI
+          m_Code: en
     00000001:
       type: {class: CommandLineLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
       data:
-        m_CommandLineArgument: -language=sl-SI
+        m_CommandLineArgument: -language=en
     00000002:
       type: {class: SystemLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
     00000003:

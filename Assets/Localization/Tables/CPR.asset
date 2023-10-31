@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: CPR
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 62bdc7eda4493b348ae9475cbc51edff, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 92a276937bb0ab84187488b21a8716da, type: 2}
+  - {fileID: 11400000, guid: 1c330da54a448174c8473b423ed4a1c1, type: 2}
+  - {fileID: 11400000, guid: caa72fb0b3b959f46809c62f43457958, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 1

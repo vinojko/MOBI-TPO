@@ -99,6 +99,18 @@ MonoBehaviour:
     m_Key: 1Preverimo
     m_Metadata:
       m_Items: []
+  - m_Id: 101329774528331776
+    m_Key: 1NistePreveriliVarnosti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101340458741825536
+    m_Key: 1IzberiteMoznost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101341603216392192
+    m_Key: 1PokrijPravilno
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

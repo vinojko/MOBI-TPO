@@ -25,6 +25,38 @@ MonoBehaviour:
     m_Address: Assets/Localization/Tables/Varnost Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 3c09229b1c46f9b44806b21d94ce2b7e
+    m_Address: Assets/Localization/Tables/Odzivnost Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 26f5c7cf97db4a343b9ae9475da54728
+    m_Address: Assets/Localization/Tables/Roka Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 23d96770fcc26c5418e5464a6b100cc5
+    m_Address: Assets/Localization/Tables/YesNo Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: df76ec7d3c2c90746bb7911ebf3b5663
+    m_Address: Assets/Localization/Tables/Dihanje Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 62bdc7eda4493b348ae9475cbc51edff
+    m_Address: Assets/Localization/Tables/CPR Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f0c2b9a425f1f4743af45148b5e32bc7
+    m_Address: Assets/Localization/Tables/AED Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: de71ed6434f9bfc47a1ecf690c0f9533
+    m_Address: Assets/Localization/Tables/Lost Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 3f1b168e4e4bf8f4e904aae155eaa9d6
+    m_Address: Assets/Localization/Tables/Won Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e1a414d4854f2cb4ab1a0937f24287ef, type: 2}
   m_SchemaSet:

@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Odzivnost_sl-SI
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sl-SI
+  m_SharedData: {fileID: 11400000, guid: 3c09229b1c46f9b44806b21d94ce2b7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 15014461440
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10627777986560
+    m_Localized: Kazalec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10723370369024
+    m_Localized: Osebo premakni na hrbet [Podrsljaj v desno].
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10826332143616
+    m_Localized: "Da preveri\u0161, \u010De je oseba odzivna, jo primi za ramena
+      in jo rahlo\r\nstresi [Stresi telefon]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11014081773568
+    m_Localized: 'Zavpij v telefon: Ali ste v redu?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11203991470080
+    m_Localized: "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11596125339648
+    m_Localized: "Da preveri\u0161 dihanje, mora\u0161 osebo\r\nsle\u010Di [Podrsljaj
+      navzdol]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11336397258752
+    m_Localized: 'Pravilno! Oseba je neodzivna. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12285027188736
+    m_Localized: "Polo\u017Ei eno roko na \u010Delu in s prsti druge roke pod brado
+      previdno zvrni glavo navzad in dvigni brado tako, da odpre\u0161 dihalno pot."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12366769979392
+    m_Localized: Ali je dihalna pot prosta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12516598906880
+    m_Localized: Preveri, ali je dihalna pot prosta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12736527237120
+    m_Localized: Pravilno! Le tako naprej.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12838578847744
+    m_Localized: "Napa\u010Den odgovor. Ali si prepri\u010Dan/a? Poskusi ponovno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12967192985600
+    m_Localized: Ali je dihalna pot prosta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13009400266752
+    m_Localized: Pravilen odgovor. Sedaj odstrani opazno oviro iz ust [Tapni na oviro].
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13128623357952
+    m_Localized: "Poklekni do osebe in prisloni uho, da lahko poslu\u0161a\u0161
+      dihanje."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13359121334272
+    m_Localized: "Glej, poslu\u0161aj in \u010Duti dihanje, ne ve\u010D kot 10 sekund."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13405237706752
+    m_Localized: Ali oseba normalno diha?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13467367931904
+    m_Localized: Pravilno! Oseba je neodzivna in ne diha normalno. Le tako naprej.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22253591756800
+    m_Localized: Ali je oseba odzivna?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24763945615360
+    m_Localized: "\rUspe\u0161no ste opravili:\r\n <b>Odzivnost in dihanje</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49636482908160
+    m_Localized: Ali oseba normalno diha?
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

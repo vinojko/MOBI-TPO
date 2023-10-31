@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AED_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f0c2b9a425f1f4743af45148b5e32bc7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3409645043712
+    m_Localized: USE AED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25567330304
+    m_Localized: Turn on the AED and listen to its instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36636098560
+    m_Localized: Open the packaging [Swipe right], remove the stickers - electrodes
+      and place them on the bare chest of the person as shown.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64695992320
+    m_Localized: 'Analyzing heart rhythm.
+
+      Do not touch the person.
+
+      .
+      . . .
+
+      I advise a shock, charging, step back.
+
+      . . . .
+
+      Make
+      sure no one is touching the person and press the flashing shock button.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76402294784
+    m_Localized: Shock delivered. It is now safe to touch the person, begin resuscitation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96975355904
+    m_Localized: Shock delivered. It is now safe to touch the person, begin resuscitation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138503159808
+    m_Localized: Wrong answer, try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182635626496
+    m_Localized: Emergency medical assistance has arrived and will now take over
+      the person.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213178548224
+    m_Localized: Perform artificial breaths. [Hold the button and release it in time]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338730844160
+    m_Localized: The amount of air blown in is too much! Be more careful.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372960559104
+    m_Localized: "You successfully completed: \n <b>CPR</b>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

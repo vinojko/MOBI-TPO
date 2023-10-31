@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 6ed8cea23ef6e164abb5b971c8086613, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 1480508219392
     m_Localized: Pour water
@@ -27,13 +28,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2104300564815872
-    m_Localized: RESPONSIVENESS BREATHING
+    m_Localized: 'RESPONSIVENESS
+
+      BREATHING'
     m_Metadata:
       m_Items: []
   - m_Id: 2104453606580224
     m_Localized: 'CALL 911
 
-      ASK A BYSTANDER TO BRING AED'
+      ASK A BYSTANDER
+
+      TO BRING AED'
     m_Metadata:
       m_Items: []
   - m_Id: 2108789686444032
@@ -53,7 +58,8 @@ MonoBehaviour:
   - m_Id: 2490146640207872
     m_Localized: How many sudden cardiac arrests occur in the home environment?
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 2490498542313472
     m_Localized: Less than <b>50%</b>.
     m_Metadata:
@@ -84,14 +90,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2491330012749824
-    m_Localized: '"WRONG! Since oil and water do not mix,
+    m_Localized: 'Wrong!
 
-      pouring water can
-      spread the fire even more."'
+      Since oil and water do not mix,
+
+      pouring water
+      can spread the fire even more.'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 2491366855516160
-    m_Localized: WRONG! Searching for a fire extinguisher takes up valuable time.
+    m_Localized: 'Wrong!
+
+      Searching for a fire extinguisher takes up valuable
+      time.'
     m_Metadata:
       m_Items: []
   - m_Id: 2491483775934464
@@ -112,5 +124,21 @@ MonoBehaviour:
       SAFETY'
     m_Metadata:
       m_Items: []
+  - m_Id: 101329774528331776
+    m_Localized: You did not check for safety!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101340458741825536
+    m_Localized: 'Choose the correct option. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101341603216392192
+    m_Localized: Correct. The lid smothers the fire.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00a0ed71c6d8080000a06df8d9d90800

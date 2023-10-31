@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CPR_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 62bdc7eda4493b348ae9475cbc51edff, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 35272949760
+    m_Localized: Select the correct hand gesture used for performing chest compressions
+      on an adult.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3616424230912
+    m_Localized: Correct answer! Now place the hands between the collarbone and the
+      chest and start performing cardiopulmonary resuscitation. Use the heart indicator
+      and music for rhythm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3638117171200
+    m_Localized: Correct answer! Keep it up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3656333033472
+    m_Localized: Correct answer! This is the average length of a thumb. Keep it up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3672409800704
+    m_Localized: Correct answer! This is the rhythm of the song Stayin' Alive by
+      the Bee Gees. Keep it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3819411767296
+    m_Localized: Wrong answer. Are you sure? Try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3850491559936
+    m_Localized: Which body position during chest compressions is correct?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3861002485760
+    m_Localized: Continue with chest compressions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3910205865984
+    m_Localized: How deep should chest compressions be?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4211101040640
+    m_Localized: What should be the volume of the breath?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4239571976192
+    m_Localized: How many chest compressions should we do in one minute?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4259742384128
+    m_Localized: Correct answer! Now place the hands between the collarbone and the
+      chest and start performing cardiopulmonary resuscitation. Use the depth slider,
+      heart indicator, and music for rhythm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4292529258496
+    m_Localized: Perform artificial respirations. [Hold the 'artificial respiration
+      ' icon below and release it on time]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4310824812544
+    m_Localized: Now place your hands in the middle between the collarbone and the
+      lower rib arch and start with chest compressions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4331116855296
+    m_Localized: The amount of air blown in is too much! Be more attentive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4341120270336
+    m_Localized: The amount of air blown in is too little! Be more attentive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4380639002624
+    m_Localized: Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4410267566080
+    m_Localized: Use the music and the frequency and depth indicator for rhythm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4429645250560
+    m_Localized: You need to perform 30 chest compressions and give 2 breaths.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4451849895936
+    m_Localized: Let's start... [Tap to perform chest compressions].
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4465816928256
+    m_Localized: The AED has arrived. Take it, and your friend will continue with
+      CPR.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4528165257216
+    m_Localized: Great, now you can start resuscitation using the AED. Keep it up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4926246649856
+    m_Localized: Perform artificial respirations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11795476414464
+    m_Localized: Chest compressions per minute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12063630852096
+    m_Localized: Number of chest compressions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12385132642304
+    m_Localized: 'DEPTH
+
+      (cm)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12311015096320
+    m_Localized: Number of required breaths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15651392356352
+    m_Localized: "\rYou have successfully completed:\r\n<b>CPR</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20419137404928
+    m_Localized: Pinky finger
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -80,12 +80,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2491330012749824
-    m_Localized: "\"NEPRAVILNO! Ker se olje in voda ne me\u0161ata,\nlahko polivanje
-      vode ogenj raz\u0161iri.\""
+    m_Localized: "Nepravilno!\nKer se olje in voda ne me\u0161ata,\nlahko polivanje
+      vode povzro\u010Di \u0161e\nhuj\u0161o raz\u0161iritev ognja."
     m_Metadata:
       m_Items: []
   - m_Id: 2491366855516160
-    m_Localized: "NEPRAVILNO! Iskanje gasilnega aparata nam vzame dragocen \u010Das."
+    m_Localized: "Nepravilno!\nIskanje gasilnega aparata terja dragocen \u010Das."
     m_Metadata:
       m_Items: []
   - m_Id: 2491483775934464
@@ -104,6 +104,18 @@ MonoBehaviour:
     m_Localized: 'PREVERIMO
 
       VARNOST'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101340458741825536
+    m_Localized: "Izberi pravilno mo\u017Enost."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101329774528331776
+    m_Localized: Nisi preveril/a varnosti!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101341603216392192
+    m_Localized: "Pravilno. Pokrov zadu\u0161i ogenj."
     m_Metadata:
       m_Items: []
   references:

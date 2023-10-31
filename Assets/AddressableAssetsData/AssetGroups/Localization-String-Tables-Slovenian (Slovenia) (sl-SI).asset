@@ -29,6 +29,54 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-sl-SI
     - Preload
+  - m_GUID: 372e463143fc7564ba67bc29502f0566
+    m_Address: Odzivnost_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: 9ab5a1fc9d82769498ff1523e856b018
+    m_Address: Roka_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: d53faa9ef3e261244ab327e39c7f5064
+    m_Address: YesNo_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: 515d7526a22c4204e9fd026a4e048a25
+    m_Address: Dihanje_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: 1c330da54a448174c8473b423ed4a1c1
+    m_Address: CPR_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: 1886d2c7b07a72542b92421f7c793a42
+    m_Address: AED_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: 1d97f2d6e7058224a968ca5bde2fe43f
+    m_Address: Lost_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
+  - m_GUID: dd1d8d2622d02ec429712592e40e6339
+    m_Address: Won_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e1a414d4854f2cb4ab1a0937f24287ef, type: 2}
   m_SchemaSet:
