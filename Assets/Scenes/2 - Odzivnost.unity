@@ -44432,8 +44432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223, y: 20.94061}
-  m_SizeDelta: {x: 542.1688, y: 138.8015}
+  m_AnchoredPosition: {x: 8.6576, y: 20.94061}
+  m_SizeDelta: {x: 728.18, y: 138.8015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670573737
 MonoBehaviour:
@@ -44518,7 +44518,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -95.365845, y: 0, z: 212.1051, w: 0}
+  m_margin: {x: -0.7428285, y: 0, z: 0.4061891, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -50770,6 +50770,7 @@ GameObject:
   - component: {fileID: 1859545567}
   - component: {fileID: 1859545569}
   - component: {fileID: 1859545568}
+  - component: {fileID: 1859545570}
   m_Layer: 5
   m_Name: Potrebna Glasnost Tekst
   m_TagString: Untagged
@@ -50893,6 +50894,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859545566}
   m_CullTransparentMesh: 1
+--- !u!114 &1859545570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859545566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:26f5c7cf97db4a343b9ae9475da54728
+    m_TableEntryReference:
+      m_KeyId: 470098206613504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1859545568}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 1
 --- !u!1001 &1863899643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57895,8 +57935,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -0.000015259}
-  m_SizeDelta: {x: 805.49, y: 253.84}
+  m_AnchoredPosition: {x: -2.5839, y: -0.000015259}
+  m_SizeDelta: {x: 965.7321, y: 253.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142527457
 MonoBehaviour:

@@ -73,8 +73,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4292529258496
-    m_Localized: Perform artificial respirations. [Hold the 'artificial respiration
-      ' icon below and release it on time]
+    m_Localized: Perform rescue breaths. [Hold the 'rescue breaths ' icon below and
+      release it on time]
     m_Metadata:
       m_Items: []
   - m_Id: 4310824812544

@@ -144,5 +144,9 @@ MonoBehaviour:
     m_Localized: "\rUspe\u0161no ste opravili:\r\n <b>KPO</b>"
     m_Metadata:
       m_Items: []
+  - m_Id: 20419137404928
+    m_Localized: Mezinec
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

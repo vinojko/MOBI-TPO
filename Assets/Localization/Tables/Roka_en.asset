@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1517871333376
-    m_Localized: KPO
+    m_Localized: CPR
     m_Metadata:
       m_Items: []
   - m_Id: 463364587520
@@ -58,6 +58,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61722613153792
     m_Localized: Chest compressions per minute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470098206613504
+    m_Localized: REQUIRED VOLUME
     m_Metadata:
       m_Items: []
   references:

@@ -117,15 +117,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2794835574784
-    m_Localized: Start CPR
+    m_Localized: Start CPR.
     m_Metadata:
       m_Items: []
   - m_Id: 2827106549760
-    m_Localized: Go get the AED
+    m_Localized: Go get the AED.
     m_Metadata:
       m_Items: []
   - m_Id: 3304208629760
     m_Localized: 'You have successfully completed: <b>CALL 911 AND SEND FOR AED</b>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325677373882368
+    m_Localized: Speaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326360017829888
+    m_Localized: 911
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326544143581184
+    m_Localized: Keyboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326528255557632
+    m_Localized: Mute
     m_Metadata:
       m_Items: []
   references:

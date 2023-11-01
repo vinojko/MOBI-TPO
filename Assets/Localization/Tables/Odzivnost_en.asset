@@ -21,12 +21,11 @@ MonoBehaviour:
   - m_Id: 15014461440
     m_Localized: 'Now you need to check for responsiveness.
 
-      Approach the
-      person.'
+      Approach the person.'
     m_Metadata:
       m_Items: []
   - m_Id: 10627777986560
-    m_Localized: Index
+    m_Localized: Index finger
     m_Metadata:
       m_Items: []
   - m_Id: 10723370369024
@@ -94,7 +93,7 @@ MonoBehaviour:
     m_Localized: 'Kneel down next to the person and place your ear close to listen
       for breathing.
 
-      
+
 
 '
     m_Metadata:
@@ -119,8 +118,7 @@ MonoBehaviour:
   - m_Id: 24763945615360
     m_Localized: 'You have successfully completed:
 
-      <b>Responsiveness and
-      Breathing</b>'
+      <b>Responsiveness and Breathing</b>'
     m_Metadata:
       m_Items: []
   - m_Id: 49636482908160

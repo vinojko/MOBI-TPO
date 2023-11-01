@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1517871333376
-    m_Localized: CPR
+    m_Localized: KPO
     m_Metadata:
       m_Items: []
   - m_Id: 23421902553088
@@ -54,6 +54,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61722613153792
     m_Localized: "Stisi prsnega ko\u0161a na minuto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470098206613504
+    m_Localized: POTREBNA GLASNOST
     m_Metadata:
       m_Items: []
   references:
