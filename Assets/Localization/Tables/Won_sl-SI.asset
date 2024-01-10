@@ -22,5 +22,21 @@ MonoBehaviour:
     m_Localized: Razvrstite kategorije v ustrezno zaporedje.
     m_Metadata:
       m_Items: []
+  - m_Id: 24526055798562816
+    m_Localized: Dosegli ste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526116787937280
+    m_Localized: Hvala za igranje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526185679380480
+    m_Localized: Nadaljuj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24530517229395968
+    m_Localized: "Po va\u0161i zaslugi je oseba pre\u017Eivela.\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

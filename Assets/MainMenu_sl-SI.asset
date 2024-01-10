@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MainMenu_sl-SI
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sl-SI
+  m_SharedData: {fileID: 11400000, guid: 9020c02a1190d6747a86a124424c68cb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 15151751168
+    m_Localized: "Idejna zasnova MOBICPR igre je nastala v \u010Dasu projekta \"Razvoj
+      mobilne aplikacije za u\u010Denje temeljnih postopkov o\u017Eivljanja odrasle
+      osebe (MOBI-TPO)\":  <link=\u201Dhttps://mobicpr.si/\u201D>https://mobicpr.si/
+      </link>\n \nNadaljnji razvoj MOBICPR igre sta vodila vodja projekta Nino Fija\u010Dko
+      in razvijalec Daniel Vinoj\u010Di\u0107.\n \nVsebina igre MOBICPR je oblikovana
+      v skladu z najnovej\u0161imi smernicami za temeljne postopke o\u017Eivljanja
+      odraslih, ki jih je objavil Evropski svet za reanimacijo (Olasveengen, et al.,
+      2021).\n \nVe\u010D o MOBICPR igri si lahko prebere tukaj:\n- Fija\u010Dko,
+      N., Metli\u010Dar, \u0160., Vinoj\u010Di\u0107, D., Greif, R. and Creber, R.M.,
+      2023. Learn how to save the life of a victim of out-of-hospital cardiac arrest
+      by playing a serious smartphone game. Resuscitation, 188.\n- Vinoj\u010Di\u0107,
+      D., 2023. Razvoj 3d mobilne resne igre za u\u010Denje temeljnih postopkov o\u017Eivljanja
+      odrasle osebe (Univerza v Mariboru, Fakulteta za elektrotehniko, ra\u010Dunalni\u0161tvo
+      in informatiko).\n- Fija\u010Dko, N., Greif, R., \u0160tiglic, G., Metli\u010Dar,
+      \u0160. and Creber, R.M.M., 2023. 322 Using a serious smartphone game to improve
+      and retain knowledge of hand placement for adult chest compressions: A randomized
+      wait-list controlled trial. Resuscitation, 192, p.S127."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15940362002432
+    m_Localized: "Za\u010Deli bomo s:\r\n- Palec: Preveri varnost,\r\n- Kazalec:
+      Preveri odzivnost in dihanje,\r\n- Sredinec: Pokli\u010Di 112 in po\u0161lji
+      po avtomatski zunanji defibrilator (AED),\r\n- Prstanec: Za\u010Dni kardiopulmonalno
+      o\u017Eivljanje (KPO), \r\n- Mezinec: Uporabi AED."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -68,5 +68,17 @@ MonoBehaviour:
     m_Localized: UPORABIMO AED
     m_Metadata:
       m_Items: []
+  - m_Id: 595296251633664
+    m_Localized: Preveri elektrodi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595428464484352
+    m_Localized: Ne dotikaj se bolnika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595644429197312
+    m_Localized: analiziram
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

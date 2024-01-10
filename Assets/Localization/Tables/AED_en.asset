@@ -76,5 +76,17 @@ MonoBehaviour:
     m_Localized: "You successfully completed: \n <b>CPR</b>"
     m_Metadata:
       m_Items: []
+  - m_Id: 595296251633664
+    m_Localized: check pads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595428464484352
+    m_Localized: do not touch patient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595644429197312
+    m_Localized: analyzing
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

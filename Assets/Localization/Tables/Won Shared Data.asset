@@ -19,6 +19,22 @@ MonoBehaviour:
     m_Key: Categories
     m_Metadata:
       m_Items: []
+  - m_Id: 24526055798562816
+    m_Key: Achieved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526116787937280
+    m_Key: Thanks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526185679380480
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24530517229395968
+    m_Key: EndText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

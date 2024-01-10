@@ -77,6 +77,7 @@ public class CPRAED : MonoBehaviour
     public DialogTrigger lungTooMuch;
     public DialogTrigger lungTooLittle;
     public DialogTrigger lungOkay;
+    public DialogTrigger pinchNose;
 
     public GameObject doctorIcon, AEDIcon;
 
@@ -97,7 +98,7 @@ public class CPRAED : MonoBehaviour
     private void Update()
     {
 
-        if (ButtonSingleton.instance.leftShoulder  && ButtonSingleton.instance.rightShoulder)
+        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder)
         {
             //StartCoroutine(RespirationClicked());
             StartCoroutine(MoveChin());
@@ -138,7 +139,7 @@ public class CPRAED : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Ambulance");
 
             HandFadeIn();
-            
+
 
 
             //Depth.instance.DepthAnimation();
@@ -224,9 +225,9 @@ public class CPRAED : MonoBehaviour
 
     private void UIAnimation()
     {
-        
+
         LeanTween.moveLocal(cprUI, new Vector3(0f, -785f, 0f), 3f).setEase(LeanTweenType.easeOutExpo).setDelay(1f);
-     
+
 
     }
     private void UIAnimationClose()
@@ -244,7 +245,7 @@ public class CPRAED : MonoBehaviour
         ChangeCamera.instance.ChangeToCamera(respirationCam);
         yield return new WaitForSeconds(1f);
         chinLift.SetActive(true);
-        
+
 
     }
 
@@ -266,15 +267,15 @@ public class CPRAED : MonoBehaviour
         //Pljuca - 500 ml
         ShowLungs();
 
-      
+
     }
 
     public void RespirationMouth()
     {
-        
-         StartCoroutine(RespirationClicked());
-        
-            
+
+        StartCoroutine(RespirationClicked());
+
+
     }
 
     private void ChangeCameraCPR()
@@ -355,9 +356,11 @@ public class CPRAED : MonoBehaviour
         LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
     }
 
-  
+
     private IEnumerator MoveChin()
     {
+        pinchNose.TriggerDialog();
+
         animator.SetBool("playReverseChin", false);
         animator.SetBool("playChin", true);
         ButtonSingleton.instance.leftShoulder = false;
@@ -367,7 +370,7 @@ public class CPRAED : MonoBehaviour
         chinLift.SetActive(false);
         yield return new WaitForSeconds(1.0f);
         respirationIcon.SetActive(true);
-       
+
     }
 
     private IEnumerator AmbulanceArrival()
@@ -377,7 +380,7 @@ public class CPRAED : MonoBehaviour
         hands.SetActive(false);
         respirationIcon.SetActive(false);
         chinLift.SetActive(false);
-   
+
         GameManager.instance.UpdateGameState(GameState.AEDKoncano);
 
 
@@ -483,7 +486,7 @@ public class CPRAED : MonoBehaviour
             }
             else
             {
-           
+
             }
         }
         else
@@ -512,7 +515,7 @@ public class CPRAED : MonoBehaviour
 
             }
 
-      
+
 
         }
     }

@@ -22,5 +22,23 @@ MonoBehaviour:
     m_Localized: Sort the categories into the appropriate order.
     m_Metadata:
       m_Items: []
+  - m_Id: 24526055798562816
+    m_Localized: You have achieved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526116787937280
+    m_Localized: Thank you for playing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526185679380480
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24530517229395968
+    m_Localized: 'Thanks to you, the person survived.
+
+'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

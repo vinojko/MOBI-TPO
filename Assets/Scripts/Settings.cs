@@ -12,7 +12,10 @@ public class Settings : MonoBehaviour
     [SerializeField]
     GameObject settingsFrontLayer;
     [SerializeField]
-    GameObject SLO, ENG, GER, MUTE;
+    GameObject SLO, ENG, InfoButton, MUTE;
+
+    [SerializeField]
+    GameObject info;
 
     [SerializeField]
     Sprite muteIcon, unmutIcon;
@@ -46,17 +49,28 @@ public class Settings : MonoBehaviour
 
     }
 
+    public void InfoOpen()
+    {
+        info.SetActive(true);
+
+    }
+    public void InfoClose()
+    {
+        info.SetActive(false);
+
+    }
+
     public void AnimationOpen()
     {
         LeanTween.scale(SLO, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
         LeanTween.scale(ENG, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
-        LeanTween.scale(GER, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
-        LeanTween.scale(MUTE,new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.3f);
+        LeanTween.scale(InfoButton, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
+        LeanTween.scale(MUTE, new Vector3(1f, 1f, 1f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.3f);
     }
     public void AnimationClose()
     {
-        LeanTween.scale(MUTE,new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
-        LeanTween.scale(GER, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
+        LeanTween.scale(MUTE, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo);
+        LeanTween.scale(InfoButton, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.1f);
         LeanTween.scale(ENG, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.2f);
         LeanTween.scale(SLO, new Vector3(0f, 0f, 0f), animationSpeed).setEase(LeanTweenType.easeOutExpo).setDelay(0.3f);
 
@@ -74,7 +88,7 @@ public class Settings : MonoBehaviour
         tempColor2.a = languageAlpha;
         image2.color = tempColor2;
 
-        Image image3 = GER.GetComponent<Image>();
+        Image image3 = InfoButton.GetComponent<Image>();
         var tempColor3 = image3.color;
         tempColor3.a = languageAlpha;
         image3.color = tempColor3;
@@ -94,7 +108,7 @@ public class Settings : MonoBehaviour
         tempColor2.a = languageAlpha;
         image2.color = tempColor2;
 
-        Image image3 = GER.GetComponent<Image>();
+        Image image3 = InfoButton.GetComponent<Image>();
         var tempColor3 = image3.color;
         tempColor3.a = languageAlpha;
         image3.color = tempColor3;
@@ -104,7 +118,7 @@ public class Settings : MonoBehaviour
 
     public void GERSelected()
     {
-        Image image = GER.GetComponent<Image>();
+        Image image = InfoButton.GetComponent<Image>();
         var tempColor = image.color;
         tempColor.a = 1f;
         image.color = tempColor;
@@ -137,7 +151,7 @@ public class Settings : MonoBehaviour
             AudioListener.volume = 1;
         }
 
-        
+
     }
 
     IEnumerator SetLocale(int localeID)

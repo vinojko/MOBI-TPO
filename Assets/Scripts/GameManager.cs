@@ -23,11 +23,11 @@ public class GameManager : MonoBehaviour
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
 
-        if(sceneName == "1 - Varnost")
+        if (sceneName == "1 - Varnost")
         {
             currentState = GameState.House;
         }
-        else if(sceneName == "2 - Odzivnost")
+        else if (sceneName == "2 - Odzivnost")
         {
             currentState = GameState.OdzivnostZacetek;
         }
@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.VolumeQuestion:
                 break;
+            case GameState.NeededBreathsQuestion:
+                break;
             case GameState.AEDShock:
                 break;
             case GameState.AEDSign:
@@ -130,7 +132,7 @@ public class GameManager : MonoBehaviour
         currentState = newState;
         Debug.Log("Curent State: " + currentState);
     }
-    
+
 }
 
 public enum GameState
@@ -168,6 +170,7 @@ public enum GameState
     CPR,
     BPM,
     VolumeQuestion,
+    NeededBreathsQuestion,
     CPRKira,
     CPRKoncano,
     /* --- 5 - AED --- */

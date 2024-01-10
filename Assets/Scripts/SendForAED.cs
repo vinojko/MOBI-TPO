@@ -52,7 +52,7 @@ public class SendForAED : MonoBehaviour
     private IEnumerator correctAnswer()
     {
         correctAnswerDialog.TriggerDialog();
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
         GameManager.instance.UpdateGameState(GameState.AEDSign);
     }
 }

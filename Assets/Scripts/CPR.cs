@@ -34,6 +34,7 @@ public class CPR : MonoBehaviour
     public DialogTrigger lungTooMuch;
     public DialogTrigger lungTooLittle;
     public DialogTrigger lungOkay;
+    public DialogTrigger pinchNose;
 
     float bpm = 0f;
     float lastBpm = 0f;
@@ -68,7 +69,7 @@ public class CPR : MonoBehaviour
 
     float lerpSpeed;
 
-   
+
 
     public GameObject lungs;
     public Image lungsFilled;
@@ -95,9 +96,10 @@ public class CPR : MonoBehaviour
     private void Update()
     {
 
-        if (ButtonSingleton.instance.leftShoulder  && ButtonSingleton.instance.rightShoulder)
+        if (ButtonSingleton.instance.leftShoulder && ButtonSingleton.instance.rightShoulder)
         {
             //StartCoroutine(RespirationClicked());
+            pinchNose.TriggerDialog();
             StartCoroutine(MoveChin());
 
 
@@ -141,7 +143,7 @@ public class CPR : MonoBehaviour
             //Depth.instance.DepthAnimation();
         }
     }
-     
+
     public IEnumerator HanzAnimation()
     {
 
@@ -197,7 +199,7 @@ public class CPR : MonoBehaviour
             StartCoroutine(Respiration());
             cprCounter = 0;
             doVibrate = false;
- 
+
         }
 
     }
@@ -221,7 +223,7 @@ public class CPR : MonoBehaviour
 
     private IEnumerator UIAnimation()
     {
-        
+
         LeanTween.moveLocal(cprUI, new Vector3(0f, -785f, 0f), 3f).setEase(LeanTweenType.easeOutExpo).setDelay(8f);
         yield return new WaitForSeconds(8.0f);
         handButton.interactable = true;
@@ -241,7 +243,7 @@ public class CPR : MonoBehaviour
         ChangeCamera.instance.ChangeToCamera(respirationCam);
         yield return new WaitForSeconds(1f);
         chinLift.SetActive(true);
-        
+
 
     }
 
@@ -255,19 +257,19 @@ public class CPR : MonoBehaviour
 
         ChangeCamera.instance.ChangeToCamera(mouthCam);
         yield return new WaitForSeconds(0.4f);
-        
+
         lungs.SetActive(true);
 
         //Pljuca - 500 ml
         ShowLungs();
-      
+
     }
 
     public void RespirationMouth()
     {
-        
-         StartCoroutine(RespirationClicked());     
-            
+
+        StartCoroutine(RespirationClicked());
+
     }
 
     void FadeImageIn()
@@ -299,7 +301,7 @@ public class CPR : MonoBehaviour
         LeanTween.value(gameObject, 0f, 0.63f, 1.2f).setOnUpdate((value) =>
         {
             lungsFilled.fillAmount = value;
-            
+
         });
     }
 
@@ -342,7 +344,7 @@ public class CPR : MonoBehaviour
             tempColor2.a = value;
             lungsImg.color = tempColor2;
         });
-       
+
 
     }
 
@@ -351,7 +353,7 @@ public class CPR : MonoBehaviour
         LeanTween.moveLocal(hand, new Vector3(43f, -200f, 0f), 1f).setEase(LeanTweenType.easeInOutExpo);
     }
 
- 
+
     private IEnumerator MoveChin()
     {
         chinLift.SetActive(false);
@@ -359,10 +361,10 @@ public class CPR : MonoBehaviour
         ButtonSingleton.instance.rightShoulder = false;
         animator.SetBool("playReverseChin", false);
         animator.SetBool("playChin", true);
- 
+
         yield return new WaitForSeconds(1.0f);
         respirationIcon.SetActive(true);
-       
+
     }
 
     public void LungFillStart()
@@ -375,13 +377,13 @@ public class CPR : MonoBehaviour
             if (released)
             {
                 resultValue = value;
-            
+
                 released = false;
                 LeanTween.cancel(gameObject);
             };
             lungsFilled.fillAmount = value;
             resultValue = value;
-            
+
 
         });
 
@@ -390,8 +392,8 @@ public class CPR : MonoBehaviour
     public void LungFillEnd()
     {
         released = true;
-        
-       
+
+
         StartCoroutine(LungFillEndCoroutine());
 
     }
@@ -421,7 +423,7 @@ public class CPR : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        
+
         FadeImageOut();
         HideLungs();
 
@@ -461,7 +463,7 @@ public class CPR : MonoBehaviour
             if (respirationCounter == 2 && cycle == 3)
             {
                 doVibrate = false;
-         
+
             }
             else
             {

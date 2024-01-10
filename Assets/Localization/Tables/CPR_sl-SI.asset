@@ -148,5 +148,9 @@ MonoBehaviour:
     m_Localized: Mezinec
     m_Metadata:
       m_Items: []
+  - m_Id: 425456073269248
+    m_Localized: Ali je potrebno dajati vpihe?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

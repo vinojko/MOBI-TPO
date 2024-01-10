@@ -64,5 +64,10 @@ MonoBehaviour:
     m_Localized: REQUIRED VOLUME
     m_Metadata:
       m_Items: []
+  - m_Id: 481763916603392
+    m_Localized: "Hi, I'm Daniel. \nI'm here to teach you\nbasic CPR procedures\nof
+      adult using\nthe 5-finger mnemonic."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

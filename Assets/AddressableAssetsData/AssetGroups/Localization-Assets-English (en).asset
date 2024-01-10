@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 12f7007eab73e8c4198bc13208194da6
   m_SerializeEntries:
   - m_GUID: bd9e8cf3a90c99242a1ed5a0ebe35406
-    m_Address: "Pokli\u010Di pomo\u010DANG"
+    m_Address: "Pokli\u010Di pomo\u010Dang"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

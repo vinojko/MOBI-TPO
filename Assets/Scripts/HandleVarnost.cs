@@ -42,13 +42,14 @@ public class HandleVarnost : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Correct");
         correctAnswer.TriggerDialog();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         ChangeCamera.instance.ChangeToCamera(HanzCamera);
         //STATE Varnost je sedaj koncana, NOV STATE
         GameManager.instance.UpdateGameState(GameState.VarnostKoncano);
     }
 
-    public void HandleButtonOff(){
+    public void HandleButtonOff()
+    {
         StartCoroutine(HandleButton());
         smokeVfx.Stop();
     }

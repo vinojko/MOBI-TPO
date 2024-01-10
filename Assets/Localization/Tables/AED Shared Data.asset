@@ -59,6 +59,18 @@ MonoBehaviour:
     m_Key: UporabimoAED
     m_Metadata:
       m_Items: []
+  - m_Id: 595296251633664
+    m_Key: PreveriElektrodi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595428464484352
+    m_Key: "NeDotikaj\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595644429197312
+    m_Key: Analaziram
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

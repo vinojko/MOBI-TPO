@@ -60,5 +60,11 @@ MonoBehaviour:
     m_Localized: POTREBNA GLASNOST
     m_Metadata:
       m_Items: []
+  - m_Id: 481763916603392
+    m_Localized: "Pozdravljen/a, sem Daniel. \nTukaj sem, da te nau\u010Dim\ntemeljnih
+      postopkov o\u017Eivljanja\nodrasle osebe s pomo\u010Djo\nmnemotehnike 5-tih
+      prstov."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

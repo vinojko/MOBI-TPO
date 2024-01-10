@@ -77,6 +77,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-sl-SI
     - Preload
+  - m_GUID: ee6df766d8ac62d46a68855988c9433d
+    m_Address: MainMenu_sl-SI
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sl-SI
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e1a414d4854f2cb4ab1a0937f24287ef, type: 2}
   m_SchemaSet:
