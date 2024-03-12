@@ -17,6 +17,26 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 3f1b168e4e4bf8f4e904aae155eaa9d6, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 78918877184
+    m_Localized: Razvrstite kategorije v ustrezno zaporedje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526055798562816
+    m_Localized: Razvrstite kategorije v ustrezno zaporedje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526116787937280
+    m_Localized: Razvrstite kategorije v ustrezno zaporedje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24526185679380480
+    m_Localized: Razvrstite kategorije v ustrezno zaporedje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24530517229395968
+    m_Localized: Razvrstite kategorije v ustrezno zaporedje.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15940362002432
-    m_Localized: "We'll start with:\r\n- Thumb: Check for safety,,\r\n- Index finger:
+    m_Localized: "We'll start with:\r\n- Thumb: Check for safety,\n- Index finger:
       check responsiveness and breathing,\r\n- Middle finger: Call 911 and send for
       an Automated External Defibrillator (AED),\r\n- Thumb: Start cardiopulmonary
       resuscitation (CPR), \r\n- Pinky finger: Use AED."

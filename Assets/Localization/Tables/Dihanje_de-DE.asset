@@ -17,6 +17,122 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: df76ec7d3c2c90746bb7911ebf3b5663, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 113727406080
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160288374784
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266739810304
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 344506400768
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403121799168
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468431306752
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 598249209856
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 721851154432
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 764981182464
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1003813240832
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1101175619584
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1157651922944
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1271745380352
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320000847872
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1373226565632
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1524976484352
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1570878947328
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1865105178624
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714202509312
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2056596127744
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326544143581184
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326528255557632
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326360017829888
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325677373882368
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304208629760
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2827106549760
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2794835574784
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2312478031872
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2112871104512
+    m_Localized: A friend has come by. What will you tell her?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

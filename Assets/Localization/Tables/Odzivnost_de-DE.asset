@@ -19,23 +19,91 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11203991470080
-    m_Localized: 
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
     m_Metadata:
       m_Items: []
   - m_Id: 11014081773568
-    m_Localized: 
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
     m_Metadata:
       m_Items: []
   - m_Id: 10826332143616
-    m_Localized: 
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
     m_Metadata:
       m_Items: []
   - m_Id: 10723370369024
-    m_Localized: 
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
     m_Metadata:
       m_Items: []
   - m_Id: 11336397258752
-    m_Localized: 
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15014461440
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10627777986560
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11596125339648
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12285027188736
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12366769979392
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12516598906880
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12736527237120
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12838578847744
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12967192985600
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13009400266752
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13128623357952
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13359121334272
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13405237706752
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13467367931904
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22253591756800
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24763945615360
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49636482908160
+    m_Localized: "Sedaj mora\u0161 preveriti odzivnost.\r\nPristopi do osebe."
     m_Metadata:
       m_Items: []
   references:

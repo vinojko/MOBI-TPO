@@ -16737,8 +16737,8 @@ Transform:
   m_Children:
   - {fileID: 1894102875}
   - {fileID: 2097756874}
-  - {fileID: 1646816968}
   - {fileID: 1276112514}
+  - {fileID: 1646816968}
   - {fileID: 1913471481}
   - {fileID: 571517990}
   - {fileID: 1790644197}
@@ -26374,7 +26374,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: PremakniZrtev
+          m_StringArgument: Odzivnost
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1064059371
@@ -30583,7 +30583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 688045648}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1276112515
 MonoBehaviour:
@@ -44009,7 +44009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 688045648}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1646816969
 MonoBehaviour:

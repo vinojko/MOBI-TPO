@@ -17,6 +17,62 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: f0c2b9a425f1f4743af45148b5e32bc7, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 25567330304
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36636098560
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64695992320
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76402294784
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96975355904
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138503159808
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182635626496
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213178548224
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338730844160
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372960559104
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3409645043712
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595296251633664
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595428464484352
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 595644429197312
+    m_Localized: "Vklopi AED in poslu\u0161aj njegova navodila."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

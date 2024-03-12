@@ -21,13 +21,12 @@ public class FirstTime : MonoBehaviour
     void Start()
     {
 
-        buttons =  new List<GameObject> { firstButton, secondButton, thirdButton, fourthButton, fifthButton };
+        buttons = new List<GameObject> { firstButton, secondButton, thirdButton, fourthButton, fifthButton };
 
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("MainMenu");
         FindObjectOfType<AudioManager>().InitVolume("MainMenu");
 
-        dialog1.TriggerDialog();
         StartCoroutine(AnimationUp());
         StartCoroutine(MoveHand());
         StartCoroutine(Buttons());
@@ -38,7 +37,6 @@ public class FirstTime : MonoBehaviour
 
     void StartFirstTime()
     {
-        dialog1.TriggerDialog();
         StartCoroutine(AnimationUp());
         StartCoroutine(MoveHand());
         StartCoroutine(Buttons());
@@ -46,6 +44,9 @@ public class FirstTime : MonoBehaviour
 
     public IEnumerator AnimationUp()
     {
+        yield return new WaitForSeconds(0.1f);
+        dialog1.TriggerDialog();
+
         yield return new WaitForSeconds(8f);
         FindObjectOfType<DialogFirstTime>().AnimationUIOpenUp();
     }
@@ -70,7 +71,7 @@ public class FirstTime : MonoBehaviour
     {
         LeanTween.scale(buttons[idx], new Vector3(1f, 1f, 1f), 1f).setEase(LeanTweenType.easeOutExpo);
 
-        
+
 
         if (idx == 4)
         {

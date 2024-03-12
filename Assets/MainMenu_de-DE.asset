@@ -17,6 +17,34 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 9020c02a1190d6747a86a124424c68cb, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 15151751168
+    m_Localized: "The conceptual design of the MOBICPR game originated during the
+      \"Razvoj mobilne aplikacije za u\u010Denje temeljnih postopkov o\u017Eivljanja
+      odrasle osebe (MOBI-TPO)\" project:  <link=\u201Dhttps://mobicpr.si/\u201D>https://mobicpr.si/
+      </link>\r\n \r\nThe further development of the MOBICPR game was led by the
+      project leader, Nino Fija\u010Dko, and the developer, Daniel Vinoj\u010Di\u0107.\r\n\r\nThe
+      content of the MOBICPR game is designed in accordance with the latest guidelines
+      for adult basic life support, published by the European Resuscitation Council
+      (Olasveengen, et al., 2021).\r\n \r\nMore information about MOBICPR game:\r\n-
+      Fija\u010Dko, N., Metli\u010Dar, \u0160., Vinoj\u010Di\u0107, D., Greif, R.
+      and Creber, R.M., 2023. Learn how to save the life of a victim of out-of-hospital
+      cardiac arrest by playing a serious smartphone game. Resuscitation, 188.\r\n-
+      Vinoj\u010Di\u0107, D., 2023. Razvoj 3d mobilne resne igre za u\u010Denje temeljnih
+      postopkov o\u017Eivljanja odrasle osebe (Univerza v Mariboru, Fakulteta za
+      elektrotehniko, ra\u010Dunalni\u0161tvo in informatiko).\r\n- Fija\u010Dko,
+      N., Greif, R., \u0160tiglic, G., Metli\u010Dar, \u0160. and Creber, R.M.M.,
+      2023. 322 Using a serious smartphone game to improve and retain knowledge of
+      hand placement for adult chest compressions: A randomized wait-list controlled
+      trial. Resuscitation, 192, p.S127."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15940362002432
+    m_Localized: "We'll start with:\r\n- Thumb: Check for safety,,\r\n- Index finger:
+      check responsiveness and breathing,\r\n- Middle finger: Call 911 and send for
+      an Automated External Defibrillator (AED),\r\n- Thumb: Start cardiopulmonary
+      resuscitation (CPR), \r\n- Pinky finger: Use AED."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

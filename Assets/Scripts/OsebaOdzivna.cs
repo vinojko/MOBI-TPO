@@ -36,7 +36,7 @@ public class OsebaOdzivna : MonoBehaviour
     {
         rightAnswer.TriggerDialog();
         yield return new WaitForSeconds(2.5f);
-        GameManager.instance.UpdateGameState(GameState.DihanjeZacetek);
+        GameManager.instance.UpdateGameState(GameState.PremakniZrtev);
         FadeOut();
         StartCoroutine(DialogTrig());
     }

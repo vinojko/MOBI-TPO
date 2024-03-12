@@ -19,7 +19,47 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 463364587520
-    m_Localized: 
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65299972096
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368766255104
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1517871333376
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23421902553088
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40467730169856
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59685636833280
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60438048833536
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61722613153792
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470098206613504
+    m_Localized: VARNOST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481763916603392
+    m_Localized: VARNOST
     m_Metadata:
       m_Items: []
   references:
